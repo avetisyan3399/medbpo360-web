@@ -184,7 +184,7 @@ export default function Home() {
                 width: 7, height: 7, borderRadius: "50%",
                 background: "#17a673", display: "inline-block",
               }} />
-              Enterprise RCM & BPO · Built to Scale
+              Medical Billing, RCM & BPO · Built to Scale
             </div>
 
             <h1
@@ -205,7 +205,7 @@ export default function Home() {
                 background: "linear-gradient(135deg, #0f2b46, #17a673)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-              }}>at enterprise scale.</span>
+              }}>that scales with you.</span>
             </h1>
 
             <p
@@ -220,9 +220,10 @@ export default function Home() {
               }}
             >
               Standardized billing, credentialing, and back-office operations
-              for health systems, MSOs, and multi-site medical groups —
-              with a dedicated implementation team and reporting built for
-              your leadership, not just your front desk.
+              that scale with you — from a growing multi-provider practice
+              to a multi-facility health system — with a dedicated
+              implementation team and reporting built for your leadership,
+              not just your front desk.
             </p>
 
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
@@ -264,7 +265,7 @@ export default function Home() {
               justifyContent: "center", marginTop: 44,
             }}>
               {[
-                "Health Systems","MSOs & PE-Backed Groups","ASCs",
+                "Growing Practices","Health Systems","MSOs & PE-Backed Groups","ASCs",
                 "Multi-Site Groups","Hospital-Based Groups","Behavioral Health",
                 "Primary Care","Cardiology","Labs & Diagnostics","And more",
               ].map((t) => (
@@ -384,6 +385,62 @@ export default function Home() {
                 description="Claims processing, denial management, and administrative staffing that flexes with your volume and growth."
               />
             </div>
+          </div>
+        </section>
+
+        {/* ── SIZE REASSURANCE ─────────────────────────────────────────────── */}
+        <section style={{ padding: "80px 24px", background: "#f5f5f7" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+            <p
+              style={{
+                fontSize: 13,
+                fontWeight: 600,
+                color: "#0f2b46",
+                textTransform: "uppercase",
+                letterSpacing: 1.5,
+                marginBottom: 16,
+              }}
+            >
+              Wherever You&apos;re Starting
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(24px, 4vw, 40px)",
+                fontWeight: 700,
+                letterSpacing: "-1.5px",
+                color: "#0a0a0f",
+                lineHeight: 1.15,
+                marginBottom: 20,
+              }}
+            >
+              Built to scale. Not built to gatekeep.
+            </h2>
+            <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 8 }}>
+              Whether you&apos;re a 12-provider group standardizing billing
+              for the first time or a health system running dozens of
+              facilities, the same systems apply — we just calibrate the
+              team to match. Many of our health system engagements started
+              as a single growing practice.
+            </p>
+            <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 32 }}>
+              If you&apos;re not sure you&apos;re &ldquo;big enough&rdquo;
+              yet, that&apos;s exactly the right time to talk to us.
+            </p>
+            <Link
+              href="/contact"
+              style={{
+                display: "inline-block",
+                padding: "14px 28px",
+                borderRadius: 980,
+                background: "#0f2b46",
+                color: "#fff",
+                fontSize: 15,
+                fontWeight: 600,
+                textDecoration: "none",
+              }}
+            >
+              Talk to Our Team
+            </Link>
           </div>
         </section>
 

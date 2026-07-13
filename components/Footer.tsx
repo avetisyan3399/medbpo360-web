@@ -33,8 +33,8 @@ export default function Footer() {
               Med<span style={{ color: "#17a673" }}>BPO360</span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.6, maxWidth: 220 }}>
-              Enterprise-scale revenue cycle management and back-office
-              outsourcing for health systems and large medical groups.
+              Revenue cycle management and back-office outsourcing built to
+              scale — from growing practices to health systems.
             </p>
           </div>
 
@@ -63,6 +63,7 @@ export default function Footer() {
               Industries
             </div>
             {[
+              { label: "Independent & Growing Practices", href: "/industries/growing-practices" },
               { label: "Health Systems", href: "/industries/health-systems" },
               { label: "MSOs & PE-Backed Groups", href: "/industries/mso-pe-backed-groups" },
               { label: "Ambulatory Surgery Centers", href: "/industries/ascs" },

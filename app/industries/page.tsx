@@ -49,11 +49,11 @@ export default function IndustriesPage() {
             letterSpacing: "-2.5px", lineHeight: 1.06, color: "#0a0a0f",
             maxWidth: 800, margin: "0 auto 24px",
           }}>
-            Built for the organizations
-            <br /><span style={{ color: "#17a673" }}>signing enterprise contracts.</span>
+            Systems that scale
+            <br /><span style={{ color: "#17a673" }}>with where you're headed.</span>
           </h1>
           <p style={{ fontSize: 18, color: "#515154", maxWidth: 560, margin: "0 auto", lineHeight: 1.65 }}>
-            Every organization type has a different operating model. Here&apos;s how we adapt to yours.
+            Every organization type has a different operating model — and every one of them started smaller. Here&apos;s how we adapt to yours, today and as you grow.
           </p>
         </section>
 
@@ -99,10 +99,10 @@ export default function IndustriesPage() {
 
         <section style={{ padding: "100px 24px", textAlign: "center", background: "#0f2b46", color: "#fff" }}>
           <h2 style={{ fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 700, letterSpacing: "-2px", lineHeight: 1.1, marginBottom: 20 }}>
-            Don&apos;t see your organization type?
+            Not seeing your organization here?
           </h2>
           <p style={{ fontSize: 17, color: "rgba(255,255,255,0.8)", maxWidth: 460, margin: "0 auto 36px", lineHeight: 1.6 }}>
-            We work with a wide range of healthcare organizations beyond what&apos;s listed here. Let&apos;s talk about yours.
+            These are where we tend to land, not a checklist you need to qualify for. Growing practices welcome — let&apos;s talk about yours.
           </p>
           <Link href="/contact" style={{
             display: "inline-block", padding: "16px 36px",

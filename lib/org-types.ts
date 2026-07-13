@@ -15,6 +15,47 @@ export type OrgType = {
 
 export const orgTypes: OrgType[] = [
   {
+    slug: "growing-practices",
+    name: "Independent & Growing Practices",
+    tagline: "Where the growth story starts",
+    headline: "RCM & Back-Office Support for Independent and Growing Practices",
+    subheadline:
+      "Standardized billing, credentialing, and reporting systems — sized right for a single practice today, ready to scale with you tomorrow.",
+    description:
+      "You don't need to be a health system to benefit from standardized revenue cycle systems. Independent and growing practices get the same clean-claim discipline, credentialing tracking, and executive-style reporting we build for our largest clients — scaled to a team and price point that fits where you are now. Many of our multi-site engagements started here.",
+    challenges: [
+      {
+        title: "Small teams wear too many hats",
+        body: "A 5-provider practice often has one person handling billing, credentialing, and collections part-time between other duties. That's where errors and missed revenue creep in — not from lack of effort, but lack of dedicated systems.",
+      },
+      {
+        title: "Growth outpaces internal processes",
+        body: "Adding a second location or a few new providers can overwhelm a billing process that was never built to scale. Practices that standardize early avoid the painful re-platforming that comes with growing on an ad hoc system.",
+      },
+      {
+        title: "Credentialing delays hit smaller practices harder",
+        body: "A single provider stuck in a credentialing backlog can mean a meaningful share of a small practice's total revenue sitting on hold — the impact is proportionally bigger than at a larger organization.",
+      },
+    ],
+    included: [
+      "Standardized billing and coding built to grow with you, not just handle today's volume",
+      "Credentialing and payer enrollment for solo and small-group providers",
+      "Transparent reporting from day one — the same dashboards we build for health systems, scaled to your size",
+      "A dedicated implementation contact, not a call queue",
+      "Flat, transparent pricing with no long-term contracts required",
+      "A clear path to add locations or providers without switching systems later",
+    ],
+    stats: [
+      { value: "Day One", label: "Executive-Style Reporting" },
+      { value: "No Minimums", label: "Practices of Any Size Welcome" },
+      { value: "94%", label: "Target Clean Claim Rate" },
+    ],
+    metaTitle: "RCM & Billing Support for Independent & Growing Practices",
+    metaDescription:
+      "Standardized billing, credentialing, and reporting for independent and growing medical practices — the same systems we build for health systems, sized to fit you.",
+    keyword: "independent medical practice billing outsourcing",
+  },
+  {
     slug: "health-systems",
     name: "Health Systems",
     tagline: "Enterprise RCM for multi-facility systems",

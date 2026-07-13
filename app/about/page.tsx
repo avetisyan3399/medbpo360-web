@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us | Enterprise Medical Billing & BPO Outsourcing",
   description:
-    "medbpo360 is an enterprise medical billing, credentialing, and back-office outsourcing partner for health systems, MSOs, and large medical groups nationwide.",
+    "medbpo360 is a medical billing, credentialing, and back-office outsourcing partner built to scale — for growing multi-provider practices, MSOs, and health systems nationwide.",
   keywords: [
     "about medbpo360",
     "enterprise medical billing company",
@@ -32,37 +32,6 @@ const stats = [
   { value: "<48h", label: "Response time from your implementation team" },
   { value: "100%", label: "Executive-level reporting on every engagement" },
   { value: "$0", label: "Hidden fees — ever" },
-];
-
-const reviews = [
-  {
-    quote:
-      "We were onboarding three acquired practices at once and our internal team couldn't keep pace with credentialing. medbpo360 ran all three rosters in parallel without a single billing gap.",
-    name: "VP of Revenue Cycle",
-    title: "Multi-State MSO",
-    location: "Texas",
-  },
-  {
-    quote:
-      "The reporting is what sold our board. We finally have one dashboard that rolls up performance across every facility instead of a dozen spreadsheets.",
-    name: "CFO",
-    title: "Regional Health System",
-    location: "Southeast US",
-  },
-  {
-    quote:
-      "Standardizing billing across 14 locations sounded impossible until we saw their onboarding playbook in action. Every new site follows the same process now.",
-    name: "COO",
-    title: "Multi-Site Medical Group",
-    location: "California",
-  },
-  {
-    quote:
-      "Their call center team handles our overflow scheduling and payer follow-up across every site. It's effectively an extra department without the hiring overhead.",
-    name: "Director of Operations",
-    title: "Ambulatory Surgery Network",
-    location: "Midwest US",
-  },
 ];
 
 const whyUs = [
@@ -94,7 +63,7 @@ const whyUs = [
     icon: "🤝",
     title: "Healthcare-Exclusive Focus",
     description:
-      "We work exclusively with health systems, MSOs, and large medical groups. We understand the operational complexity that comes with scale.",
+      "We work exclusively with healthcare organizations — from growing multi-provider practices to full health systems. We understand the operational complexity that comes with scale, at every stage of it.",
   },
   {
     icon: "🔒",
@@ -144,23 +113,23 @@ export default function AboutPage() {
               margin: "0 auto 24px",
             }}
           >
-            Built for organizations
+            Built to scale
             <br />
-            <span style={{ color: "#17a673" }}>that outgrew small.</span>
+            <span style={{ color: "#17a673" }}>wherever you start.</span>
           </h1>
           <p
             style={{
               fontSize: 18,
               color: "#515154",
-              maxWidth: 540,
+              maxWidth: 560,
               margin: "0 auto",
               lineHeight: 1.65,
             }}
           >
             medbpo360 is the sister company to medbillytics — same
-            healthcare revenue cycle expertise, built out for health
-            systems, MSOs, and multi-site groups running at enterprise
-            volume.
+            healthcare revenue cycle expertise, built around standardized
+            systems and reporting that work for a 15-provider group and a
+            multi-facility health system alike.
           </p>
         </section>
 
@@ -290,92 +259,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ── REVIEWS ──────────────────────────────────────────────────── */}
-        <section style={{ padding: "80px 24px", background: "#0a0a0f" }}>
-          <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: 60 }}>
-              <p
-                style={{
-                  fontSize: 13,
-                  fontWeight: 600,
-                  color: "#17a673",
-                  textTransform: "uppercase",
-                  letterSpacing: 1.5,
-                  marginBottom: 16,
-                }}
-              >
-                Client Feedback
-              </p>
-              <h2
-                style={{
-                  fontSize: "clamp(28px, 4vw, 48px)",
-                  fontWeight: 700,
-                  letterSpacing: "-1.5px",
-                  color: "#f5f5f7",
-                  lineHeight: 1.1,
-                }}
-              >
-                Don&apos;t take our word for it.
-              </h2>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: 20,
-              }}
-            >
-              {reviews.map(({ quote, name, title, location }) => (
-                <div
-                  key={name}
-                  style={{
-                    background: "#16161e",
-                    border: "1px solid #2a2a2e",
-                    borderRadius: 20,
-                    padding: "32px 28px",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 20,
-                  }}
-                >
-                  <div style={{ color: "#f5a623", fontSize: 14, letterSpacing: 2 }}>
-                    ★★★★★
-                  </div>
-                  <p
-                    style={{
-                      fontSize: 15,
-                      color: "#c7c7cc",
-                      lineHeight: 1.75,
-                      fontStyle: "italic",
-                      flexGrow: 1,
-                    }}
-                  >
-                    &ldquo;{quote}&rdquo;
-                  </p>
-                  <div>
-                    <div
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 600,
-                        color: "#f5f5f7",
-                      }}
-                    >
-                      {name}
-                    </div>
-                    <div style={{ fontSize: 13, color: "#6e6e73" }}>
-                      {title} · {location}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p style={{ fontSize: 12, color: "#4a4a50", textAlign: "center", marginTop: 32 }}>
-              Representative feedback illustrating the engagements we run — named client references available on request.
-            </p>
           </div>
         </section>
 
