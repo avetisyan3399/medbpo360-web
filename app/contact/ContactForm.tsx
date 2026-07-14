@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { trackEvent } from "@/lib/analytics";
 
 const services = [
   "Call Center Services",
@@ -75,6 +76,7 @@ export default function ContactForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Failed");
+      trackEvent("contact_form_submit", { service: form.service, orgType: form.orgType });
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please email us directly at info@medbpo360.com");
@@ -130,10 +132,10 @@ export default function ContactForm() {
 
               {[
                 { icon: "📍", label: "Office", value: "4100 W Alameda Ave, Burbank, CA 91505" },
-                { icon: "📞", label: "Phone", value: "(323) 332-6768" },
-                { icon: "✉️", label: "Email", value: "info@medbpo360.com" },
+                { icon: "📞", label: "Phone", value: "(323) 332-6768", href: "tel:+13233326768" },
+                { icon: "✉️", label: "Email", value: "info@medbpo360.com", href: "mailto:info@medbpo360.com" },
                 { icon: "🕐", label: "Hours", value: "Mon–Fri, 8am–6pm PT · 24/7 call center available" },
-              ].map(({ icon, label, value }) => (
+              ].map(({ icon, label, value, href }) => (
                 <div key={label} style={{ display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 24 }}>
                   <div style={{
                     width: 44, height: 44, borderRadius: 12, background: "#e8eef4",
@@ -141,7 +143,17 @@ export default function ContactForm() {
                   }}>{icon}</div>
                   <div>
                     <div style={{ fontSize: 12, fontWeight: 600, color: "#86868b", textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 3 }}>{label}</div>
-                    <div style={{ fontSize: 15, color: "#0a0a0f", fontWeight: 500 }}>{value}</div>
+                    {href ? (
+                      <a
+                        href={href}
+                        onClick={() => trackEvent(href.startsWith("tel:") ? "phone_click" : "email_click")}
+                        style={{ fontSize: 15, color: "#0a0a0f", fontWeight: 500, textDecoration: "none" }}
+                      >
+                        {value}
+                      </a>
+                    ) : (
+                      <div style={{ fontSize: 15, color: "#0a0a0f", fontWeight: 500 }}>{value}</div>
+                    )}
                   </div>
                 </div>
               ))}

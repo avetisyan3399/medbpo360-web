@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Analytics from "@/components/Analytics";
+import { GTM_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -30,21 +32,12 @@ export const metadata: Metadata = {
     title: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
     description:
       "Enterprise-scale medical billing, credentialing, and back-office outsourcing for health systems, MSOs, and large medical groups.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "medbpo360 — Enterprise Medical Billing & BPO Outsourcing",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
     description:
       "Standardized billing, credentialing, and back-office outsourcing built for health systems and large medical groups.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -103,8 +96,21 @@ export default function RootLayout({
             }),
           }}
         />
+        <Analytics />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
+        {children}
+      </body>
     </html>
   );
 }

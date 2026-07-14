@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -96,8 +99,20 @@ export default function Footer() {
               </div>
             ))}
             <div style={{ marginTop: 20, paddingTop: 16, borderTop: "1px solid #2a2a2e" }}>
-              <div style={{ fontSize: 13, color: "#86868b", marginBottom: 6 }}>(323) 332-6768</div>
-              <div style={{ fontSize: 13, color: "#86868b" }}>info@medbpo360.com</div>
+              <a
+                href="tel:+13233326768"
+                onClick={() => trackEvent("phone_click")}
+                style={{ display: "block", fontSize: 13, color: "#86868b", marginBottom: 6, textDecoration: "none" }}
+              >
+                (323) 332-6768
+              </a>
+              <a
+                href="mailto:info@medbpo360.com"
+                onClick={() => trackEvent("email_click")}
+                style={{ fontSize: 13, color: "#86868b", textDecoration: "none" }}
+              >
+                info@medbpo360.com
+              </a>
             </div>
           </div>
 
