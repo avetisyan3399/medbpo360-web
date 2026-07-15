@@ -42,6 +42,28 @@ export default async function ServiceLandingPage({
   return (
     <>
       <Nav />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: s.name,
+            description: s.metaDescription,
+            serviceType: s.name,
+            url: `https://medbpo360.com/services/${slug}`,
+            provider: {
+              "@type": "MedicalBusiness",
+              name: "medbpo360",
+              url: "https://medbpo360.com",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+          }),
+        }}
+      />
       <main>
         {/* HERO */}
         <section style={{
