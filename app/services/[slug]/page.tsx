@@ -178,7 +178,9 @@ export default async function ServiceLandingPage({
                 <span style={{ color: "#17a673" }}>Run at scale.</span>
               </h2>
               <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 32 }}>
-                No long-term contracts required. A dedicated implementation team. Full transparency through your client portal. We handle {s.name.toLowerCase()} end-to-end — across every site.
+                <strong style={{ color: "#0a0a0f" }}>No long-term contracts required.</strong>{" "}
+                <strong style={{ color: "#0a0a0f" }}>A dedicated implementation team,</strong> not a single account manager split across dozens of clients.{" "}
+                <strong style={{ color: "#0a0a0f" }}>Full transparency through your client portal</strong> — every claim, every credentialing status, visible at all times, no black box. We handle {s.name.toLowerCase()} end-to-end — across every site.
               </p>
               <Link href="/contact" style={{
                 display: "inline-block", padding: "14px 28px",
@@ -216,7 +218,7 @@ export default async function ServiceLandingPage({
             Ready to get started?
           </h2>
           <p style={{ fontSize: 17, color: "rgba(255,255,255,0.8)", maxWidth: 480, margin: "0 auto 36px", lineHeight: 1.6 }}>
-            Free revenue cycle assessment — we&apos;ll show you exactly where the gaps are and what it would take to fix them.
+            A free revenue cycle assessment — you&apos;ll get a written breakdown of your denial patterns, AR aging, and credentialing gaps, whether or not you move forward with us. No pushy sales, just a straightforward look at where you stand.
           </p>
           <Link href="/contact" style={{
             display: "inline-block", padding: "16px 36px",
