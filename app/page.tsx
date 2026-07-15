@@ -498,11 +498,11 @@ export default function Home() {
                   marginBottom: 32,
                 }}
               >
-                Growing organizations outgrow single-account-manager billing
-                companies fast. We built medbpo360 for what comes next —
-                dedicated implementation teams, standardized processes across
-                every site, and reporting that speaks to a CFO, not just a
-                front desk.
+                Whether you&apos;re a 12-provider practice or a health
+                system, you get a dedicated implementation team — not a
+                single account manager split across dozens of clients —
+                with standardized processes across every site and reporting
+                that speaks to a CFO, not just a front desk.
               </p>
               <Link
                 href="/contact"
@@ -542,6 +542,114 @@ export default function Home() {
                 title="HIPAA-Compliant at Volume"
                 description="Enterprise-grade security and access controls across every operation, from call center to claims processing."
               />
+            </div>
+          </div>
+        </section>
+
+        {/* ── SYSTEMS WE WORK WITHIN ───────────────────────────────────────── */}
+        <section style={{ padding: "100px 24px", background: "#fff" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+            <p
+              style={{
+                fontSize: 13,
+                fontWeight: 600,
+                color: "#0f2b46",
+                textTransform: "uppercase",
+                letterSpacing: 1.5,
+                marginBottom: 16,
+              }}
+            >
+              Systems We Work Within
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(24px, 4vw, 40px)",
+                fontWeight: 700,
+                letterSpacing: "-1.5px",
+                color: "#0a0a0f",
+                lineHeight: 1.15,
+                marginBottom: 20,
+              }}
+            >
+              No new tech stack to learn.
+            </h2>
+            <p
+              style={{
+                fontSize: 16,
+                color: "#515154",
+                lineHeight: 1.75,
+                maxWidth: 640,
+                margin: "0 auto 48px",
+              }}
+            >
+              We submit claims and manage enrollment across all major
+              commercial and government payers nationwide, including
+              Medicare and Medicaid — and connect directly into the
+              clearinghouses and practice systems you already run.
+            </p>
+
+            <div style={{ marginBottom: 40 }}>
+              <p
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  color: "#86868b",
+                  textTransform: "uppercase",
+                  letterSpacing: 1,
+                  marginBottom: 16,
+                }}
+              >
+                Clearinghouses
+              </p>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+                {["Waystar", "Availity", "Office Ally"].map((t) => (
+                  <span key={t} style={{
+                    padding: "6px 16px",
+                    borderRadius: 980,
+                    background: "#f5f5f7",
+                    border: "1px solid #e8e8ed",
+                    fontSize: 13,
+                    color: "#375368",
+                    fontWeight: 500,
+                  }}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  color: "#86868b",
+                  textTransform: "uppercase",
+                  letterSpacing: 1,
+                  marginBottom: 16,
+                }}
+              >
+                EHR &amp; Practice Management
+              </p>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+                {[
+                  "Epic", "Oracle Health (Cerner)", "athenahealth", "eClinicalWorks",
+                  "NextGen Healthcare", "Greenway Health", "DrChrono", "Kareo / Tebra",
+                  "AdvancedMD", "Valant", "CentralReach",
+                ].map((t) => (
+                  <span key={t} style={{
+                    padding: "6px 16px",
+                    borderRadius: 980,
+                    background: "#f5f5f7",
+                    border: "1px solid #e8e8ed",
+                    fontSize: 13,
+                    color: "#375368",
+                    fontWeight: 500,
+                  }}>
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
