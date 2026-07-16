@@ -9,16 +9,18 @@ const services = [
   "Call Center Services",
   "Medical Billing & RCM",
   "Credentialing & Payer Enrollment",
-  "Full-Scale BPO / Back-Office Outsourcing",
+  "Back-Office Outsourcing",
   "Not sure — I need a consultation",
 ];
 
 const orgTypeOptions = [
-  "Health System",
+  "Solo or Independent Practice",
+  "Small Practice",
+  "Multi-Site Medical Group",
   "MSO / PE-Backed Group",
   "Ambulatory Surgery Center",
-  "Multi-Site Medical Group",
   "Hospital-Based Physician Group",
+  "Health System",
   "Other",
 ];
 
@@ -110,7 +112,7 @@ export default function ContactForm() {
             fontSize: 17, color: "#515154", maxWidth: 480,
             margin: "0 auto", lineHeight: 1.65,
           }}>
-            No pushy sales. Just a straightforward conversation about where you are and how we can help you scale.
+            No pushy sales. Just a straightforward conversation about where you are and how we can help.
           </p>
         </section>
 
@@ -127,7 +129,7 @@ export default function ContactForm() {
                 fontSize: 24, fontWeight: 700, color: "#0a0a0f",
                 letterSpacing: "-0.5px", marginBottom: 32,
               }}>
-                We&apos;re based in Burbank, CA.<br />We serve health systems nationwide.
+                We&apos;re based in Burbank, CA.<br />We serve practices of every size nationwide.
               </h2>
 
               {[

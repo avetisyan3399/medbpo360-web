@@ -126,10 +126,10 @@ export default function AboutPage() {
               lineHeight: 1.65,
             }}
           >
-            medbpo360 is the sister company to medbillytics — same
-            healthcare revenue cycle expertise, built around standardized
-            systems and reporting that work for a solo provider, a
-            15-provider group, and a multi-facility health system alike.
+            medbpo360 is a healthcare revenue cycle expertise company,
+            built around standardized systems and reporting that work for
+            a solo provider, a 15-provider group, and a multi-facility
+            health system alike.
           </p>
         </section>
 
