@@ -3,6 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import { specialties } from "@/lib/specialties";
 import { orgTypes } from "@/lib/org-types";
 import { servicePages } from "@/lib/service-pages";
+import { specialtyServicePages } from "@/lib/specialty-service-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://medbpo360.com";
@@ -46,5 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...serviceLandingPages, ...industryPages, ...specialtyPages, ...blogPages];
+  const specialtyServiceComboPages: MetadataRoute.Sitemap = specialtyServicePages.map((p) => ({
+    url: `${base}/specialties/${p.specialtySlug}/${p.serviceSlug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticPages, ...serviceLandingPages, ...industryPages, ...specialtyPages, ...specialtyServiceComboPages, ...blogPages];
 }

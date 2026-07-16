@@ -4,7 +4,8 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { servicePages, getServicePage } from "@/lib/service-pages";
-import { specialties } from "@/lib/specialties";
+import { getSpecialty } from "@/lib/specialties";
+import { getCombosForService } from "@/lib/specialty-service-pages";
 import { getPostsForService } from "@/lib/blog";
 
 export async function generateStaticParams() {
@@ -41,6 +42,7 @@ export default async function ServiceLandingPage({
   const s = getServicePage(slug);
   if (!s) notFound();
   const relatedPosts = getPostsForService(slug);
+  const combos = getCombosForService(slug);
 
   return (
     <>
@@ -227,10 +229,10 @@ export default async function ServiceLandingPage({
               </h2>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
-              {specialties.map((specialty) => (
+              {combos.map((combo) => (
                 <Link
-                  key={specialty.slug}
-                  href={`/specialties/${specialty.slug}`}
+                  key={combo.specialtySlug}
+                  href={`/specialties/${combo.specialtySlug}/${slug}`}
                   style={{
                     display: "block", background: "#f5f5f7", borderRadius: 20,
                     padding: "24px 22px", textDecoration: "none",
@@ -238,10 +240,10 @@ export default async function ServiceLandingPage({
                   }}
                 >
                   <h3 style={{ fontSize: 15, fontWeight: 700, color: "#0a0a0f", marginBottom: 8, lineHeight: 1.3 }}>
-                    {specialty.name}
+                    {getSpecialty(combo.specialtySlug)?.name}
                   </h3>
                   <p style={{ fontSize: 13, color: "#515154", lineHeight: 1.6 }}>
-                    {specialty.tagline}
+                    {combo.subheadline}
                   </p>
                 </Link>
               ))}
