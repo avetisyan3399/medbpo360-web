@@ -6,6 +6,7 @@ category: "Revenue Cycle Management"
 keyword: "cardiology denial management"
 author: "medbpo360 Team"
 readTime: "7 min read"
+relatedSpecialty: "cardiology"
 ---
 
 Cardiology sits in an uncomfortable spot in the reimbursement landscape: high-value procedures, heavy imaging volume, and an expanding list of payer rules that change faster than most practices can track them. For a cardiology practice of any size — a solo cardiologist just as much as a multi-site group — that combination shows up as a denial rate that never quite settles down, and a billing team that spends more time appealing claims than submitting new ones.

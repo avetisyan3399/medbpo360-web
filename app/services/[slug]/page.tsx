@@ -4,6 +4,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { servicePages, getServicePage } from "@/lib/service-pages";
+import { getPostsForService } from "@/lib/blog";
 
 export async function generateStaticParams() {
   return servicePages.map((s) => ({ slug: s.slug }));
@@ -38,6 +39,7 @@ export default async function ServiceLandingPage({
   const { slug } = await params;
   const s = getServicePage(slug);
   if (!s) notFound();
+  const relatedPosts = getPostsForService(slug);
 
   return (
     <>
@@ -211,6 +213,40 @@ export default async function ServiceLandingPage({
             </div>
           </div>
         </section>
+
+        {/* RELATED READING */}
+        {relatedPosts.length > 0 && (
+          <section style={{ padding: "80px 24px", background: "#f5f5f7" }}>
+            <div style={{ maxWidth: 1080, margin: "0 auto" }}>
+              <p style={{ fontSize: 13, fontWeight: 600, color: "#0f2b46", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 24, textAlign: "center" }}>
+                From the Blog
+              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    style={{
+                      display: "block", background: "#fff", borderRadius: 20,
+                      padding: "28px 24px", textDecoration: "none",
+                      border: "1px solid #e8e8ed",
+                    }}
+                  >
+                    <h3 style={{ fontSize: 16, fontWeight: 700, color: "#0a0a0f", marginBottom: 10, lineHeight: 1.3 }}>
+                      {post.title}
+                    </h3>
+                    <p style={{ fontSize: 13, color: "#515154", lineHeight: 1.6, marginBottom: 14 }}>
+                      {post.excerpt}
+                    </p>
+                    <span style={{ fontSize: 12, color: "#86868b", fontWeight: 500 }}>
+                      {post.readTime}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA */}
         <section style={{ padding: "100px 24px", background: "#0f2b46", textAlign: "center", color: "#fff" }}>

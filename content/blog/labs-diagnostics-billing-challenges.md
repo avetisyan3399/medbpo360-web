@@ -6,6 +6,7 @@ category: "Revenue Cycle Management"
 keyword: "laboratory diagnostic billing"
 author: "medbpo360 Team"
 readTime: "6 min read"
+relatedSpecialty: "laboratory-diagnostics"
 ---
 
 A lab or diagnostic center billing team can do everything right by the standards that govern physician office billing and still get lab billing wrong, because labs run on a fundamentally different regulatory framework. PAMA fee schedules, Local Coverage Determinations, CLIA compliance, and ABN issuance rules don't have close equivalents in a typical physician practice's billing process — which means the usual playbook doesn't fully transfer.

@@ -6,6 +6,7 @@ category: "Revenue Cycle Management"
 keyword: "behavioral health billing denial rates"
 author: "medbpo360 Team"
 readTime: "6 min read"
+relatedSpecialty: "behavioral-health"
 ---
 
 Ask a behavioral health provider why their denial rate runs higher than a colleague's in another specialty, and the honest answer usually isn't "we code worse." It's that behavioral health billing carries structural friction other specialties don't: care is frequently carved out to a separate managed entity, authorization rules for mental health and substance use treatment have — despite federal parity law — often run stricter than the medical/surgical side, and the whole system depends on getting session limits and coding conventions right that don't map cleanly onto how other specialties bill.

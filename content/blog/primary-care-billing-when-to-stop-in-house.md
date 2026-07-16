@@ -6,6 +6,7 @@ category: "Revenue Cycle Management"
 keyword: "primary care billing outsourcing"
 author: "medbpo360 Team"
 readTime: "6 min read"
+relatedSpecialty: "primary-care"
 ---
 
 Most primary care practices start with billing handled internally — an office manager, a biller, sometimes a front-desk staffer doing it between other duties. That arrangement works fine for a long time. The question worth asking isn't whether in-house billing is viable in general; it's whether the specific regulatory and administrative load your practice is carrying has outgrown what that arrangement was ever built to handle.

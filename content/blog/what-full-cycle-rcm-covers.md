@@ -6,6 +6,7 @@ category: "Revenue Cycle Management"
 keyword: "full cycle revenue cycle management"
 author: "medbpo360 Team"
 readTime: "6 min read"
+relatedService: "medical-billing-rcm"
 ---
 
 "RCM" gets used loosely enough that it's worth pinning down what it actually includes before deciding whether to keep it in-house, outsource part of it, or hand off the whole cycle. Full-cycle revenue cycle management is a sequential set of functions, and most practices' actual pain point is concentrated in one or two of them — not all of it equally.

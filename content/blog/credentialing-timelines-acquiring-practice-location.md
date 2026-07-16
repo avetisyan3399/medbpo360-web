@@ -6,6 +6,7 @@ category: "Credentialing"
 keyword: "credentialing new practice location"
 author: "medbpo360 Team"
 readTime: "5 min read"
+relatedService: "credentialing-enrollment"
 ---
 
 When a practice acquires another location or opens a new one, the clinical and operational transition gets most of the planning attention — moving records, aligning staff, updating signage. Credentialing tends to get modeled as an afterthought, which is exactly backwards: it's often the single biggest determinant of when the new location can actually start billing and collecting revenue.

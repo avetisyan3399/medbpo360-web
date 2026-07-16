@@ -6,6 +6,7 @@ category: "Industry Insights"
 keyword: "medical back office outsourcing"
 author: "medbpo360 Team"
 readTime: "5 min read"
+relatedService: "bpo-back-office"
 ---
 
 When back-office work starts outpacing staff capacity, the instinct is often to think in all-or-nothing terms — either keep everything in-house and push through, or hand off the whole back office at once. Neither is usually the right first move. Back-office functions degrade unevenly under volume pressure, and knowing which one to address first matters more than the scope of what eventually gets outsourced.

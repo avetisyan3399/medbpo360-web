@@ -6,6 +6,7 @@ category: "Call Center & Operations"
 keyword: "medical practice call center outsourcing"
 author: "medbpo360 Team"
 readTime: "5 min read"
+relatedService: "call-center"
 ---
 
 Phone access is often the first thing patients notice about how a growing practice is actually running behind the scenes — and it's one of the last things to get formally measured, because nobody assigns ownership of "how long does it take us to answer the phone" until it's already a problem.

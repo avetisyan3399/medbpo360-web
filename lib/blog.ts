@@ -17,6 +17,8 @@ export type Post = {
   keyword: string;
   author: string;
   readTime: string;
+  relatedService?: string;
+  relatedSpecialty?: string;
   content?: string;
 };
 
@@ -42,6 +44,8 @@ export function getAllPosts(): Post[] {
       keyword: data.keyword ?? "",
       author: data.author ?? "medbpo360 Team",
       readTime: data.readTime ?? "5 min read",
+      relatedService: data.relatedService ?? undefined,
+      relatedSpecialty: data.relatedSpecialty ?? undefined,
     } as Post;
   });
 
@@ -73,6 +77,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     keyword: data.keyword ?? "",
     author: data.author ?? "medbpo360 Team",
     readTime: data.readTime ?? "5 min read",
+    relatedService: data.relatedService ?? undefined,
+    relatedSpecialty: data.relatedSpecialty ?? undefined,
     content: processed.toString(),
   };
 }
@@ -81,4 +87,12 @@ export function getPostsByCategory(category: string): Post[] {
   const all = getAllPosts();
   if (category === "All") return all;
   return all.filter((p) => p.category === category);
+}
+
+export function getPostsForService(slug: string): Post[] {
+  return getAllPosts().filter((p) => p.relatedService === slug);
+}
+
+export function getPostsForSpecialty(slug: string): Post[] {
+  return getAllPosts().filter((p) => p.relatedSpecialty === slug);
 }

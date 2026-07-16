@@ -6,6 +6,7 @@ category: "Credentialing"
 keyword: "CAQH PECOS Medicaid credentialing"
 author: "medbpo360 Team"
 readTime: "6 min read"
+relatedService: "credentialing-enrollment"
 ---
 
 New practices and newly hired providers run into the same surprise: "credentialing" sounds like a single process, but it's actually three separate systems — CAQH, Medicare's PECOS, and state Medicaid — each with its own portal, documentation requirements, and timeline. Missing a step in any one of them delays billing with that payer just as effectively as missing all three.

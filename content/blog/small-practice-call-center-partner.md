@@ -6,6 +6,7 @@ category: "Call Center & Operations"
 keyword: "call center for small medical practice"
 author: "medbpo360 Team"
 readTime: "5 min read"
+relatedService: "call-center"
 ---
 
 "Call center" sounds like something a hospital system needs, not a 3-provider practice. But a small practice's phone problem is often more acute than a larger organization's, for a simple reason: there's no redundancy. When one front-desk staffer is out sick, on lunch, or handling an in-person patient, calls at a small practice often just don't get answered — there's no second or third person to absorb the overflow the way a larger operation can.

@@ -6,6 +6,7 @@ category: "Revenue Cycle Management"
 keyword: "multi specialty billing"
 author: "medbpo360 Team"
 readTime: "5 min read"
+relatedSpecialty: "multi-specialty-groups"
 ---
 
 A practice that added a second specialty under one roof — primary care plus behavioral health, or a surgical specialty alongside general medicine — often assumes the billing complexity scales down proportionally with size. It doesn't. A two-specialty practice runs into essentially the same coding-complexity problem a ten-specialty group does; there's just less volume absorbing the cost of getting it wrong.
