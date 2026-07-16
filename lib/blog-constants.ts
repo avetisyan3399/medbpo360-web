@@ -1,6 +1,6 @@
 export const CATEGORIES = [
   "All",
-  "Revenue Cycle Management",
+  "Billing & Denials",
   "Credentialing",
   "Call Center & Operations",
   "Industry Insights",

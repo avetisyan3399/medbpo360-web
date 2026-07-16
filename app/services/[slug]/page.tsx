@@ -4,6 +4,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { servicePages, getServicePage } from "@/lib/service-pages";
+import { specialties } from "@/lib/specialties";
 import { getPostsForService } from "@/lib/blog";
 
 export async function generateStaticParams() {
@@ -210,6 +211,40 @@ export default async function ServiceLandingPage({
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AVAILABLE ACROSS EVERY SPECIALTY */}
+        <section style={{ padding: "80px 24px", background: "#fff" }}>
+          <div style={{ maxWidth: 1080, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: 40 }}>
+              <p style={{ fontSize: 13, fontWeight: 600, color: "#0f2b46", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
+                Available Across Every Specialty
+              </p>
+              <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, letterSpacing: "-1.2px", color: "#0a0a0f", lineHeight: 1.15 }}>
+                {s.name} for every specialty we support
+              </h2>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
+              {specialties.map((specialty) => (
+                <Link
+                  key={specialty.slug}
+                  href={`/specialties/${specialty.slug}`}
+                  style={{
+                    display: "block", background: "#f5f5f7", borderRadius: 20,
+                    padding: "24px 22px", textDecoration: "none",
+                    border: "1px solid #e8e8ed",
+                  }}
+                >
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: "#0a0a0f", marginBottom: 8, lineHeight: 1.3 }}>
+                    {specialty.name}
+                  </h3>
+                  <p style={{ fontSize: 13, color: "#515154", lineHeight: 1.6 }}>
+                    {specialty.tagline}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { specialties, getSpecialty } from "@/lib/specialties";
+import { servicePages } from "@/lib/service-pages";
 import { getPostsForSpecialty } from "@/lib/blog";
 
 export async function generateStaticParams() {
@@ -181,6 +182,40 @@ export default async function SpecialtyPage({
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES AVAILABLE FOR THIS SPECIALTY */}
+        <section style={{ padding: "80px 24px", background: "#fff" }}>
+          <div style={{ maxWidth: 1080, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: 40 }}>
+              <p style={{ fontSize: 13, fontWeight: 600, color: "#0f2b46", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
+                Services Available
+              </p>
+              <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, letterSpacing: "-1.2px", color: "#0a0a0f", lineHeight: 1.15 }}>
+                Every service, built for {s.name.toLowerCase()} practices
+              </h2>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
+              {servicePages.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  style={{
+                    display: "block", background: "#f5f5f7", borderRadius: 20,
+                    padding: "24px 22px", textDecoration: "none",
+                    border: "1px solid #e8e8ed",
+                  }}
+                >
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: "#0a0a0f", marginBottom: 8, lineHeight: 1.3 }}>
+                    {service.name}
+                  </h3>
+                  <p style={{ fontSize: 13, color: "#515154", lineHeight: 1.6 }}>
+                    {service.tagline}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

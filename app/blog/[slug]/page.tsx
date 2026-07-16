@@ -54,9 +54,12 @@ export default async function BlogPostPage({
               <Link href="/blog" style={{ fontSize: 13, color: "#0f2b46", fontWeight: 600, textDecoration: "none" }}>
                 ← Back to Blog
               </Link>
-              <p style={{ fontSize: 12, fontWeight: 600, color: "#17a673", textTransform: "uppercase", letterSpacing: 1, margin: "24px 0 12px" }}>
+              <Link
+                href={`/blog?category=${encodeURIComponent(post.category)}`}
+                style={{ display: "inline-block", fontSize: 12, fontWeight: 600, color: "#17a673", textTransform: "uppercase", letterSpacing: 1, margin: "24px 0 12px", textDecoration: "none" }}
+              >
                 {post.category}
-              </p>
+              </Link>
               <h1 style={{
                 fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 700,
                 letterSpacing: "-1.5px", lineHeight: 1.15, color: "#0a0a0f",

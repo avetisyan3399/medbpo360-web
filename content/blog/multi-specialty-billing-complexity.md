@@ -2,7 +2,7 @@
 title: "Billing Across Multiple Specialties Under One Roof: Where the Coding Complexity Actually Lives"
 date: "2026-07-29"
 excerpt: "A two-specialty practice runs into the same billing-complexity problem a ten-specialty group does, just at smaller scale. Different specialties follow genuinely different coding logic, and no single generalist biller holds equal depth across all of them."
-category: "Revenue Cycle Management"
+category: "Billing & Denials"
 keyword: "multi specialty billing"
 author: "medbpo360 Team"
 readTime: "5 min read"

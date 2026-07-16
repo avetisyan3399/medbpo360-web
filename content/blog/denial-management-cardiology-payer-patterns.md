@@ -2,7 +2,7 @@
 title: "Denial Management for Cardiology Practices: Payer-Specific Patterns to Watch"
 date: "2026-07-15"
 excerpt: "Cardiology denials rarely come from one universal cause. They cluster around specific payers, specific procedures, and specific documentation gaps — and the fix looks different depending on which pattern you're seeing."
-category: "Revenue Cycle Management"
+category: "Billing & Denials"
 keyword: "cardiology denial management"
 author: "medbpo360 Team"
 readTime: "7 min read"

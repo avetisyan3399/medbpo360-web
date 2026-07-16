@@ -2,7 +2,7 @@
 title: "What Full-Cycle RCM Actually Covers (And Where Practices Usually Draw the Line)"
 date: "2026-07-27"
 excerpt: "\"Revenue cycle management\" gets used as a catch-all term. It's actually a specific, sequential set of functions — useful to know exactly what's included when deciding what to keep in-house and what to hand off."
-category: "Revenue Cycle Management"
+category: "Billing & Denials"
 keyword: "full cycle revenue cycle management"
 author: "medbpo360 Team"
 readTime: "6 min read"

@@ -2,7 +2,7 @@
 title: "Medical Billing for Primary Care Practices: When to Stop Doing It In-House"
 date: "2026-07-17"
 excerpt: "In-house billing works fine for a primary care practice right up until it doesn't. The tipping point usually isn't a single crisis — it's the slow accumulation of regulatory burden that eventually outpaces what internal staff can absorb."
-category: "Revenue Cycle Management"
+category: "Billing & Denials"
 keyword: "primary care billing outsourcing"
 author: "medbpo360 Team"
 readTime: "6 min read"

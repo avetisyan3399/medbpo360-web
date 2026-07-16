@@ -2,7 +2,7 @@
 title: "Why Behavioral Health Billing Runs Higher Denial Rates Than Other Specialties"
 date: "2026-07-16"
 excerpt: "Behavioral health denials aren't a documentation problem in disguise. Carve-out routing, authorization rules that often run stricter than parity law allows, and a coding structure unlike any other specialty all compound at once."
-category: "Revenue Cycle Management"
+category: "Billing & Denials"
 keyword: "behavioral health billing denial rates"
 author: "medbpo360 Team"
 readTime: "6 min read"

@@ -2,7 +2,7 @@
 title: "Billing Challenges Unique to Labs & Diagnostic Centers"
 date: "2026-07-20"
 excerpt: "Lab billing doesn't run on the same rules as physician billing. PAMA fee schedules, Local Coverage Determinations, and ABN workflows create a regulatory landscape that's genuinely different — not just more detailed."
-category: "Revenue Cycle Management"
+category: "Billing & Denials"
 keyword: "laboratory diagnostic billing"
 author: "medbpo360 Team"
 readTime: "6 min read"
