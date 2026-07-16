@@ -5,21 +5,20 @@ import Link from "next/link";
 import { servicePages } from "@/lib/service-pages";
 
 export const metadata: Metadata = {
-  title: "Services | Enterprise Medical Billing, RCM, Credentialing & BPO",
+  title: "Services | Medical Billing, RCM, Credentialing & BPO",
   description:
-    "Full-scale revenue cycle outsourcing: call center services, medical billing & RCM, credentialing & payer enrollment, and back-office BPO for health systems and large medical groups.",
+    "Full-scale revenue cycle outsourcing: call center services, medical billing & RCM, credentialing & payer enrollment, and back-office BPO for medical practices of any size.",
   keywords: [
-    "enterprise medical billing services",
-    "health system RCM outsourcing",
-    "bulk credentialing services",
+    "medical billing services",
+    "medical practice RCM outsourcing",
+    "provider credentialing services",
     "medical call center outsourcing",
     "back office BPO healthcare",
-    "MSO billing services",
   ],
   openGraph: {
     title: "medbpo360 Services | Full Revenue Cycle & Back-Office Outsourcing",
     description:
-      "Call center, billing & RCM, credentialing & enrollment, and back-office BPO — everything your organization needs to run revenue cycle at scale.",
+      "Call center, billing & RCM, credentialing & enrollment, and back-office BPO — everything your practice needs to run its revenue cycle, sized to fit you.",
     url: "https://medbpo360.com/services",
   },
   alternates: {
@@ -125,7 +124,7 @@ export default function ServicesPage() {
           >
             Everything your revenue
             <br />
-            <span style={{ color: "#17a673" }}>cycle needs. At scale.</span>
+            <span style={{ color: "#17a673" }}>cycle needs. Sized to fit you.</span>
           </h1>
           <p
             style={{
@@ -137,7 +136,8 @@ export default function ServicesPage() {
             }}
           >
             From the call center to the last dollar collected — one partner
-            running your revenue cycle and back office across every site.
+            running your revenue cycle and back office, whether you're a
+            single practice or several sites.
           </p>
 
           {/* Quick jump links */}

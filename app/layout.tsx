@@ -5,16 +5,17 @@ import { GTM_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
+    default: "medbpo360 | Medical Billing, RCM & BPO Outsourcing",
     template: "%s | medbpo360",
   },
   description:
-    "Enterprise-scale medical billing, credentialing, and back-office outsourcing for health systems, MSOs, and large medical groups. Standardized processes, executive reporting, built to scale.",
+    "Medical billing, credentialing, and back-office outsourcing for practices of any size — solo providers and small practices, MSOs, and health systems. Standardized processes, transparent reporting.",
   keywords: [
-    "enterprise medical billing outsourcing",
+    "medical billing outsourcing",
+    "independent medical practice billing",
     "health system revenue cycle management",
     "MSO billing outsourcing",
-    "bulk provider credentialing services",
+    "provider credentialing services",
     "medical BPO services",
     "back office outsourcing healthcare",
     "multi-site medical group billing",
@@ -29,15 +30,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://medbpo360.com",
     siteName: "medbpo360",
-    title: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
+    title: "medbpo360 | Medical Billing, RCM & BPO Outsourcing",
     description:
-      "Enterprise-scale medical billing, credentialing, and back-office outsourcing for health systems, MSOs, and large medical groups.",
+      "Medical billing, credentialing, and back-office outsourcing for practices of any size, from solo providers to health systems and MSOs.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
+    title: "medbpo360 | Medical Billing, RCM & BPO Outsourcing",
     description:
-      "Standardized billing, credentialing, and back-office outsourcing built for health systems and large medical groups.",
+      "Standardized billing, credentialing, and back-office outsourcing built for medical practices of any size.",
   },
   robots: {
     index: true,
@@ -72,7 +73,7 @@ export default function RootLayout({
               "@type": "MedicalBusiness",
               name: "medbpo360",
               description:
-                "Enterprise-scale medical billing, credentialing, and back-office outsourcing for health systems and large medical groups.",
+                "Medical billing, credentialing, and back-office outsourcing for medical practices of any size, from solo providers to health systems.",
               url: "https://medbpo360.com",
               telephone: "+13233326768",
               email: "info@medbpo360.com",

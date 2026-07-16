@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import { getPostsByCategory, CATEGORIES } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Enterprise Revenue Cycle & Healthcare Operations Insights",
+  title: "Blog | Revenue Cycle & Healthcare Operations Insights",
   description:
-    "Insights on revenue cycle management, credentialing, and back-office operations for health systems, MSOs, and large medical groups.",
+    "Insights on revenue cycle management, credentialing, and back-office operations for medical practices of any size, from solo providers to health systems.",
   alternates: {
     canonical: "https://medbpo360.com/blog",
   },
@@ -47,7 +47,7 @@ export default async function BlogPage({
             Revenue cycle & operations, explained.
           </h1>
           <p style={{ fontSize: 17, color: "#515154", maxWidth: 520, margin: "0 auto 40px", lineHeight: 1.65 }}>
-            Practical guidance on billing, credentialing, and back-office operations for organizations running at scale.
+            Practical guidance on billing, credentialing, and back-office operations for medical practices of any size.
           </p>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
@@ -86,7 +86,7 @@ export default async function BlogPage({
                   More insights coming soon.
                 </h2>
                 <p style={{ fontSize: 15, color: "#515154", maxWidth: 420, margin: "0 auto", lineHeight: 1.6 }}>
-                  We&apos;re building out our library on enterprise revenue cycle management, credentialing, and back-office operations. Check back soon — or{" "}
+                  We&apos;re building out our library on revenue cycle management, credentialing, and back-office operations for practices of every size. Check back soon — or{" "}
                   <Link href="/contact" style={{ color: "#0f2b46", fontWeight: 600, textDecoration: "none" }}>
                     talk to our team
                   </Link>{" "}

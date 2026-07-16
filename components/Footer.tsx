@@ -36,8 +36,8 @@ export default function Footer() {
               Med<span style={{ color: "#17a673" }}>BPO360</span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.6, maxWidth: 220 }}>
-              Revenue cycle management and back-office outsourcing built to
-              scale — from growing practices to health systems.
+              Revenue cycle management and back-office outsourcing sized to
+              fit you — from solo practices to health systems.
             </p>
           </div>
 
@@ -128,7 +128,7 @@ export default function Footer() {
             </div>
             <div style={{ marginTop: 20 }}>
               <div style={{ fontSize: 12, color: "#3a3a3f", lineHeight: 1.6 }}>
-                4100 W Alameda Ave<br />Burbank, CA 91505<br />Serving health systems nationwide
+                4100 W Alameda Ave<br />Burbank, CA 91505<br />Serving practices of every size nationwide
               </div>
             </div>
           </div>

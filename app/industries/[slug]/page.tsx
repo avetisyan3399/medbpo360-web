@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title: o.metaTitle,
     description: o.metaDescription,
-    keywords: [o.keyword, "medbpo360", "enterprise RCM"],
+    keywords: [o.keyword, "medbpo360"],
     openGraph: {
       title: o.metaTitle,
       description: o.metaDescription,

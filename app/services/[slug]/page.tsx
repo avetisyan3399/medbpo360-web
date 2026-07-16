@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title: s.metaTitle,
     description: s.metaDescription,
-    keywords: [s.keyword, "medical billing", "enterprise RCM", "medbpo360"],
+    keywords: [s.keyword, "medical billing", "medbpo360"],
     openGraph: {
       title: s.metaTitle,
       description: s.metaDescription,
@@ -175,12 +175,12 @@ export default async function ServiceLandingPage({
               </p>
               <h2 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 700, letterSpacing: "-1.5px", color: "#0a0a0f", lineHeight: 1.1, marginBottom: 20 }}>
                 {s.name}.<br />
-                <span style={{ color: "#17a673" }}>Run at scale.</span>
+                <span style={{ color: "#17a673" }}>Sized to fit you.</span>
               </h2>
               <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 32 }}>
                 <strong style={{ color: "#0a0a0f" }}>No long-term contracts required.</strong>{" "}
                 <strong style={{ color: "#0a0a0f" }}>A dedicated implementation team,</strong> not a single account manager split across dozens of clients.{" "}
-                <strong style={{ color: "#0a0a0f" }}>Full transparency through your client portal</strong> — every claim, every credentialing status, visible at all times, no black box. We handle {s.name.toLowerCase()} end-to-end — across every site.
+                <strong style={{ color: "#0a0a0f" }}>Full transparency through your client portal</strong> — every claim, every credentialing status, visible at all times, no black box. We handle {s.name.toLowerCase()} end-to-end, for your practice.
               </p>
               <Link href="/contact" style={{
                 display: "inline-block", padding: "14px 28px",

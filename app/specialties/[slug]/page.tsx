@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title: s.metaTitle,
     description: s.metaDescription,
-    keywords: [s.keyword, "medbpo360", "enterprise RCM"],
+    keywords: [s.keyword, "medbpo360"],
     openGraph: {
       title: s.metaTitle,
       description: s.metaDescription,
@@ -120,7 +120,7 @@ export default async function SpecialtyPage({
                 Common Challenges
               </p>
               <h2 style={{ fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 700, letterSpacing: "-1.5px", color: "#0a0a0f", lineHeight: 1.1 }}>
-                Where {s.name.toLowerCase()} networks lose revenue
+                Where {s.name.toLowerCase()} practices lose revenue
               </h2>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
@@ -148,7 +148,7 @@ export default async function SpecialtyPage({
               </p>
               <h2 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 700, letterSpacing: "-1.5px", color: "#0a0a0f", lineHeight: 1.1, marginBottom: 20 }}>
                 {s.name}.<br />
-                <span style={{ color: "#17a673" }}>Done right, at scale.</span>
+                <span style={{ color: "#17a673" }}>Done right, at any size.</span>
               </h2>
               <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 32 }}>
                 Specialty-specific coding expertise backed by a dedicated implementation team and full transparency through your client portal.

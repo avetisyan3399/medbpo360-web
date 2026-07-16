@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "medbpo360 — Enterprise Medical Billing, RCM & BPO Outsourcing";
+export const alt = "medbpo360 — Medical Billing, RCM & BPO Outsourcing";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -35,7 +35,7 @@ export default function Image() {
               color: "#ffffff",
             }}
           >
-            Revenue cycle that scales with you.
+            Revenue cycle sized to fit you.
           </div>
           <div
             style={{
@@ -47,7 +47,7 @@ export default function Image() {
               maxWidth: 780,
             }}
           >
-            Standardized billing, credentialing, and back-office outsourcing for growing practices, MSOs, and health systems.
+            Standardized billing, credentialing, and back-office outsourcing for solo practices, MSOs, and health systems alike.
           </div>
         </div>
 

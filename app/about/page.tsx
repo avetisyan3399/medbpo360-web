@@ -4,20 +4,20 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | Enterprise Medical Billing & BPO Outsourcing",
+  title: "About Us | Medical Billing & BPO Outsourcing",
   description:
-    "medbpo360 is a medical billing, credentialing, and back-office outsourcing partner built to scale — for growing multi-provider practices, MSOs, and health systems nationwide.",
+    "medbpo360 is a medical billing, credentialing, and back-office outsourcing partner for medical practices of any size — solo providers and small practices, MSOs, and health systems nationwide.",
   keywords: [
     "about medbpo360",
-    "enterprise medical billing company",
+    "medical billing company",
     "health system RCM partner",
     "MSO billing partner",
     "medical BPO company",
   ],
   openGraph: {
-    title: "About medbpo360 | Built for Scale",
+    title: "About medbpo360 | Sized to Fit You",
     description:
-      "Standardized billing, credentialing, and back-office outsourcing for health systems and large medical groups nationwide.",
+      "Standardized billing, credentialing, and back-office outsourcing for medical practices of any size, from solo providers to health systems nationwide.",
     url: "https://medbpo360.com/about",
   },
   alternates: {
@@ -43,33 +43,33 @@ const whyUs = [
   },
   {
     icon: "🏗️",
-    title: "Built for Growth, Not Just Maintenance",
+    title: "Built for Any Stage, Growth or Not",
     description:
-      "New site opening, acquisition closing, roster expanding — our onboarding playbooks are built to absorb growth without a revenue dip.",
+      "A new site opening, an acquisition closing, a roster expanding, or simply a practice that wants better systems without changing size at all — our onboarding playbooks fit all of it without a revenue dip.",
   },
   {
     icon: "📊",
-    title: "Executive-Ready Reporting",
+    title: "Reporting That Fits the Reader",
     description:
-      "Dashboards built for a CFO or board meeting, not a solo practitioner — site-by-site performance, denial patterns, and roster-level status.",
+      "Dashboards built to be genuinely useful — whether that's a solo practitioner checking collections or a CFO reviewing site-by-site performance, denial patterns, and roster-level status for a board meeting.",
   },
   {
     icon: "🔍",
     title: "Full Operational Transparency",
     description:
-      "Every claim, every credentialing status, every call log — visible in your portal at all times. No black boxes, even at scale.",
+      "Every claim, every credentialing status, every call log — visible in your portal at all times. No black boxes, at any size.",
   },
   {
     icon: "🤝",
     title: "Healthcare-Exclusive Focus",
     description:
-      "We work exclusively with healthcare organizations — from growing multi-provider practices to full health systems. We understand the operational complexity that comes with scale, at every stage of it.",
+      "We work exclusively with healthcare organizations — from solo practitioners and small independent practices to MSOs, PE-backed groups, and full health systems. We understand the operational complexity at every size, not just the largest ones.",
   },
   {
     icon: "🔒",
-    title: "HIPAA Compliant at Volume",
+    title: "HIPAA Compliant, Any Volume",
     description:
-      "Enterprise-grade security and access controls across every operation we run — call center, claims processing, and credentialing alike.",
+      "The same security and access controls across every operation we run — call center, claims processing, and credentialing alike — regardless of your practice size.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function AboutPage() {
               margin: "0 auto 24px",
             }}
           >
-            Built to scale
+            Sized to fit you,
             <br />
             <span style={{ color: "#17a673" }}>wherever you start.</span>
           </h1>
@@ -128,8 +128,8 @@ export default function AboutPage() {
           >
             medbpo360 is the sister company to medbillytics — same
             healthcare revenue cycle expertise, built around standardized
-            systems and reporting that work for a 15-provider group and a
-            multi-facility health system alike.
+            systems and reporting that work for a solo provider, a
+            15-provider group, and a multi-facility health system alike.
           </p>
         </section>
 

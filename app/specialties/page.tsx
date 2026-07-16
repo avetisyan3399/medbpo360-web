@@ -5,20 +5,20 @@ import Footer from "@/components/Footer";
 import { specialties } from "@/lib/specialties";
 
 export const metadata: Metadata = {
-  title: "Specialties We Bill | Enterprise Medical Billing by Specialty",
+  title: "Specialties We Bill | Medical Billing by Specialty",
   description:
-    "medbpo360 provides enterprise-scale billing expertise across behavioral health, primary care, cardiology, multi-specialty groups, and labs & diagnostics.",
+    "medbpo360 provides specialty-specific billing expertise across behavioral health, primary care, cardiology, multi-specialty practices, and labs & diagnostics — for practices of any size.",
   keywords: [
-    "behavioral health billing enterprise",
-    "primary care group billing",
-    "cardiology group billing",
+    "behavioral health billing outsourcing",
+    "primary care billing outsourcing",
+    "cardiology billing outsourcing",
     "multi specialty billing outsourcing",
     "lab billing outsourcing",
   ],
   openGraph: {
     title: "Specialties We Bill | medbpo360",
     description:
-      "Specialty-specific billing expertise built for networks and groups running at enterprise volume.",
+      "Specialty-specific billing expertise built for practices of any size, from solo providers to multi-site groups.",
     url: "https://medbpo360.com/specialties",
   },
   alternates: {
@@ -50,10 +50,10 @@ export default function SpecialtiesPage() {
             maxWidth: 780, margin: "0 auto 24px",
           }}>
             Specialty depth,
-            <br /><span style={{ color: "#17a673" }}>at enterprise volume.</span>
+            <br /><span style={{ color: "#17a673" }}>at any size.</span>
           </h1>
           <p style={{ fontSize: 18, color: "#515154", maxWidth: 560, margin: "0 auto", lineHeight: 1.65 }}>
-            Every specialty codes differently. We staff the expertise to get it right — across every provider in your network.
+            Every specialty codes differently. We staff the expertise to get it right — whether you're a solo provider or a multi-site practice.
           </p>
         </section>
 

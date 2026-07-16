@@ -17,12 +17,12 @@ export const orgTypes: OrgType[] = [
   {
     slug: "growing-practices",
     name: "Independent & Growing Practices",
-    tagline: "Where the growth story starts",
-    headline: "RCM & Back-Office Support for Independent and Growing Practices",
+    tagline: "Standardized systems, sized to fit you",
+    headline: "RCM & Back-Office Support for Independent Practices",
     subheadline:
-      "Standardized billing, credentialing, and reporting systems — sized right for a single practice today, ready to scale with you tomorrow.",
+      "Standardized billing, credentialing, and reporting systems — sized right for a single practice today, whether you're planning to grow or planning to stay exactly this size.",
     description:
-      "You don't need to be a health system to benefit from standardized revenue cycle systems. Independent and growing practices get the same clean-claim discipline, credentialing tracking, and executive-style reporting we build for our largest clients — scaled to a team and price point that fits where you are now. Many of our multi-site engagements started here.",
+      "You don't need to be a health system to benefit from standardized revenue cycle systems. Independent practices get the same clean-claim discipline, credentialing tracking, and executive-style reporting we build for our largest clients — scaled to a team and price point that fits where you are now. That's true whether you're aiming to add locations down the line or you're perfectly happy staying a single, independent practice indefinitely — either way, you get systems built for accuracy, not for a growth trajectory you may not want.",
     challenges: [
       {
         title: "Small teams wear too many hats",

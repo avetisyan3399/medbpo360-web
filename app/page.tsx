@@ -4,21 +4,20 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
+  title: "medbpo360 | Medical Billing, RCM & BPO Outsourcing",
   description:
-    "Enterprise-scale medical billing, credentialing, and back-office outsourcing for health systems, MSOs, and large medical groups. Standardized processes, executive reporting, built to scale.",
+    "Medical billing, credentialing, and back-office outsourcing for medical practices of any size, from solo providers to multi-site health systems. Standardized processes, transparent reporting.",
   keywords: [
-    "enterprise medical billing outsourcing",
-    "health system revenue cycle management",
-    "MSO billing outsourcing",
-    "bulk provider credentialing services",
+    "medical billing outsourcing",
+    "medical practice revenue cycle management",
+    "provider credentialing services",
     "medical BPO services",
     "back office outsourcing healthcare",
   ],
   openGraph: {
-    title: "medbpo360 | Enterprise Medical Billing, RCM & BPO Outsourcing",
+    title: "medbpo360 | Medical Billing, RCM & BPO Outsourcing",
     description:
-      "Standardized billing, credentialing, and back-office outsourcing built for health systems and large medical groups — with executive-level reporting.",
+      "Standardized billing, credentialing, and back-office outsourcing built for medical practices of any size — with transparent, clear reporting.",
     url: "https://medbpo360.com",
   },
   alternates: {
@@ -184,7 +183,7 @@ export default function Home() {
                 width: 7, height: 7, borderRadius: "50%",
                 background: "#17a673", display: "inline-block",
               }} />
-              Medical Billing, RCM & BPO · Built to Scale
+              Medical Billing, RCM & BPO · Sized to Fit You
             </div>
 
             <h1
@@ -205,7 +204,7 @@ export default function Home() {
                 background: "linear-gradient(135deg, #0f2b46, #17a673)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-              }}>that scales with you.</span>
+              }}>sized to fit you.</span>
             </h1>
 
             <p
@@ -220,10 +219,10 @@ export default function Home() {
               }}
             >
               Standardized billing, credentialing, and back-office operations
-              that scale with you — from a growing multi-provider practice
-              to a multi-facility health system — with a dedicated
-              implementation team and reporting built for your leadership,
-              not just your front desk.
+              built to fit your practice — whether you're a solo provider,
+              a small group, or a multi-facility health system — with a
+              dedicated implementation team and reporting that's clear and
+              transparent, not just for the front desk.
             </p>
 
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
@@ -265,9 +264,9 @@ export default function Home() {
               justifyContent: "center", marginTop: 44,
             }}>
               {[
-                "Growing Practices","Health Systems","MSOs & PE-Backed Groups","ASCs",
-                "Multi-Site Groups","Hospital-Based Groups","Behavioral Health",
-                "Primary Care","Cardiology","Labs & Diagnostics","And more",
+                "Solo Practices","Small Practices","Multi-Site Groups","MSOs & PE-Backed Groups",
+                "ASCs","Health Systems","Behavioral Health","Primary Care","Cardiology",
+                "Labs & Diagnostics","And more",
               ].map((t) => (
                 <span key={t} style={{
                   padding: "5px 13px",
@@ -299,10 +298,10 @@ export default function Home() {
               boxShadow: "0 8px 40px rgba(0,0,0,0.08)",
             }}>
               {[
-                { value: "40+", label: "Provider Rosters Managed", color: "#0f2b46" },
+                { value: "1 to 40+", label: "Providers Supported, Any Size", color: "#0f2b46" },
                 { value: "24/7", label: "Call Center Coverage Available", color: "#17a673" },
                 { value: "90d", label: "New-Site Onboarding Window", color: "#0f2b46" },
-                { value: "100%", label: "Executive-Level Reporting", color: "#17a673" },
+                { value: "100%", label: "Transparent Client Reporting", color: "#17a673" },
               ].map(({ value, label, color }, i) => (
                 <div key={label} style={{
                   padding: "36px 28px",
@@ -370,19 +369,19 @@ export default function Home() {
                 href="/services/medical-billing-rcm"
                 icon="📊"
                 title="Medical Billing & RCM"
-                description="Full-cycle revenue cycle management standardized across every site, with executive dashboards built for leadership."
+                description="Full-cycle revenue cycle management standardized to your practice, with clear reporting you can actually use."
               />
               <ServiceCard
                 href="/services/credentialing-enrollment"
                 icon="🏥"
                 title="Credentialing & Payer Enrollment"
-                description="Bulk roster credentialing and enrollment across every payer — with real-time visibility into who's billable and who isn't."
+                description="Credentialing and enrollment across every payer — from a single provider to a full roster — with real-time visibility into who's billable and who isn't."
               />
               <ServiceCard
                 href="/services/bpo-back-office"
                 icon="⚙️"
-                title="Full-Scale BPO / Back-Office"
-                description="Claims processing, denial management, and administrative staffing that flexes with your volume and growth."
+                title="Back-Office Outsourcing"
+                description="Claims processing, denial management, and administrative support that flexes with your volume, whatever your size."
               />
             </div>
           </div>
@@ -401,7 +400,7 @@ export default function Home() {
                 marginBottom: 16,
               }}
             >
-              Wherever You&apos;re Starting
+              Whatever Your Practice Looks Like
             </p>
             <h2
               style={{
@@ -413,18 +412,20 @@ export default function Home() {
                 marginBottom: 20,
               }}
             >
-              Built to scale. Not built to gatekeep.
+              Sized to fit you. Not built to gatekeep.
             </h2>
             <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 8 }}>
-              Whether you&apos;re a 12-provider group standardizing billing
-              for the first time or a health system running dozens of
-              facilities, the same systems apply — we just calibrate the
-              team to match. Many of our health system engagements started
-              as a single growing practice.
+              Whether you&apos;re a solo provider handling billing yourself
+              for the first time, a small practice with no plans to grow
+              any bigger, a multi-site group, an MSO integrating acquisitions,
+              or a health system running dozens of facilities, the same
+              systems apply — we just calibrate the team to match your
+              practice as it is today.
             </p>
             <p style={{ fontSize: 16, color: "#515154", lineHeight: 1.75, marginBottom: 32 }}>
-              If you&apos;re not sure you&apos;re &ldquo;big enough&rdquo;
-              yet, that&apos;s exactly the right time to talk to us.
+              You don&apos;t need to be scaling up to be a fit. Staying
+              exactly the size you are is a perfectly good reason to want
+              billing handled well.
             </p>
             <Link
               href="/contact"
@@ -484,7 +485,7 @@ export default function Home() {
                   marginBottom: 20,
                 }}
               >
-                Built for scale.
+                Sized to fit you.
                 <br />
                 <span style={{ color: "#17a673" }}>
                   Run by a real team.
@@ -498,11 +499,11 @@ export default function Home() {
                   marginBottom: 32,
                 }}
               >
-                Whether you&apos;re a 12-provider practice or a health
-                system, you get a dedicated implementation team — not a
-                single account manager split across dozens of clients —
-                with standardized processes across every site and reporting
-                that speaks to a CFO, not just a front desk.
+                Whether you&apos;re a solo practice or a multi-site group,
+                you get a dedicated implementation team — not a single
+                account manager split across dozens of clients — with
+                standardized processes and reporting that's clear enough
+                for whoever's actually reading it, front desk or CFO.
               </p>
               <Link
                 href="/contact"
@@ -529,18 +530,18 @@ export default function Home() {
               />
               <Feature
                 icon="🏗️"
-                title="Built for Roll-Up Growth"
-                description="Acquiring a practice or opening a new site? We run a repeatable onboarding playbook so revenue doesn't dip during the transition."
+                title="Repeatable Onboarding"
+                description="Adding a provider, opening a new site, switching billing partners for the first time, or integrating an acquired practice into a roll-up — we run a repeatable playbook so revenue doesn't dip during the transition."
               />
               <Feature
                 icon="📈"
-                title="Executive-Level Reporting"
-                description="Dashboards built for a CFO or COO — site-by-site performance, denial patterns, and roster-level credentialing status."
+                title="Clear, Transparent Reporting"
+                description="Dashboards built to actually be read — performance, denial patterns, and credentialing status, whether you're checking it yourself or handing it to a CFO."
               />
               <Feature
                 icon="🔒"
-                title="HIPAA-Compliant at Volume"
-                description="Enterprise-grade security and access controls across every operation, from call center to claims processing."
+                title="HIPAA-Compliant, Any Volume"
+                description="The same security and access controls across every operation, from call center to claims processing, regardless of your practice size."
               />
             </div>
           </div>
@@ -679,7 +680,7 @@ export default function Home() {
                 lineHeight: 1.1,
               }}
             >
-              Built to onboard at scale.
+              Onboarding sized to fit you.
             </h2>
 
             <div
@@ -693,17 +694,17 @@ export default function Home() {
                 {
                   step: "01",
                   title: "Assessment & Roadmap",
-                  desc: "We audit your current revenue cycle across every site and build a standardization roadmap tailored to your structure.",
+                  desc: "We audit your current revenue cycle and build a standardization roadmap tailored to your practice, whatever its size.",
                 },
                 {
                   step: "02",
                   title: "Implementation Sprint",
-                  desc: "A dedicated implementation team onboards your rosters, payers, and workflows — following a repeatable playbook, not a blank slate.",
+                  desc: "A dedicated implementation team onboards your providers, payers, and workflows — following a repeatable playbook, not a blank slate.",
                 },
                 {
                   step: "03",
                   title: "Operate & Report",
-                  desc: "Ongoing operations run against your standard, with executive dashboards tracking performance across every site.",
+                  desc: "Ongoing operations run against your standard, with clear dashboards tracking performance the whole time.",
                 },
               ].map(({ step, title, desc }) => (
                 <div
@@ -766,7 +767,7 @@ export default function Home() {
               marginBottom: 20,
             }}
           >
-            Ready to scale your back office?
+            Ready to fix your back office?
           </h2>
           <p
             style={{
@@ -777,9 +778,9 @@ export default function Home() {
               lineHeight: 1.55,
             }}
           >
-            Let&apos;s talk about your organization. We&apos;ll show you
-            exactly how we&apos;d standardize your revenue cycle across
-            every site.
+            Let&apos;s talk about your practice. We&apos;ll show you
+            exactly how we&apos;d standardize your revenue cycle, at
+            whatever size you're running today.
           </p>
           <Link
             href="/contact"
