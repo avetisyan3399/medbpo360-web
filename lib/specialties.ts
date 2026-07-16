@@ -17,10 +17,10 @@ export const specialties: Specialty[] = [
   {
     slug: "behavioral-health",
     name: "Behavioral Health",
-    tagline: "Mental health & substance use billing, done right",
-    headline: "Behavioral Health Billing Services",
+    tagline: "Full practice support for behavioral health providers",
+    headline: "Behavioral Health Practice Support",
     subheadline:
-      "Carve-out routing, authorization tracking, and telehealth compliance for behavioral health and substance use providers of any size.",
+      "Billing, credentialing, call center, and back-office support built for behavioral health and substance use providers of any size.",
     description:
       "Behavioral health billing is complex regardless of how many providers you have — MBHO carve-outs to route correctly, authorization limits to track per patient, telehealth compliance rules that vary by state. Whether you're a solo therapist, a small group practice, or a multi-site provider, we bring the systems to manage that complexity so it doesn't fall on you or an overstretched front desk.",
     challenges: [
@@ -58,10 +58,10 @@ export const specialties: Specialty[] = [
   {
     slug: "primary-care",
     name: "Primary Care",
-    tagline: "High-volume primary care billing, standardized",
-    headline: "Primary Care Billing Services",
+    tagline: "Every service a primary care practice needs, in one place",
+    headline: "Primary Care Practice Support",
     subheadline:
-      "E/M optimization, AWV and CCM revenue capture, and consistent coding for primary care practices of any size.",
+      "Billing, credentialing, call center, and back-office support built for primary care practices of any size.",
     description:
       "Primary care sees the highest claim volume of any specialty, which means small per-claim inefficiencies add up fast — whether you're a solo practitioner or a multi-provider group. We standardize E/M coding accuracy, AWV and CCM capture, and documentation review so no provider is leaving revenue on the table, regardless of how many providers you have.",
     challenges: [
@@ -99,10 +99,10 @@ export const specialties: Specialty[] = [
   {
     slug: "cardiology",
     name: "Cardiology",
-    tagline: "High-value procedural billing, done precisely",
-    headline: "Cardiology Billing Services",
+    tagline: "Full practice support, from billing to back office",
+    headline: "Cardiology Practice Support",
     subheadline:
-      "Authorization management, modifier compliance, and device/procedure billing for cardiology practices of any size.",
+      "Billing, credentialing, call center, and back-office support built for cardiology practices of any size.",
     description:
       "Cardiology is one of the highest-reimbursing specialties and one of the most heavily scrutinized — which means getting authorization, modifier, and global-vs-professional billing right matters just as much for a solo cardiologist as it does for a multi-site group. We bring cardiology-specific billing expertise to practices running interventional, diagnostic, and device volume, whatever your size.",
     challenges: [
@@ -140,10 +140,10 @@ export const specialties: Specialty[] = [
   {
     slug: "multi-specialty-groups",
     name: "Multi-Specialty Groups",
-    tagline: "One billing partner, every specialty under your roof",
-    headline: "Billing & RCM for Multi-Specialty Practices",
+    tagline: "One partner, every service, every specialty under your roof",
+    headline: "Practice Support for Multi-Specialty Groups",
     subheadline:
-      "Specialty-specific coding expertise unified under one standardized billing operation, whether you run two departments or a dozen.",
+      "Billing, credentialing, call center, and back-office support unified across every department, whether you run two specialties or a dozen.",
     description:
       "Multi-specialty practices need billing accuracy that flexes across different coding rules — a cardiology procedure, a behavioral health session, and a lab test all follow different logic — while still rolling up into one coherent revenue cycle operation. That's true for a small practice with two specialties under one roof just as much as a larger group. We staff specialty-specific expertise within a single, standardized billing operation sized to fit your practice.",
     challenges: [
@@ -181,10 +181,10 @@ export const specialties: Specialty[] = [
   {
     slug: "laboratory-diagnostics",
     name: "Labs & Diagnostics",
-    tagline: "PAMA-compliant billing, at any test volume",
-    headline: "Laboratory & Diagnostics Billing Services",
+    tagline: "Full practice support for labs and diagnostic centers",
+    headline: "Laboratory & Diagnostics Practice Support",
     subheadline:
-      "PAMA rates, LCD compliance, and ABN management for independent labs and diagnostic providers of any size.",
+      "Billing, credentialing, call center, and back-office support for independent labs and diagnostic providers of any size.",
     description:
       "Lab billing runs on a fundamentally different regulatory framework — PAMA fee schedules, Local Coverage Determinations, and CLIA compliance — and getting it wrong carries real financial risk whether you're running a single reference lab or a multi-site diagnostic network. We bring lab-specific billing expertise built to fit your test volume and testing relationships, not a one-size-fits-enterprise model.",
     challenges: [
