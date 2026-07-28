@@ -5,6 +5,8 @@ import { orgTypes } from "@/lib/org-types";
 import { servicePages } from "@/lib/service-pages";
 import { specialtyServicePages } from "@/lib/specialty-service-pages";
 
+export const revalidate = 3600;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://medbpo360.com";
   const now = new Date();
