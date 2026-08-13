@@ -9,7 +9,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/client/", "/staff/", "/api/"],
       },
     ],
-    sitemap: "https://medbpo360.com/sitemap.xml",
+    sitemap: [
+      "https://medbpo360.com/sitemap.xml",
+      "https://medbpo360.com/sitemap-index.xml",
+    ],
     host: "https://medbpo360.com",
   };
 }
