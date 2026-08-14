@@ -12,6 +12,7 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: [
       "https://medbpo360.com/sitemap.xml",
       "https://medbpo360.com/sitemap-index.xml",
+      "https://medbpo360.com/sitemap-static.xml",
     ],
     host: "https://medbpo360.com",
   };
