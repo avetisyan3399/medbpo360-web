@@ -27,6 +27,12 @@ export async function generateMetadata({
       url: `https://medbpo360.com/blog/${slug}`,
       type: "article",
     },
+    // Without these, X pairs the post's own image with the site-wide
+    // title/description inherited from the root layout.
+    twitter: {
+      title: post.title,
+      description: post.excerpt,
+    },
     alternates: { canonical: `https://medbpo360.com/blog/${slug}` },
   };
 }
