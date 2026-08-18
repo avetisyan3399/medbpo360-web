@@ -274,7 +274,11 @@ The page needs an audience before the content queue means anything.
 3. **Ask anyone on the team to list medbpo360 as their employer** — *with the anonymity caveat below.*
 4. **Notify followers on post #0** and pin it.
 
-> **Anonymity note.** Page admins are not shown publicly on LinkedIn, so administering and posting as the page is compatible with staying personally anonymous. What *is* public is the "Associated members" list — anyone who lists medbpo360 as their current employer on their personal profile appears there. So: don't add medbpo360 to your own profile's experience section if the goal is to stay off the record. Inviting connections to follow the page is sent from the page, not from your profile, and is fine.
+> **Anonymity note — revised 2026-08-18.** Page admins are not shown publicly on either LinkedIn or Facebook, so administering and posting as the page never exposes anyone. The owner has since listed medbpo360 on their personal LinkedIn profile under the title **Account Executive** rather than owner. That is a deliberate shift in goal: from "nobody knows I'm connected to medbpo360" to "nobody knows I'm the owner." It is the better trade for a services business — a vendor handling practices' revenue with no identifiable humans reads as a shell, and a named client-facing contact is reassuring rather than risky. It also makes follower invites natural, since an account executive inviting relevant contacts is expected behavior.
+>
+> The exposure that actually matters is not social media. State business filings routinely publish LLC officers, managers, and registered agents; domain WHOIS publishes registrant details unless privacy-protected. Neither is fixed by a job title — check those directly. The site itself is clean: no personal identifiers in source, and every blog byline is "medbpo360 Team" (verified 2026-08-18).
+>
+> The one real cost: if a client later learns the account executive is the owner, that reads as a small deception, and this is a trust business. It isn't fabrication — plenty of owners do sales, and the title describes real work — but don't deny it if asked directly.
 
 ### 6c. Engage as the page, not just from it
 
