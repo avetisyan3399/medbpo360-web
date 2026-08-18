@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
 import { GTM_ID } from "@/lib/analytics";
+import { socialUrls } from "@/lib/social";
 
 export const metadata: Metadata = {
   title: {
@@ -75,6 +76,7 @@ export default function RootLayout({
               description:
                 "Medical billing, credentialing, and back-office outsourcing for medical practices of any size, from solo providers to health systems.",
               url: "https://medbpo360.com",
+              ...(socialUrls.length > 0 && { sameAs: socialUrls }),
               telephone: "+13233326768",
               email: "info@medbpo360.com",
               address: {
