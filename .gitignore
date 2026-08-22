@@ -42,3 +42,21 @@ next-env.d.ts
 
 # claude code — machine-local permissions
 .claude/settings.local.json
+
+# ---------------------------------------------------------------
+# PHI / PROTECTED HEALTH INFORMATION — NEVER COMMIT
+# Automation output may contain patient names, DOB, DOS, claim
+# numbers, and payment detail. This repo is a public-facing
+# marketing site. PHI must never enter its history.
+# ---------------------------------------------------------------
+auto_post*.txt
+auto_post*.log
+*_reconciliation.xlsx
+*reconciliation*.xlsx
+*.log
+logs/
+phi/
+patients/
+era/
+*.era
+*.835
