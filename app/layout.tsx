@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
+import LinkedInInsight from "@/components/LinkedInInsight";
 import { GTM_ID } from "@/lib/analytics";
 import { socialUrls } from "@/lib/social";
 
@@ -116,6 +117,7 @@ export default function RootLayout({
           </noscript>
         )}
         {children}
+        <LinkedInInsight />
       </body>
     </html>
   );

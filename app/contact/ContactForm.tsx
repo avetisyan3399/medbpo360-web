@@ -4,6 +4,7 @@ import { useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { trackEvent } from "@/lib/analytics";
+import { trackLinkedInConversion, LINKEDIN_CONVERSIONS } from "@/lib/linkedin";
 
 const services = [
   "Call Center Services",
@@ -79,6 +80,7 @@ export default function ContactForm() {
       });
       if (!res.ok) throw new Error("Failed");
       trackEvent("contact_form_submit", { service: form.service, orgType: form.orgType });
+      trackLinkedInConversion(LINKEDIN_CONVERSIONS.contactFormSubmit);
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please email us directly at info@medbpo360.com");
