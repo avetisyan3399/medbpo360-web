@@ -2,7 +2,18 @@ import { Resend } from "resend";
 import { NextResponse } from "next/server";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Built on first use rather than at module load: constructing this with no key
+// throws, which would take down the whole route — including the cheap rejections
+// above it — instead of failing one request with something the visitor can act on.
+let resendClient: Resend | null | undefined;
+
+function getResend(): Resend | null {
+  if (resendClient === undefined) {
+    const key = process.env.RESEND_API_KEY;
+    resendClient = key ? new Resend(key) : null;
+  }
+  return resendClient;
+}
 
 function escapeHtml(value: unknown): string {
   return String(value ?? "")
@@ -95,6 +106,19 @@ export async function POST(request: Request) {
   const invalid = validate(phone, email);
   if (invalid) {
     return NextResponse.json({ error: invalid }, { status: 400 });
+  }
+
+  const resend = getResend();
+  if (!resend) {
+    // Log enough to chase the lead by hand; the visitor must not just hit a wall.
+    console.error(
+      "Contact form: RESEND_API_KEY is not set — inquiry NOT delivered. Follow up manually.",
+      { organization, email, phone },
+    );
+    return NextResponse.json(
+      { error: "We couldn't send your message right now. Please email us directly at info@medbpo360.com." },
+      { status: 503 },
+    );
   }
 
   const { error } = await resend.emails.send({
