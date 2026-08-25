@@ -131,6 +131,7 @@ export default function Footer() {
               { label: "Specialties", href: "/specialties" },
               { label: "Blog", href: "/blog" },
               { label: "Contact", href: "/contact" },
+              { label: "Privacy Policy", href: "/privacy" },
             ].map(({ label, href }) => (
               <div key={label} style={{ marginBottom: 10 }}>
                 <Link href={href} style={{ fontSize: 13, color: "#86868b", textDecoration: "none" }}>
