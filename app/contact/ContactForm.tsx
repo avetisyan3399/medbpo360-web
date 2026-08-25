@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { trackEvent } from "@/lib/analytics";
@@ -109,6 +110,7 @@ const invalidInputStyle: React.CSSProperties = {
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "", organization: "", orgType: "", providerCount: "",
@@ -173,6 +175,9 @@ export default function ContactForm() {
       trackEvent("contact_form_submit", { service: form.service, orgType: form.orgType });
       trackLinkedInConversion(LINKEDIN_CONVERSIONS.contactFormSubmit);
       setSubmitted(true);
+      // replace, not push: going Back must not return to a filled-in form
+      // and tempt a duplicate submission.
+      router.replace("/contact/thank-you");
     } catch (err) {
       setError(
         err instanceof Error && err.message !== "Failed"
