@@ -19,6 +19,7 @@ export type Post = {
   readTime: string;
   relatedService?: string;
   relatedSpecialty?: string;
+  relatedIndustry?: string;
   content?: string;
 };
 
@@ -46,6 +47,7 @@ export function getAllPosts(): Post[] {
       readTime: data.readTime ?? "5 min read",
       relatedService: data.relatedService ?? undefined,
       relatedSpecialty: data.relatedSpecialty ?? undefined,
+      relatedIndustry: data.relatedIndustry ?? undefined,
     } as Post;
   });
 
@@ -79,6 +81,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     readTime: data.readTime ?? "5 min read",
     relatedService: data.relatedService ?? undefined,
     relatedSpecialty: data.relatedSpecialty ?? undefined,
+    relatedIndustry: data.relatedIndustry ?? undefined,
     content: processed.toString(),
   };
 }
@@ -95,4 +98,8 @@ export function getPostsForService(slug: string): Post[] {
 
 export function getPostsForSpecialty(slug: string): Post[] {
   return getAllPosts().filter((p) => p.relatedSpecialty === slug);
+}
+
+export function getPostsForIndustry(slug: string): Post[] {
+  return getAllPosts().filter((p) => p.relatedIndustry === slug);
 }

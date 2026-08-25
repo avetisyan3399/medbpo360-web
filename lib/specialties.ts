@@ -219,6 +219,53 @@ export const specialties: Specialty[] = [
       "PAMA-compliant billing, LCD compliance, and ABN management for independent labs and diagnostic providers of any size.",
     keyword: "diagnostic laboratory billing outsourcing",
   },
+  {
+    slug: "gastroenterology",
+    name: "Gastroenterology",
+    tagline: "Full practice support for gastroenterology and endoscopy",
+    headline: "Gastroenterology Practice Support",
+    subheadline:
+      "Billing, credentialing, call center, and back-office support built for gastroenterology practices and endoscopy centers of any size.",
+    description:
+      "Gastroenterology billing turns on distinctions most specialties never face — whether a colonoscopy stayed screening or became diagnostic, which modifier that requires for which payer, and whether the surveillance interval a payer covers matches the one the physician recommended. Get those wrong and you either bill a patient who was promised a no-cost screening or write off a procedure that was reimbursable. Whether you're a solo gastroenterologist, a group with an endoscopy suite, or a practice with its own ASC, we bring the coding discipline those distinctions require.",
+    challenges: [
+      {
+        title: "Screening colonoscopies that become diagnostic are the most common coding failure in GI",
+        body: "A screening colonoscopy where a polyp is removed is no longer purely preventive, and the correct handling differs by payer — modifier PT for Medicare, modifier 33 for many commercial plans. Coding it wrong shifts cost-sharing onto a patient who was told the screening was covered, which produces both a refund and a complaint.",
+      },
+      {
+        title: "Endoscopy bundling edits punish imprecise coding of multi-technique sessions",
+        body: "A single session may involve biopsy, snare polypectomy, and ablation. NCCI edits govern which combinations are separately reportable and which require a distinct-procedural modifier. Defaulting to modifier 59 on everything invites audit exposure; omitting it entirely leaves revenue unbilled.",
+      },
+      {
+        title: "Anesthesia for endoscopy is denied more often than the procedure itself",
+        body: "Monitored anesthesia care for routine endoscopy sits in genuinely contested coverage territory, and policies vary by payer and by patient risk documentation. Practices that don't track denial patterns per payer keep resubmitting the same claim the same way.",
+      },
+      {
+        title: "Surveillance intervals and payer-covered intervals often disagree",
+        body: "A physician may recommend a three-year follow-up while the payer covers five. Verifying the covered interval before the procedure is scheduled — not after it's denied — is the difference between a conversation with the patient and a write-off.",
+      },
+    ],
+    included: [
+      "Screening-to-diagnostic conversion handling with correct modifier PT and 33 application by payer",
+      "Endoscopy bundling and NCCI edit review for multi-technique sessions",
+      "Anesthesia denial tracking and appeal by payer policy",
+      "Surveillance interval verification before scheduling, not after denial",
+      "Prior authorization for biologics and infusion therapy in IBD management",
+      "Facility and professional component coordination across office, endoscopy suite, and ASC settings",
+      "Pathology billing coordination for specimens sent to outside labs",
+      "Credentialing for both the practice and the endoscopy center or ASC",
+    ],
+    stats: [
+      { value: "Modifier-Level", label: "Screening vs Diagnostic Accuracy" },
+      { value: "Pre-Procedure", label: "Coverage Interval Verification" },
+      { value: "Any Size", label: "Solo to Practice-Owned ASC" },
+    ],
+    metaTitle: "Gastroenterology Billing Services",
+    metaDescription:
+      "Screening-to-diagnostic modifier handling, endoscopy bundling review, and anesthesia denial management for gastroenterology practices and endoscopy centers of any size.",
+    keyword: "gastroenterology billing outsourcing",
+  },
 ];
 
 export function getSpecialty(slug: string): Specialty | undefined {
