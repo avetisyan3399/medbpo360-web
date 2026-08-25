@@ -3,6 +3,35 @@ import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+function escapeHtml(value: unknown): string {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+// Phone numbers reach an href, so escaping is not enough — reduce the value to
+// the characters a tel: URI may contain and drop it entirely if nothing is left.
+function telHref(value: unknown): string | null {
+  const cleaned = String(value ?? "").replace(/[^0-9+#*,;]/g, "");
+  const digits = cleaned.replace(/[^0-9]/g, "");
+  if (digits.length < 7 || digits.length > 15) return null;
+  return `tel:${cleaned}`;
+}
+
+function mailtoHref(value: unknown): string | null {
+  const address = String(value ?? "").trim();
+  if (!/^[^\s@<>"'&]+@[^\s@<>"'&]+\.[^\s@<>"'&]+$/.test(address)) return null;
+  return `mailto:${address}`;
+}
+
+function linkOrText(href: string | null, label: unknown): string {
+  const text = escapeHtml(label);
+  return href ? `<a href="${escapeHtml(href)}">${text}</a>` : text;
+}
+
 export async function POST(request: Request) {
   const body = await request.json();
   const { name, organization, orgType, providerCount, phone, email, service, message } = body;
@@ -25,38 +54,38 @@ export async function POST(request: Request) {
         <table style="width: 100%; border-collapse: collapse;">
           <tr>
             <td style="padding: 8px 0; font-weight: bold; width: 160px; color: #515154;">Name</td>
-            <td style="padding: 8px 0;">${name}</td>
+            <td style="padding: 8px 0;">${escapeHtml(name)}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: bold; color: #515154;">Organization</td>
-            <td style="padding: 8px 0;">${organization}</td>
+            <td style="padding: 8px 0;">${escapeHtml(organization)}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: bold; color: #515154;">Organization Type</td>
-            <td style="padding: 8px 0;">${orgType || "—"}</td>
+            <td style="padding: 8px 0;">${orgType ? escapeHtml(orgType) : "—"}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: bold; color: #515154;">Provider Count</td>
-            <td style="padding: 8px 0;">${providerCount || "—"}</td>
+            <td style="padding: 8px 0;">${providerCount ? escapeHtml(providerCount) : "—"}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: bold; color: #515154;">Phone</td>
-            <td style="padding: 8px 0;"><a href="tel:${phone}">${phone}</a></td>
+            <td style="padding: 8px 0;">${linkOrText(telHref(phone), phone)}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: bold; color: #515154;">Email</td>
-            <td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td>
+            <td style="padding: 8px 0;">${linkOrText(mailtoHref(email), email)}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: bold; color: #515154;">Service Interest</td>
-            <td style="padding: 8px 0;">${service || "—"}</td>
+            <td style="padding: 8px 0;">${service ? escapeHtml(service) : "—"}</td>
           </tr>
         </table>
 
         ${message ? `
         <div style="margin-top: 20px; padding: 16px; background: #f5f5f7; border-radius: 8px; border-left: 3px solid #0f2b46;">
           <p style="font-weight: bold; color: #515154; margin: 0 0 8px;">Message:</p>
-          <p style="margin: 0; line-height: 1.6;">${message.replace(/\n/g, "<br>")}</p>
+          <p style="margin: 0; line-height: 1.6;">${escapeHtml(message).replace(/\n/g, "<br>")}</p>
         </div>
         ` : ""}
 
