@@ -54,17 +54,17 @@ One thing that changed the plan: a page with no posts also has essentially no fo
 | Mon 2026-08-31 | 6 | Small practice + call center partner | `/blog/small-practice-call-center-partner` |
 | Wed 2026-09-02 | 7 | CAQH/PECOS/Medicaid roadmap | `/blog/caqh-pecos-medicaid-credentialing-roadmap` |
 | Fri 2026-09-04 | 8 | Credentialing timelines for new locations | `/blog/credentialing-timelines-acquiring-practice-location` |
-| **Tue 2026-09-08** | 9 | What full-cycle RCM covers | `/blog/what-full-cycle-rcm-covers` |
-| Wed 2026-09-09 | 10 | What to outsource first | `/blog/what-to-outsource-first-back-office` |
-| Fri 2026-09-11 | 11 | Billing across multiple specialties | `/blog/multi-specialty-billing-complexity` |
+| Wed 2026-09-09 | 9 | What full-cycle RCM covers | `/blog/what-full-cycle-rcm-covers` |
+| Fri 2026-09-11 | 10 | What to outsource first | `/blog/what-to-outsource-first-back-office` |
+| **Mon 2026-09-14** | 11 | Billing across multiple specialties | `/blog/multi-specialty-billing-complexity` |
 
-*Mon 2026-09-07 is Labor Day — post #9 shifts to Tue 09-08, then back on rhythm.*
+*Mon 2026-09-07 is Labor Day. Revised 2026-08-25: rather than shifting #9 to Tuesday — which created a back-to-back Tue/Wed pair — the queue skips the holiday slot entirely and everything moves one slot later. Keeps a clean Mon/Wed/Fri rhythm and buys three more days before the queue empties. Buffer had #9 scheduled on 09-07 and was corrected to match.*
 
 All URLs are `https://medbpo360.com` + the path shown. Every one of these posts is already live on the blog, so the links work today.
 
 **Timing within the day:** aim for roughly 8–10am Pacific on posting days. This is a convention, not a law — after ~6 posts, check the page's own analytics (Analytics → Updates → impressions by post) and move the slot if the data says otherwise. Your own numbers beat any general "best time to post" advice.
 
-**After 2026-09-11:** the queue is empty. Steady state needs new blog posts to companion, which means the blog topic pipeline (already flagged P1 in the marketing audit) has to be restocked before mid-September or the LinkedIn cadence stalls again. Interim filler that needs no new blog post: re-angle an older post around a different stat, or comment on a real CMS/MGMA news item as it lands.
+**After 2026-09-14:** the queue is empty. Steady state needs new blog posts to companion, which means the blog topic pipeline (already flagged P1 in the marketing audit) has to be restocked before mid-September or the LinkedIn cadence stalls again. Interim filler that needs no new blog post: re-angle an older post around a different stat, or comment on a real CMS/MGMA news item as it lands.
 
 ## 5. LinkedIn posts — ready to publish
 
@@ -347,7 +347,7 @@ All 12 Facebook posts live in **`docs/facebook-posts.md`** in the repo, adapted 
 | Tue 2026-09-22 | 10 | What to outsource first |
 | Thu 2026-09-24 | 11 | Billing across multiple specialties |
 
-Runs to 2026-09-24, about two weeks past LinkedIn's 2026-09-11 finish. After #11 both queues are empty and the blog pipeline has to be restocked.
+Runs to 2026-09-24, about ten days past LinkedIn's 2026-09-14 finish. After #11 both queues are empty and the blog pipeline has to be restocked.
 
 ## 9. Instagram / X — still deferred
 
