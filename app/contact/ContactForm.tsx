@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { trackEvent } from "@/lib/analytics";
@@ -119,6 +119,14 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [field]: value }));
 
   const [error, setError] = useState<string | null>(null);
+  // Stamped after mount rather than during render, which must stay pure. The
+  // server uses it to reject submissions that arrive faster than a human types.
+  const startedAt = useRef<number | null>(null);
+  const honeypot = useRef("");
+
+  useEffect(() => {
+    startedAt.current = Date.now();
+  }, []);
   const [fieldErrors, setFieldErrors] = useState<{ phone?: string | null; email?: string | null }>({});
 
   const setPhone = (value: string) => {
@@ -151,14 +159,26 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          startedAt: startedAt.current ?? undefined,
+          subject_ref: honeypot.current,
+        }),
       });
-      if (!res.ok) throw new Error("Failed");
+      if (!res.ok) {
+        // The API explains rate limiting in plain language; pass it through.
+        const payload = await res.json().catch(() => null);
+        throw new Error(payload?.error || "Failed");
+      }
       trackEvent("contact_form_submit", { service: form.service, orgType: form.orgType });
       trackLinkedInConversion(LINKEDIN_CONVERSIONS.contactFormSubmit);
       setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please email us directly at info@medbpo360.com");
+    } catch (err) {
+      setError(
+        err instanceof Error && err.message !== "Failed"
+          ? err.message
+          : "Something went wrong. Please email us directly at info@medbpo360.com",
+      );
     } finally {
       setLoading(false);
     }
@@ -274,6 +294,22 @@ export default function ContactForm() {
                   <h3 style={{ fontSize: 20, fontWeight: 700, color: "#0a0a0f", letterSpacing: "-0.3px", margin: 0 }}>
                     Tell us about your organization
                   </h3>
+
+                  <div aria-hidden="true" style={{
+                    position: "absolute", width: 1, height: 1,
+                    overflow: "hidden", clip: "rect(0 0 0 0)", whiteSpace: "nowrap",
+                  }}>
+                    <label htmlFor="subject_ref">Leave this field empty</label>
+                    <input
+                      id="subject_ref"
+                      name="subject_ref"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      defaultValue=""
+                      onChange={(e) => { honeypot.current = e.target.value; }}
+                    />
+                  </div>
 
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                     <div>

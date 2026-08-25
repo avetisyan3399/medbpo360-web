@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -47,9 +48,45 @@ function validate(phone: unknown, email: unknown): string | null {
   return null;
 }
 
+// Bots that fill every input trip the hidden field; humans never see it.
+// Answer them with a normal success so they have no signal to adapt to.
+const SILENT_OK = NextResponse.json({ success: true });
+
+// Nobody reads this form and completes it in under three seconds.
+const MIN_FILL_MS = 3_000;
+
 export async function POST(request: Request) {
+  const ip = clientIp(request);
+
+  const burst = rateLimit(`contact:burst:${ip}`, { limit: 3, windowMs: 10 * 60_000 });
+  if (!burst.ok) {
+    return NextResponse.json(
+      { error: "You've sent several messages already. Please wait a few minutes, or email us directly at info@medbpo360.com." },
+      { status: 429, headers: { "Retry-After": String(burst.retryAfterSeconds) } },
+    );
+  }
+
+  const sustained = rateLimit(`contact:hourly:${ip}`, { limit: 10, windowMs: 60 * 60_000 });
+  if (!sustained.ok) {
+    return NextResponse.json(
+      { error: "Too many messages from this connection today. Please email us directly at info@medbpo360.com." },
+      { status: 429, headers: { "Retry-After": String(sustained.retryAfterSeconds) } },
+    );
+  }
+
   const body = await request.json();
   const { name, organization, orgType, providerCount, phone, email, service, message } = body;
+
+  if (typeof body.subject_ref === "string" && body.subject_ref.trim() !== "") {
+    console.warn("Contact form: honeypot tripped", { ip });
+    return SILENT_OK;
+  }
+
+  const startedAt = Number(body.startedAt);
+  if (Number.isFinite(startedAt) && Date.now() - startedAt < MIN_FILL_MS) {
+    console.warn("Contact form: submitted too fast", { ip });
+    return SILENT_OK;
+  }
 
   if (!name || !organization || !email || !phone) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
