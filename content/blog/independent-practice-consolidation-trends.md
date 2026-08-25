@@ -13,11 +13,11 @@ The headline number gets repeated a lot, usually to sell something: physicians i
 
 ## What actually changed, according to AMA's own numbers
 
-Over that same twelve years, hospital-owned practices grew from 23.4% to 34.5% of physicians, and direct hospital employment rose from 5.6% to 12.2%. Private equity ownership — a newer category AMA started tracking separately — grew from 4.5% in 2022 to 6.5% in 2024. Physicians with any ownership stake in their practice dropped from 53.2% to 35.4% over the same period ([American Medical Association](https://www.ama-assn.org/practice-management/private-practices/smaller-share-doctors-private-practice-ever)).
+Over that same twelve years, hospital-owned practices grew from 23.4% to 34.5% of physicians, and direct hospital employment rose from 5.6% to 12.2%. Private equity ownership — a newer category AMA started tracking separately — grew from 4.5% in 2022 to 6.5% in 2024. Practice size shifted in step: physicians in small practices of 10 or fewer doctors fell from 61.4% to 47.4%, while those in practices of 50 or more grew from 12.2% to 18.3% ([American Medical Association](https://www.ama-assn.org/practice-management/private-practices/smaller-share-doctors-private-practice-ever)).
 
 ## What the number doesn't say
 
-It doesn't say independent practice stopped being viable. Even after twelve years of consistent consolidation pressure, more than 4 in 10 physicians are still in private practice, and that share also varies enormously by specialty — ophthalmology sits at 70.4% private practice, well above the aggregate, while some primary care specialties sit in the high 30s to low 40s. A trend line isn't a verdict on any individual practice's decision to stay independent, and specialty matters more to the real answer than the national average does.
+It doesn't say independent practice stopped being viable. Even after twelve years of consistent consolidation pressure, more than 4 in 10 physicians are still in private practice, and that share varies enormously by specialty — ophthalmology sits at 70.4% and orthopedic surgery at 54%, both well above the aggregate. A trend line isn't a verdict on any individual practice's decision to stay independent, and specialty matters more to the real answer than the national average does.
 
 ## The actual pressure is operational, not existential
 

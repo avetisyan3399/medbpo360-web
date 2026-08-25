@@ -9,7 +9,7 @@ readTime: "5 min read"
 relatedSpecialty: "gastroenterology"
 ---
 
-Somewhere between a quarter and a fifth of screening colonoscopies end with a polyp coming out ([National Institutes of Health / PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3495695/)) — which means "screening colonoscopy" and "the claim we actually need to bill" are frequently two different things by the time the patient is in recovery. Getting the conversion right isn't a documentation nicety. It's the difference between a patient who was promised a no-cost preventive screening and a patient who gets a bill they weren't expecting, and between a practice that gets paid correctly and one that's writing off revenue or fielding a complaint.
+Roughly a quarter of screening colonoscopies end with a polyp coming out — one peer-reviewed analysis of screening colonoscopies in patients aged 50–75 found adjusted polypectomy rates between 22.6% and 26.2% depending on how "screening" was defined ([National Institutes of Health / PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3495695/)). Which means "screening colonoscopy" and "the claim we actually need to bill" are frequently two different things by the time the patient is in recovery. Getting the conversion right isn't a documentation nicety. It's the difference between a patient who was promised a no-cost preventive screening and a patient who gets a bill they weren't expecting, and between a practice that gets paid correctly and one that's writing off revenue or fielding a complaint.
 
 ## Medicare and commercial plans use different modifiers for the same event
 
