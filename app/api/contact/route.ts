@@ -32,12 +32,32 @@ function linkOrText(href: string | null, label: unknown): string {
   return href ? `<a href="${escapeHtml(href)}">${text}</a>` : text;
 }
 
+// The form validates these too, but that check only protects honest users —
+// anything can POST here directly, so the rules are enforced again server-side.
+function validate(phone: unknown, email: unknown): string | null {
+  const digits = String(phone ?? "").replace(/\D/g, "");
+  const normalized = digits.length === 11 && digits.startsWith("1") ? digits.slice(1) : digits;
+  if (normalized.length !== 10) return "Enter a 10-digit US phone number.";
+  if (normalized[0] === "0" || normalized[0] === "1") return "US area codes can't start with 0 or 1.";
+
+  const address = String(email ?? "").trim();
+  if (!/^[^\s@<>"'&]+@[^\s@<>"'&]+\.[a-zA-Z]{2,}$/.test(address)) {
+    return "Enter a valid email address.";
+  }
+  return null;
+}
+
 export async function POST(request: Request) {
   const body = await request.json();
   const { name, organization, orgType, providerCount, phone, email, service, message } = body;
 
   if (!name || !organization || !email || !phone) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+  }
+
+  const invalid = validate(phone, email);
+  if (invalid) {
+    return NextResponse.json({ error: invalid }, { status: 400 });
   }
 
   const { error } = await resend.emails.send({

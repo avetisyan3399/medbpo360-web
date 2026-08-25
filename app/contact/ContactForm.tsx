@@ -55,6 +55,58 @@ const inputStyle: React.CSSProperties = {
   fontFamily: "inherit",
 };
 
+// US numbers are 10 digits once the +1 country code is dropped. Format as the
+// user types and refuse anything past the tenth digit.
+function formatUsPhone(raw: string): string {
+  let digits = raw.replace(/\D/g, "");
+  if (digits.length === 11 && digits.startsWith("1")) digits = digits.slice(1);
+  digits = digits.slice(0, 10);
+  if (digits.length <= 3) return digits;
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
+function phoneError(value: string): string | null {
+  const digits = value.replace(/\D/g, "");
+  if (digits.length === 0) return "Phone number is required.";
+  if (digits.length < 10)
+    return `A US phone number needs 10 digits — you've entered ${digits.length}.`;
+  if (digits[0] === "0" || digits[0] === "1")
+    return "US area codes can't start with 0 or 1. Check the number.";
+  return null;
+}
+
+// Say what is actually wrong rather than a generic "invalid email".
+function emailError(value: string): string | null {
+  const address = value.trim();
+  if (address.length === 0) return "Email address is required.";
+  if (/\s/.test(address)) return "Email addresses can't contain spaces.";
+  const at = address.split("@");
+  if (at.length === 1) return "Email address needs an @ — for example you@organization.com.";
+  if (at.length > 2) return "Email address can only contain one @.";
+  const [local, domain] = at;
+  if (!local) return "Add the part before the @ — for example you@organization.com.";
+  if (!domain) return "Add the part after the @ — for example you@organization.com.";
+  if (!domain.includes(".")) return "The part after the @ needs a domain ending, like organization.com.";
+  if (domain.startsWith(".") || domain.endsWith(".")) return "The part after the @ can't start or end with a dot.";
+  if (!/^[^\s@<>"'&]+@[^\s@<>"'&]+\.[a-zA-Z]{2,}$/.test(address))
+    return "That doesn't look like a valid email address. Example: you@organization.com.";
+  return null;
+}
+
+const fieldErrorStyle: React.CSSProperties = {
+  fontSize: 12,
+  color: "#c0392b",
+  margin: "6px 0 0",
+  lineHeight: 1.4,
+};
+
+const invalidInputStyle: React.CSSProperties = {
+  ...inputStyle,
+  borderColor: "#c0392b",
+  background: "#fffafa",
+};
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -67,11 +119,34 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [field]: value }));
 
   const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{ phone?: string | null; email?: string | null }>({});
+
+  const setPhone = (value: string) => {
+    const formatted = formatUsPhone(value);
+    set("phone", formatted);
+    // Only clear a shown error while typing; don't nag before they've finished.
+    if (fieldErrors.phone) setFieldErrors((p) => ({ ...p, phone: phoneError(formatted) }));
+  };
+
+  const setEmail = (value: string) => {
+    set("email", value);
+    if (fieldErrors.email) setFieldErrors((p) => ({ ...p, email: emailError(value) }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const phoneMsg = phoneError(form.phone);
+    const emailMsg = emailError(form.email);
+    if (phoneMsg || emailMsg) {
+      setFieldErrors({ phone: phoneMsg, email: emailMsg });
+      setError("Please correct the highlighted fields below.");
+      return;
+    }
+
     setLoading(true);
     setError(null);
+    setFieldErrors({});
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -231,11 +306,42 @@ export default function ContactForm() {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                     <div>
                       <label style={labelStyle}>Phone *</label>
-                      <input required type="tel" placeholder="(555) 555-0100" value={form.phone} onChange={(e) => set("phone", e.target.value)} style={inputStyle} />
+                      <input
+                        required
+                        type="tel"
+                        inputMode="tel"
+                        autoComplete="tel"
+                        maxLength={14}
+                        placeholder="(555) 555-0100"
+                        aria-invalid={fieldErrors.phone ? true : undefined}
+                        aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
+                        value={form.phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        onBlur={() => setFieldErrors((p) => ({ ...p, phone: phoneError(form.phone) }))}
+                        style={fieldErrors.phone ? invalidInputStyle : inputStyle}
+                      />
+                      {fieldErrors.phone && (
+                        <p id="phone-error" style={fieldErrorStyle}>{fieldErrors.phone}</p>
+                      )}
                     </div>
                     <div>
                       <label style={labelStyle}>Email *</label>
-                      <input required type="email" placeholder="you@organization.com" value={form.email} onChange={(e) => set("email", e.target.value)} style={inputStyle} />
+                      <input
+                        required
+                        type="email"
+                        inputMode="email"
+                        autoComplete="email"
+                        placeholder="you@organization.com"
+                        aria-invalid={fieldErrors.email ? true : undefined}
+                        aria-describedby={fieldErrors.email ? "email-error" : undefined}
+                        value={form.email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onBlur={() => setFieldErrors((p) => ({ ...p, email: emailError(form.email) }))}
+                        style={fieldErrors.email ? invalidInputStyle : inputStyle}
+                      />
+                      {fieldErrors.email && (
+                        <p id="email-error" style={fieldErrorStyle}>{fieldErrors.email}</p>
+                      )}
                     </div>
                   </div>
 
