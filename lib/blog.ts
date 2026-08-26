@@ -4,6 +4,9 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
+import { getSpecialty } from "@/lib/specialties";
+import { getServicePage } from "@/lib/service-pages";
+import { getOrgType } from "@/lib/org-types";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
@@ -102,4 +105,26 @@ export function getPostsForSpecialty(slug: string): Post[] {
 
 export function getPostsForIndustry(slug: string): Post[] {
   return getAllPosts().filter((p) => p.relatedIndustry === slug);
+}
+
+/**
+ * The landing page a post supports, resolved to a name and href for CTA copy.
+ * Every post carries exactly one of the three relations (see AGENTS.md), so a
+ * post without a match is a frontmatter error rather than a normal case —
+ * callers should fall back to the generic CTA rather than render nothing.
+ */
+export function getPostTarget(post: Post): { name: string; href: string } | null {
+  if (post.relatedSpecialty) {
+    const s = getSpecialty(post.relatedSpecialty);
+    if (s) return { name: s.name, href: `/specialties/${s.slug}` };
+  }
+  if (post.relatedService) {
+    const s = getServicePage(post.relatedService);
+    if (s) return { name: s.name, href: `/services/${s.slug}` };
+  }
+  if (post.relatedIndustry) {
+    const o = getOrgType(post.relatedIndustry);
+    if (o) return { name: o.name, href: `/industries/${o.slug}` };
+  }
+  return null;
 }

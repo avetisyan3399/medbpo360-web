@@ -20,8 +20,10 @@ export type Resource = {
   metaTitle: string;
   metaDescription: string;
   keyword: string;
-  /** Specialty page this resource supports, for cross-linking. */
+  /** Page this resource supports, for cross-linking. Exactly one applies. */
   relatedSpecialty?: string;
+  relatedService?: string;
+  relatedIndustry?: string;
   /** Shown above the gate. Indexable. */
   intro: string[];
   freeSections: ResourceSection[];
@@ -158,4 +160,23 @@ export function getResource(slug: string): Resource | undefined {
 
 export function getResourcesForSpecialty(slug: string): Resource[] {
   return resources.filter((r) => r.relatedSpecialty === slug);
+}
+
+/**
+ * The resource that belongs with a blog post, matched on whichever of the
+ * three relations the post carries. Returns undefined when nothing matches —
+ * an unrelated resource on a post is worse than none, so callers should render
+ * nothing rather than fall back to whatever exists.
+ */
+export function getResourceForPost(post: {
+  relatedSpecialty?: string;
+  relatedService?: string;
+  relatedIndustry?: string;
+}): Resource | undefined {
+  return resources.find(
+    (r) =>
+      (post.relatedSpecialty && r.relatedSpecialty === post.relatedSpecialty) ||
+      (post.relatedService && r.relatedService === post.relatedService) ||
+      (post.relatedIndustry && r.relatedIndustry === post.relatedIndustry),
+  );
 }
