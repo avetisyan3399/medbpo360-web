@@ -1,3 +1,4 @@
+import { resources } from "@/lib/resources";
 import { getAllPosts } from "@/lib/blog";
 import { specialties } from "@/lib/specialties";
 import { orgTypes } from "@/lib/org-types";
@@ -33,6 +34,13 @@ export function buildSitemapXml(): string {
     { url: `${base}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
+
+  const resourcePages: Entry[] = resources.map((r) => ({
+    url: `${base}/resources/${r.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   const blogPages: Entry[] = getAllPosts().map((post) => ({
     url: `${base}/blog/${post.slug}`,
@@ -70,6 +78,7 @@ export function buildSitemapXml(): string {
   }));
 
   const all = [
+    ...resourcePages,
     ...staticPages,
     ...serviceLandingPages,
     ...industryPages,

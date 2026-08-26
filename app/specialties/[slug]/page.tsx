@@ -7,6 +7,7 @@ import { specialties, getSpecialty } from "@/lib/specialties";
 import { getServicePage } from "@/lib/service-pages";
 import { getCombosForSpecialty } from "@/lib/specialty-service-pages";
 import { getPostsForSpecialty } from "@/lib/blog";
+import { getResourcesForSpecialty } from "@/lib/resources";
 
 export async function generateStaticParams() {
   return specialties.map((s) => ({ slug: s.slug }));
@@ -42,6 +43,7 @@ export default async function SpecialtyPage({
   const s = getSpecialty(slug);
   if (!s) notFound();
   const relatedPosts = getPostsForSpecialty(slug);
+  const relatedResources = getResourcesForSpecialty(slug);
   const combos = getCombosForSpecialty(slug);
 
   return (
@@ -221,6 +223,36 @@ export default async function SpecialtyPage({
             </div>
           </div>
         </section>
+
+        {relatedResources.length > 0 && (
+          <section style={{ padding: "70px 24px 0" }}>
+            <div style={{ maxWidth: 1140, margin: "0 auto" }}>
+              {relatedResources.map((resource) => (
+                <Link
+                  key={resource.slug}
+                  href={`/resources/${resource.slug}`}
+                  style={{
+                    display: "block", background: "#0f2b46", borderRadius: 20,
+                    padding: "30px 32px", textDecoration: "none",
+                  }}
+                >
+                  <div style={{ fontSize: 11, fontWeight: 700, color: "#17a673", textTransform: "uppercase", letterSpacing: 1.4, marginBottom: 10 }}>
+                    Free Resource
+                  </div>
+                  <div style={{ fontSize: 21, fontWeight: 700, color: "#fff", marginBottom: 8, letterSpacing: "-0.4px" }}>
+                    {resource.title}
+                  </div>
+                  <div style={{ fontSize: 14.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.6, maxWidth: 620 }}>
+                    {resource.subtitle}
+                  </div>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: "#17a673", marginTop: 16 }}>
+                    Read it →
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {relatedPosts.length > 0 && (
           <section style={{ padding: "80px 24px", background: "#f5f5f7" }}>

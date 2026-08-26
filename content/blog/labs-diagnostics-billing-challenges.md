@@ -30,3 +30,5 @@ High-volume molecular diagnostic and toxicology billing has drawn sustained fede
 ## The common thread
 
 Each of these — PAMA reporting, LCD compliance, ABN discipline, and audit-ready molecular/toxicology documentation — is a distinct regulatory obligation with its own failure mode. A lab that's excellent at PAMA reporting can still have a live LCD compliance gap, and vice versa. Treating lab billing as "physician billing but for tests" is usually where the gap starts. See how we approach [laboratory and diagnostics billing](/specialties/laboratory-diagnostics) for labs and diagnostic centers navigating this regulatory framework at any test volume.
+
+If you want to work through this systematically, our [Lab Billing Compliance Checklist](/resources/lab-billing-compliance-checklist) covers seven specific places diagnostic revenue leaks — date-of-service rules, the current PAMA reporting window, ABN validity, MAC coverage variation, panel scope, and genetic testing scrutiny — with the source documents cited throughout.
