@@ -138,13 +138,17 @@ Each is in company voice, sized for a LinkedIn post, ending with the link from t
 
 > Lab billing isn't "physician billing but for tests" — it runs on a genuinely different regulatory framework.
 >
-> PAMA reporting requirements, Local Coverage Determinations that vary by MAC jurisdiction, ABN workflows that only work when issued correctly (not as a blanket habit), and molecular/toxicology testing that draws sustained federal program-integrity scrutiny — each is a distinct compliance obligation with its own failure mode. A lab can be excellent at PAMA reporting and still have a live LCD compliance gap.
+> An OIG report published this January found Medicare Part B spending on clinical diagnostic lab tests rose 5% to $8.4 billion in 2024, while the number of enrollees receiving tests actually declined. Genetic testing accounted for 43% of that spending on 5% of the tests. That disproportion is why OIG's 2026 work plan added initiatives on genetic testing oversight and on expanded panels — those detecting six or more pathogens versus targeted panels detecting up to five.
 >
-> Worth an audit at any test volume, not just at scale.
+> But enforcement attention isn't where most labs quietly lose money. It's the narrower rules: which date of service applies to a molecular test ordered on a hospital outpatient, whether your ABNs would survive review or read as routine, and whether coverage logic is keyed to the right MAC for each referring location.
 >
-> Where the gaps usually hide → https://medbpo360.com/blog/labs-diagnostics-billing-challenges
+> We put together a checklist of seven places diagnostic revenue leaks, with the CMS, OIG, and DOJ sources cited throughout so you can check any of it yourself. Worth running at any test volume.
+>
+> Read the checklist → https://medbpo360.com/resources/lab-billing-compliance-checklist
 >
 > #medicalbilling #revenuecyclemanagement #medicallaboratory #healthcarecompliance
+
+*Changed 2026-08-25: originally linked the labs blog post. Repointed at the gated checklist, which is the stronger destination for this audience — it captures an email, and the blog article stays reachable from it and from search. One link only: LinkedIn renders a single preview card, and a second link splits the click.*
 
 ### 5. Signs your in-house call center can't keep up
 

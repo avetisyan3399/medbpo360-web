@@ -64,12 +64,12 @@ const labBillingChecklist: Resource = {
     {
       heading: "2. PAMA reporting is live again, and the window is specific",
       body: [
-        "After several years of legislative delay, private payer rate reporting is back. The Consolidated Appropriations Act of 2026, signed February 3, set the next data reporting period as May 1 through July 31, 2026, based on private payer data collected January 1 through June 30, 2025.",
-        "Two things labs get wrong. First, what counts as the rate: you report the allowed amount — payment from the insurer plus any patient cost sharing — regardless of whether you were in network or out of network for that payer. Not your charge, and not your net receipt. Second, the collection period is already closed. The data you must report covers the first half of 2025, so if nobody was capturing it then, you are reconstructing it now under a deadline.",
-        "On the payment side, there is no phase-in reduction in 2026. Beginning in 2027 through 2029, payment for a test may not be reduced by more than 15% per year against the prior year's rate.",
+        "After several years of legislative delay, private payer rate reporting resumed this year. The Consolidated Appropriations Act of 2026, signed February 3, set the data reporting period as May 1 through July 31, 2026, based on private payer data collected January 1 through June 30, 2025.",
+        "That window has now closed. If you were an applicable laboratory for this cycle, the question is no longer whether you can gather the data in time — it is whether you reported, and whether what you reported was right. Labs frequently get the definition of the rate wrong: you report the allowed amount, meaning payment from the insurer plus any patient cost sharing, regardless of whether you were in network or out of network for that payer. Not your charge, and not your net receipt.",
+        "On the payment side, there is no phase-in reduction in 2026. Beginning in 2027 through 2029, payment for a test may not be reduced by more than 15% per year against the prior year's rate — so the rates reported this summer are what the next three years of reductions are calculated against.",
       ],
       verify:
-        "That you know whether you meet the definition of an applicable laboratory for this cycle, and that someone owns the July 31, 2026 deadline by name.",
+        "Whether you met the definition of an applicable laboratory for this cycle and actually reported before the window closed on July 31, 2026 — and if you did, that the figures submitted were allowed amounts rather than charges. This is the data the 2027–2029 rates are built on.",
     },
   ],
   gatedSections: [
@@ -123,8 +123,8 @@ const labBillingChecklist: Resource = {
   checklist: [
     "Date-of-service pathway documented per molecular test line, with the three-condition exception applied deliberately",
     "Applicable-laboratory status determined for the current PAMA cycle",
-    "PAMA data for Jan 1–Jun 30, 2025 assembled as allowed amounts, in and out of network",
-    "A named owner for the July 31, 2026 PAMA deadline",
+    "PAMA data for Jan 1–Jun 30, 2025 reported as allowed amounts, in and out of network, before the window closed 2026-07-31",
+    "If the window was missed, applicable-laboratory status confirmed and exposure understood",
     "ABNs issued only on specific anticipated non-coverage, with time to decide",
     "Coverage rules keyed to the correct MAC per referring location",
     "Expanded panel orders supported by documented clinical rationale",
@@ -149,7 +149,9 @@ const labBillingChecklist: Resource = {
     { label: "HHS OIG Work Plan 2026 — genetic testing oversight; expanded laboratory panels" },
     { label: "U.S. Department of Justice — 2025 National Health Care Fraud Takedown" },
   ],
-  reviewBy: "2026-07-31",
+  // Section 2 was rewritten on 2026-08-25 after the reporting window closed;
+  // revisit when CMS announces the next collection and reporting periods.
+  reviewBy: "2027-01-31",
 };
 
 export const resources: Resource[] = [labBillingChecklist];

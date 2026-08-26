@@ -1,6 +1,8 @@
 # DRAFT FOR REVIEW — Lab Billing Compliance Checklist
 
-*Draft 2026-08-25. Not published. Every factual claim is sourced; sources listed at the end. Company voice, no client outcomes claimed, no invented statistics.*
+*Draft 2026-08-25, published 2026-08-25. Section 2 corrected the same day: the PAMA reporting window closed 2026-07-31, so it was written in the wrong tense. See lib/resources.ts for the shipped text — that file is the source of truth, not this draft.*
+
+*Original note: Every factual claim is sourced; sources listed at the end. Company voice, no client outcomes claimed, no invented statistics.*
 
 **Gate design:** everything above the `--- GATE ---` marker is free and indexable. Below it requires an email to keep reading, in-page — no download required.
 
