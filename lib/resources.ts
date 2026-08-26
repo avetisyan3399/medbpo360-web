@@ -154,7 +154,127 @@ const labBillingChecklist: Resource = {
   reviewBy: "2027-01-31",
 };
 
-export const resources: Resource[] = [labBillingChecklist];
+
+const credentialingChecklist: Resource = {
+  slug: "credentialing-timeline-checklist",
+  title: "The Credentialing Timeline Checklist",
+  subtitle:
+    "Where enrollment quietly costs a practice money — and the dates that decide whether work you have already done is billable.",
+  metaTitle: "Credentialing Timeline Checklist",
+  metaDescription:
+    "Medicare effective dates, retrospective billing, revalidation deactivation, CAQH lapses, and payer contract dates — a sourced credentialing checklist for practices of any size.",
+  keyword: "provider credentialing timeline",
+  relatedService: "credentialing-enrollment",
+  intro: [
+    "Credentialing failures rarely look like failures. Nobody sends a letter saying a provider is unbillable. The claims simply deny, or the enrollment quietly deactivates, and the practice discovers months of work was never payable.",
+    "Almost all of it comes down to dates — which one governs, when the clock actually starts, and who was watching it. A provider can be fully credentialed with a payer and still have a window of services nobody can bill.",
+    "This is a checklist of the dates that decide that. It applies to a solo provider adding one payer and to a group onboarding forty at once. The volume differs; the rules don't.",
+  ],
+  freeSections: [
+    {
+      heading: "1. Your effective date is not the date you were approved",
+      body: [
+        "This is the single most expensive misunderstanding in provider enrollment. Approval tells you the application succeeded. It does not tell you which services are billable.",
+        "For physicians and non-physician practitioners, Medicare sets the effective date of billing privileges as the later of the date of filing, or the date the supplier first began furnishing services at a new practice location. Filing late does not move the clock back to when the provider started seeing patients — it moves the billable date forward to when the paperwork arrived.",
+        "There is one narrow relief valve. Retrospective billing can reach back up to 30 days prior to the receipt of the enrollment package: if the date requested is not more than 30 days prior to receipt, the requested date becomes the Medicare effective date. During a Presidentially declared disaster that window widens — reassigners can be backdated up to 120 days from the receipt date, and all others up to 90 days.",
+        "Thirty days is the entire margin for error in normal conditions. A provider who starts seeing Medicare patients sixty days before the application is filed has thirty days of services that cannot be billed to anyone.",
+      ],
+      verify:
+        "For every provider who started in the last year, the gap between their first date of service and the date their enrollment application was received. Anything beyond 30 days was written off, whether or not anyone recorded it as a write-off.",
+    },
+    {
+      heading: "2. Revalidation deactivates you on a schedule, and the notice is easy to miss",
+      body: [
+        "Medicare requires enrolled providers to revalidate their enrollment information roughly every five years. This is not optional maintenance and it is not triggered by anything the practice does — it arrives on Medicare's calendar, not yours.",
+        "Notification is where practices lose it. Revalidation letters go to the special payments address and the correspondence address on file — addresses that are often years old, sometimes a former billing company, sometimes a suite the practice has left. Reminder emails go out roughly four months before the due date and again about six weeks prior, but only if a valid email is on file.",
+        "Miss the submission window and enrollment is deactivated, typically within 60 to 75 days after the due date. Reactivation means re-enrolling, and claims for services in the gap are rejected. A provider who has practised continuously for years becomes unbillable because a letter went to the wrong address.",
+      ],
+      verify:
+        "The correspondence and special payments addresses on file in PECOS for every enrolled provider, and whether the email on file reaches someone who will act on it. Check the addresses, not just the due dates — a due date you never receive is the failure mode.",
+    },
+  ],
+  gatedSections: [
+    {
+      heading: "3. A lapsed CAQH attestation freezes everything downstream",
+      body: [
+        "CAQH ProView is where most commercial payers pull provider data during credentialing and re-credentialing. Attestation is the provider's confirmation that the profile is still accurate, and it must be repeated periodically — it is not a one-time setup task.",
+        "When an attestation lapses the profile stops being treated as current. Payers pulling data during that window see a profile flagged as out of date, and credentialing and re-credentialing processes that depend on it stall. Nothing is rejected outright; it simply stops moving, which is why lapses often go unnoticed until a payer asks why an application has been sitting.",
+        "The practical problem is ownership. Attestation reminders go to the individual provider's email, not to whoever manages credentialing — so the alert reaches the person least likely to act on it and least aware of what it blocks.",
+      ],
+      verify:
+        "Whose inbox CAQH reminders reach for each provider, and whether anyone other than that provider would notice a lapse. Confirm the current attestation date for every provider directly in ProView rather than assuming.",
+    },
+    {
+      heading: "4. Payer contract dates and credentialing approval are different dates",
+      body: [
+        "Being credentialed with a payer and being contracted to bill them are two separate events, and the second does not automatically follow the first. Credentialing verifies the provider. The contract establishes the participation and its effective date.",
+        "Practices routinely start scheduling patients on the credentialing approval, then discover the contract's effective date is later — sometimes the first of the following month, sometimes tied to a load date in the payer's system. Services in between are out-of-network for a patient who was told otherwise.",
+        "This is worth pinning down in writing, per payer, because the answer varies and nobody volunteers it.",
+      ],
+      verify:
+        "For each payer added in the past year, whether you hold a written participation effective date — and whether any patient was scheduled as in-network before it.",
+    },
+    {
+      heading: "5. A new location restarts the clock, even for credentialed providers",
+      body: [
+        "Opening or acquiring a location does not carry existing enrollments across. Each provider's billing privileges are tied to practice locations, and a new site means new filings — for providers who are already fully credentialed everywhere else.",
+        "The trap is modelling the financial timeline against the clinical one. A site can be staffed, licensed, and seeing patients while nobody there is billable. Because the effective date is the later of filing or the start of services at that location, every day the paperwork lags is a day of unbillable work.",
+        "Credentialing should start when a deal is in motion, not when it closes.",
+      ],
+      verify:
+        "For any location opened or acquired in the last two years, the date services began there against the date enrollment was filed for it. The gap is the revenue that was never collectable.",
+    },
+    {
+      heading: "6. Expirables lapse quietly and take billing with them",
+      body: [
+        "State licenses, DEA registrations, board certifications, and malpractice coverage all expire on their own schedules. Each is a credentialing prerequisite, and a lapse can suspend participation with payers that require it — often without an explicit notice tying the suspension to the cause.",
+        "The failure is structural rather than negligent. Expiry dates live across a dozen systems and inboxes, each provider tracks their own, and nobody holds the consolidated view. It works until one is missed, and the miss surfaces as unexplained denials.",
+      ],
+      verify:
+        "Whether a single list exists showing every expirable for every provider with its expiry date. If that list lives in more than one place, it does not exist.",
+    },
+    {
+      heading: "7. Delegated credentialing changes who is accountable, not whether it is done",
+      body: [
+        "Larger groups sometimes hold delegated credentialing agreements, performing primary source verification themselves rather than each payer repeating it. Done well it shortens onboarding substantially.",
+        "It also transfers the obligation. The delegating payer audits against the agreed standard, and a group that has drifted from its own documented process faces findings and potentially the loss of delegation — which would push every future provider back through full payer-side credentialing on the payer's timeline.",
+        "For smaller practices this is not an option to pursue, but it is worth understanding when a billing or credentialing partner claims to hold delegation: ask which payers, and when it was last audited.",
+      ],
+      verify:
+        "If you hold delegation, the date of your last audit and whether current practice matches the documented process. If a partner claims it, which payers it covers.",
+    },
+  ],
+  checklist: [
+    "Gap measured between first date of service and enrollment filing date for every provider added in the last year",
+    "PECOS correspondence and special payments addresses confirmed current for every provider",
+    "A monitored inbox — not only the provider's — receives revalidation and CAQH notices",
+    "Current CAQH attestation date confirmed in ProView per provider",
+    "Written participation effective date held for every payer, per provider",
+    "Enrollment filed for every practice location before services began there",
+    "One consolidated list of expirables: licenses, DEA, board certifications, malpractice",
+    "If delegated credentialing applies, last audit date known and process matches practice",
+  ],
+  sources: [
+    {
+      label: "First Coast Service Options (CMS MAC) — Determining your Medicare effective date",
+      url: "https://medicare.fcso.com/enrollment/determining-your-medicare-effective-date",
+    },
+    {
+      label: "Noridian Healthcare Solutions (CMS MAC) — Revalidation",
+      url: "https://med.noridianmedicare.com/web/jfb/enrollment/revalidation",
+    },
+    {
+      label: "CMS — Medicare Provider Enrollment (MLN9658742)",
+      url: "https://www.cms.gov/medicare/enrollment-renewal/providers-suppliers",
+    },
+    { label: "CAQH ProView — provider attestation requirements" },
+  ],
+  // Enrollment rules change less often than fee schedules, but the disaster
+  // backdating windows shift with active declarations.
+  reviewBy: "2027-02-28",
+};
+
+export const resources: Resource[] = [labBillingChecklist, credentialingChecklist];
 
 export function getResource(slug: string): Resource | undefined {
   return resources.find((r) => r.slug === slug);
@@ -162,6 +282,14 @@ export function getResource(slug: string): Resource | undefined {
 
 export function getResourcesForSpecialty(slug: string): Resource[] {
   return resources.filter((r) => r.relatedSpecialty === slug);
+}
+
+export function getResourcesForService(slug: string): Resource[] {
+  return resources.filter((r) => r.relatedService === slug);
+}
+
+export function getResourcesForIndustry(slug: string): Resource[] {
+  return resources.filter((r) => r.relatedIndustry === slug);
 }
 
 /**
