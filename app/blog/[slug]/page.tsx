@@ -50,8 +50,36 @@ export default async function BlogPostPage({
   const resource = getResourceForPost(post);
   const target = getPostTarget(post);
 
+  // BlogPosting schema. Author is the organisation, not a person: every post is
+  // bylined "medbpo360 Team" and the owner stays personally unnamed.
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.updated ?? post.date,
+    author: { "@type": "Organization", name: "medbpo360", url: "https://medbpo360.com" },
+    publisher: {
+      "@type": "Organization",
+      name: "medbpo360",
+      url: "https://medbpo360.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://medbpo360.com/blog/${post.slug}`,
+    },
+    image: `https://medbpo360.com/blog/${post.slug}/opengraph-image`,
+    articleSection: post.category,
+    inLanguage: "en-US",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Nav />
       <main>
         <article>
