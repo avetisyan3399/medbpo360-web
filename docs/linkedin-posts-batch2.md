@@ -72,4 +72,76 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-*Batch 1 of 3 drafted 2026-08-26. Posts 15–18 pending review of these.*
+## 15. Health system denial patterns — Mon 2026-09-28
+
+> Hospital denials got worse again in 2025, and the increase is concentrated in the category that is hardest to fix.
+>
+> Kodiak Solutions' analysis of roughly 2,300 hospitals and 350,000 physicians found the average initial denial rate rose to 11.6% in 2025 from 11.4%, the median final denial rate climbed from 2.5% to 2.7%, and net revenue leakage jumped 25% year over year. The hospitals in that dataset collectively missed $48.4 billion in 2025, up from $38.6 billion.
+>
+> The composition matters more than the headline. Clinical denials — prior authorization failures and medical necessity determinations — rose from 2.4% to 2.6%, and denials involving a payer request for information went from 3.4% to 3.6%.
+>
+> That distinction decides where a system should spend. Clerical denials get solved with better claim scrubbing. Clinical denials need authorization workflows, documentation standards, and payer-specific appeal strategy — a different investment aimed at a different part of the organisation.
+>
+> At system scale there is a second problem underneath: the same fixable pattern can exist in five departments at once without anyone connecting them, because each one sees only its own numbers.
+>
+> Full analysis → https://medbpo360.com/blog/health-system-denial-patterns-across-facilities
+>
+> #revenuecyclemanagement #denialmanagement #healthsystems #healthcarefinance
+
+---
+
+## 16. Multi-site revenue variance — Thu 2026-10-01
+
+> When one location collects better than another, the explanation offered is usually patient mix. It usually isn't.
+>
+> Experian Health's State of Claims 2025 survey of 250 healthcare professionals found that incomplete or inaccurate information collected during check-in is now the third most common cause of denials — with 26% of respondents reporting that at least one in ten denials traces back to intake errors.
+>
+> Intake is exactly the process that varies most between sites. Same group, same payers, same specialties, different front desk — and demographics get blamed for a gap that is really about who verifies eligibility carefully and who is covering three jobs at once.
+>
+> The diagnostic is straightforward: compare denial rate by reason code across locations rather than looking at collections in aggregate. If one site's eligibility and registration denials run higher, that is a training and staffing answer, not a market one.
+>
+> This applies at two locations as much as at twenty. Fewer sites just means less data to see the pattern in.
+>
+> Where the variance actually comes from → https://medbpo360.com/blog/multi-site-groups-revenue-variance-by-location
+>
+> #practicemanagement #revenuecyclemanagement #healthcareoperations #denialmanagement
+
+---
+
+## 17. MSO/PE acquisition onboarding — Mon 2026-10-05
+
+> In a healthcare roll-up, the thing that compounds is the onboarding process — not any individual deal.
+>
+> The Private Equity Stakeholder Project tracked 1,029 private equity healthcare transactions in 2025. Of those, 664 were add-on acquisitions, against 151 leveraged buyouts and 214 growth investments.
+>
+> Add-ons dominating that mix changes the operational question. Underwriting one practice well is a deal skill. Integrating the twelfth one as cleanly as the second is an operations skill, and it is the one that decides platform returns.
+>
+> Where it degrades is predictable. Credentialing gets started after close instead of when the deal is in motion, so providers are clinically live and unbillable. Each acquired practice keeps its own billing conventions because standardising them was nobody's line item. Reporting cannot compare sites because no two define the same metric identically.
+>
+> None of that shows up in the first acquisition. All of it shows up by the fifth.
+>
+> Full breakdown → https://medbpo360.com/blog/mso-pe-acquisition-onboarding-billing
+>
+> #privateequity #healthcare #mso #revenuecyclemanagement
+
+---
+
+## 18. Hospital-based out-of-network disputes — Thu 2026-10-08
+
+> Emergency, radiology, and anesthesia groups did not choose to be at the centre of the surprise billing dispute system. They are there structurally, because their patients do not select them.
+>
+> The federal Independent Dispute Resolution data shows the scale: 1,243,621 disputes involving emergency and non-emergency services were initiated between January 2023 and June 2024, and nearly two in three disputed services involved care furnished in an emergency room.
+>
+> The outcomes are the part most groups underestimate. Providers and facilities initiated 90% of disputes and prevailed 80% of the time — and the provider win rate climbed from 68% in early 2023 to 85% by early 2024.
+>
+> That is a very high success rate on a process most groups treat as a last resort. If disputes are usually won, the constraint is not whether to pursue them — it is whether the group has the operational capacity to file within the deadlines, with the documentation the process requires, at volume.
+>
+> For a hospital-based group, that makes billing operations a strategic function rather than a back-office one.
+>
+> Full read → https://medbpo360.com/blog/hospital-based-groups-out-of-network-disputes
+>
+> #revenuecyclemanagement #emergencymedicine #radiology #anesthesia
+
+---
+
+*Batch 1 (12–14) drafted 2026-08-26. Batch 2 (15–18) drafted 2026-08-26. All seven now queued to 2026-10-08.*
