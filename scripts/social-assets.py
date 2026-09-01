@@ -140,6 +140,104 @@ def save_jpeg(img: Image.Image, path: Path) -> None:
     print(f"wrote {path.relative_to(Path.cwd())} ({img.width}x{img.height})")
 
 
+# ---------------------------------------------------------------------------
+# Per-post squares
+#
+# Instagram rejects text-only posts, so the account cannot publish at all
+# without an image per post. These also give Facebook a native-image option to
+# test against link posts, which Facebook downranks.
+#
+# Unlike the web card in lib/og-card.tsx — Satori can't measure text, so that
+# one steps font size by character count — Pillow measures, so these wrap
+# properly and shrink only when a title genuinely needs it.
+# ---------------------------------------------------------------------------
+
+POST_SQUARE = (1080, 1080)
+BLOG_DIR = Path(__file__).resolve().parent.parent / "content" / "blog"
+
+
+def read_frontmatter(path: Path) -> dict[str, str]:
+    """Minimal YAML-ish reader for the flat `key: "value"` frontmatter used here."""
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        return {}
+    _, fm, *_ = text.split("---", 2)
+    out = {}
+    for line in fm.splitlines():
+        if ":" not in line:
+            continue
+        k, v = line.split(":", 1)
+        out[k.strip()] = v.strip().strip('"')
+    return out
+
+
+def wrap(draw, text: str, font, max_width: int) -> list[str]:
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        trial = f"{cur} {w}".strip()
+        if draw.textlength(trial, font=font) <= max_width or not cur:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def draw_tracked(draw, xy, text: str, font, fill, tracking: int = 0) -> None:
+    """Pillow has no letter-spacing, so step per character."""
+    x, y = xy
+    for ch in text:
+        draw.text((x, y), ch, font=font, fill=fill)
+        x += draw.textlength(ch, font=font) + tracking
+
+
+def build_post_square(path: Path, title: str, category: str) -> None:
+    w, h = POST_SQUARE
+    pad = 90
+    usable = w - pad * 2
+    img = backdrop(POST_SQUARE, focus=(0.5, 0.3))
+    draw = ImageDraw.Draw(img)
+
+    draw.text((pad, pad), "Med", font=load_font("bold", 44), fill=WHITE)
+    off = draw.textlength("Med", font=load_font("bold", 44))
+    draw.text((pad + off, pad), "BPO360", font=load_font("bold", 44), fill=GREEN)
+
+    draw_tracked(draw, (pad, 330), category.upper(), load_font("bold", 26), GREEN, 3)
+
+    # Largest size whose wrap fits the title box.
+    box_h, top = 470, 400
+    for size in (68, 62, 56, 50, 44, 40):
+        font = load_font("bold", size)
+        lines = wrap(draw, title, font, usable)
+        lh = int(size * 1.22)
+        if len(lines) * lh <= box_h:
+            break
+    y = top
+    for line in lines:
+        draw.text((pad, y), line, font=font, fill=WHITE)
+        y += lh
+
+    draw.text((pad, h - pad - 34), "medbpo360.com/blog",
+              font=load_font("regular", 30), fill=MUTED)
+    save_jpeg(img, path)
+
+
+def build_all_post_squares() -> None:
+    out = OUT_DIR / "squares"
+    posts = sorted(BLOG_DIR.glob("*.md"))
+    for f in posts:
+        fm = read_frontmatter(f)
+        title, category = fm.get("title"), fm.get("category")
+        if not title or not category:
+            print(f"  skipped {f.name} — missing title or category")
+            continue
+        build_post_square(out / f"{f.stem}.jpg", title, category)
+    print(f"{len(posts)} posts processed")
+
+
 if __name__ == "__main__":
     build_cover(OUT_DIR / "facebook-cover.jpg")
     build_square(OUT_DIR / "logo-square.jpg")
+    build_all_post_squares()
