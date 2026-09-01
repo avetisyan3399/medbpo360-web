@@ -68,6 +68,8 @@ All URLs are `https://medbpo360.com` + the path shown. Every one of these posts 
 
 ## 5. LinkedIn posts — ready to publish
 
+> **Link-placement test (2026-09-01).** Posts 7 and 9 keep the link in the body; posts 8 and 10 move it to the first comment, with the body ending on a question instead. Two weeks of data showed impressions falling post over post (102 → 88 → 58 → 56 → 26) against near-zero engagement — one reaction and no comments across six posts. These four are also shorter and end with a question, because a platform that distributes on interaction was being given nothing to interact with. Compare impressions and clicks across the pairs before drawing conclusions.
+
 Each is in company voice, sized for a LinkedIn post, ending with the link from the table above and a hashtag block. Copy the whole thing including the hashtag line — 3–5 tags on their own line after the link is the format that works; more than five reads as spam. Specialty posts carry the specialty tag because it's narrower and better targeted than the broad ones.
 
 ### 0. Page introduction — publish first, then pin
@@ -182,11 +184,15 @@ Each is in company voice, sized for a LinkedIn post, ending with the link from t
 
 *Pillar: Credentialing*
 
-> "Credentialing" sounds like one process. It's actually three — CAQH, Medicare's PECOS, and state Medicaid — each on its own timeline.
+> "Credentialing" sounds like one process. It's three, and they run on separate clocks.
 >
-> Palmetto GBA (a CMS Medicare Administrative Contractor) reports a complete PECOS submission averages 7 days to process — an incomplete one jumps to 35. That's a 5x difference driven entirely by whether the paperwork was right the first time. CAQH attestation has to stay current on a recurring basis, not just at initial setup. And state Medicaid is frequently the slowest of the three, with no national benchmark since every state runs its own system.
+> CAQH. Medicare's PECOS. State Medicaid. Miss that they're independent and you sequence them — which is how a provider ends up clinically ready and unbillable for two months.
 >
-> The fix: run all three in parallel, start CAQH first, submit PECOS complete, and start Medicaid as early as possible.
+> Palmetto GBA, a CMS Medicare Administrative Contractor, reports a complete PECOS submission averages 7 days to process. An incomplete one takes 35. Same application, five times the wait, decided entirely by whether the paperwork was right the first time.
+>
+> Run all three in parallel. Start CAQH first. Submit PECOS complete rather than fast. Start Medicaid earliest, because it's usually slowest and no two states behave alike.
+>
+> Which of the three usually holds you up?
 >
 > Full roadmap → https://medbpo360.com/blog/caqh-pecos-medicaid-credentialing-roadmap
 >
@@ -196,27 +202,33 @@ Each is in company voice, sized for a LinkedIn post, ending with the link from t
 
 *Pillar: Credentialing*
 
-> Acquiring or opening a new location resets the credentialing clock for every provider there, with every payer — even ones they're already credentialed with elsewhere.
+> Opening a second location resets the credentialing clock for every provider in it — including ones already credentialed with that exact payer somewhere else.
 >
-> Medicare enrollment through PECOS commonly runs 60-90 days from a complete submission — and that clock starts when the paperwork is filed correctly, not when the deal closes. The most common (and most avoidable) mistake: modeling the financial timeline around the clinical/operational transition date instead of the credentialing timeline, which creates a foreseeable revenue gap between "clinically ready" and "actually billable."
+> Medicare enrollment through PECOS commonly runs 60–90 days from a complete submission, and that clock starts when the paperwork is filed correctly. Not when the lease is signed. Not when the deal closes.
 >
-> Starting credentialing the moment a deal is in motion — not after close — is what closes that gap.
+> The expensive mistake is modelling the financial timeline against the clinical one. The site is staffed, licensed, and seeing patients while nobody there can bill for it.
 >
-> Full breakdown → https://medbpo360.com/blog/credentialing-timelines-acquiring-practice-location
+> Credentialing should start when a deal is in motion, not after it closes.
+>
+> If you've opened a location in the past two years — how long was the gap between first patient and first payable claim?
 >
 > #credentialing #payerenrollment #practicemanagement #healthcareadmin
+
+*Link in first comment: `https://medbpo360.com/blog/credentialing-timelines-acquiring-practice-location` — post it immediately after publishing.*
 
 ### 9. What full-cycle RCM actually covers
 
 *Pillar: Billing & Denials*
 
-> "RCM" gets used as a catch-all term. It's actually a specific, sequential set of functions — worth pinning down before deciding what to keep in-house.
+> "RCM" gets used as a catch-all, which makes it hard to decide what to hand off.
 >
-> Front-end (eligibility, prior auth, registration) is where errors are hardest to catch later. Mid-cycle is coding and claim scrubbing — the stage where specialty-specific depth matters most. Back-end is submission, posting, and denial management, which is often where revenue leaks not because claims were coded wrong, but because a denied claim never gets worked. And reporting — clean claim rate, AR days, denial rate by payer/CPT — is the layer most practices lack entirely.
+> It's four distinct stages. Front-end: eligibility, prior auth, registration — where errors are cheapest to prevent and hardest to catch later. Mid-cycle: coding and claim scrubbing, where specialty depth matters most. Back-end: submission, posting, denial management — where revenue leaks not because claims were wrong but because denials never get worked. And reporting: clean claim rate, AR days, denial rate by payer — the layer most practices don't have at all.
 >
-> Most practices keep front-desk registration in-house and hand off the rest. There's no single right line — it depends on where your actual gaps are.
+> Most keep front-desk registration in-house and hand off the rest. There's no single right line.
 >
-> Full breakdown of each stage → https://medbpo360.com/blog/what-full-cycle-rcm-covers
+> Which stage is furthest behind in your practice right now?
+>
+> Full breakdown → https://medbpo360.com/blog/what-full-cycle-rcm-covers
 >
 > #revenuecyclemanagement #medicalbilling #healthcarefinance #practicemanagement
 
@@ -224,15 +236,17 @@ Each is in company voice, sized for a LinkedIn post, ending with the link from t
 
 *Pillar: Industry Insights*
 
-> When back-office work outpaces staff, the instinct is all-or-nothing — keep everything in-house, or hand off the whole thing. Neither is usually right.
+> When back-office work outpaces staff, the instinct is all-or-nothing. Keep everything, or hand off everything. Neither is usually right.
 >
-> Back-office functions degrade unevenly. Claims processing is usually first to back up — high-volume, well-defined, and the most visible symptom of strain. Denial management often has the clearest ROI to outsource first, since an unworked denial is money already earned and at risk of write-off. Admin/data-entry work scales with volume regardless of staffing. And relationship-dependent work — patient continuity, provider-specific scheduling nuance — is usually the last thing to hand off, for good reason.
+> These functions degrade unevenly. Claims processing backs up first — high volume, well defined, most visible. Denial management often has the clearest case for going first, because an unworked denial is money already earned and about to be written off. Admin and data entry scale with volume no matter who's staffed. Relationship-dependent work — patient continuity, provider-specific scheduling — should usually be last, for good reason.
 >
-> The real question isn't "should we outsource" — it's which function is furthest behind right now.
+> So the question isn't whether to outsource. It's which function is furthest behind right now.
 >
-> Full sequencing guide → https://medbpo360.com/blog/what-to-outsource-first-back-office
+> What's the first thing you'd hand off if you could?
 >
 > #healthcareadmin #practicemanagement #outsourcing #medicalpractice
+
+*Link in first comment: `https://medbpo360.com/blog/what-to-outsource-first-back-office` — post it immediately after publishing.*
 
 ### 11. Billing across multiple specialties under one roof
 
