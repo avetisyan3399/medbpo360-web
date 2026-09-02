@@ -7,7 +7,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 The owner runs multiple Claude sessions against this repo at the same time. Files you did not create will appear in `git status` mid-task, and commits you did not make will appear in the log.
 
 - **Stage by explicit path.** Never `git add -A`, `git add .`, or `git commit -a`. Name each file. On 2026-08-25 an `add`-everything commit swept two unreviewed blog posts from another session into an unrelated commit and pushed them live.
-- **Check what you are about to publish.** Run `git log --oneline origin/main..HEAD` before every push and confirm you reviewed each commit listed. `main` auto-deploys to production.
+- **Push only your own commits.** Run `git log --oneline origin/main..HEAD` **as its own command — never chained onto the push** — and read the output before deciding. If it lists a commit you did not write, stop and tell the owner. Another session's unpushed commit is not yours to publish, even when it looks finished and turns out to be harmless: it may be held back deliberately. `main` auto-deploys to production, so there is no gap in which to catch it.
+
+  This replaces an earlier "review each commit before pushing" rule that failed twice. On 2026-08-25 and again on 2026-09-02 a session ran the check as `git log … && git push`, which printed a list nobody read and shipped three commits from other sessions early — one set the owner had asked to keep local. Reviewing-then-judging asks for a decision at the moment of least attention; "did I write this?" does not.
 - **Leave other sessions' work alone.** Do not commit, revert, stash, or `checkout` files you did not write. If they block you, say so rather than clearing them.
 
 # Blog content rules
