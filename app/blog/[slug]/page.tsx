@@ -18,7 +18,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
+
+  // getAllPosts() hides future-dated posts from the blog index and the sitemap,
+  // but getPostBySlug() does not, so the URL stays reachable before its date.
+  // That is deliberate — social posts are scheduled ahead of publication and
+  // need a working link and preview card at compose time. Reachable is not the
+  // same as indexable though: keep search engines out until the post is live.
+  const scheduled = post.date > new Date().toISOString().split("T")[0];
+
   return {
+    ...(scheduled && { robots: { index: false, follow: true } }),
     title: post.title,
     description: post.excerpt,
     keywords: [post.keyword, "medbpo360"],
