@@ -10,17 +10,17 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 | Date | # | Topic | Link |
 |---|---|---|---|
-| Thu 2026-09-17 | 12 | Screening colonoscopy modifiers | `/blog/gastroenterology-screening-colonoscopy-billing` |
-| Mon 2026-09-21 | 13 | Independent practice trend | `/blog/independent-practice-consolidation-trends` |
-| Thu 2026-09-24 | 14 | ASC per-case risk | `/blog/asc-billing-financial-risk-per-case` |
-| Mon 2026-09-28 | 15 | Health system denial patterns | `/blog/health-system-denial-patterns-across-facilities` |
-| Thu 2026-10-01 | 16 | Multi-site revenue variance | `/blog/multi-site-groups-revenue-variance-by-location` |
-| Mon 2026-10-05 | 17 | MSO/PE acquisition onboarding | `/blog/mso-pe-acquisition-onboarding-billing` |
-| Thu 2026-10-08 | 18 | Hospital-based out-of-network | `/blog/hospital-based-groups-out-of-network-disputes` |
+| Mon 2026-09-14 | 12 | Screening colonoscopy modifiers | `/blog/gastroenterology-screening-colonoscopy-billing` |
+| Thu 2026-09-17 | 13 | Independent practice trend | `/blog/independent-practice-consolidation-trends` |
+| Mon 2026-09-21 | 14 | ASC per-case risk | `/blog/asc-billing-financial-risk-per-case` |
+| Thu 2026-09-24 | 15 | Health system denial patterns | `/blog/health-system-denial-patterns-across-facilities` |
+| Mon 2026-09-28 | 16 | Multi-site revenue variance | `/blog/multi-site-groups-revenue-variance-by-location` |
+| Thu 2026-10-01 | 17 | MSO/PE acquisition onboarding | `/blog/mso-pe-acquisition-onboarding-billing` |
+| Mon 2026-10-05 | 18 | Hospital-based out-of-network | `/blog/hospital-based-groups-out-of-network-disputes` |
 
 ---
 
-## 12. Screening colonoscopy modifiers — Thu 2026-09-17
+## 12. Screening colonoscopy modifiers — Mon 2026-09-14
 
 > About a quarter of screening colonoscopies stop being screening colonoscopies partway through.
 >
@@ -38,7 +38,7 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-## 13. Independent practice trend — Mon 2026-09-21
+## 13. Independent practice trend — Thu 2026-09-17
 
 > The number gets repeated constantly, usually by someone selling an exit: physicians in private practice fell from 60.1% in 2012 to 42.2% in 2024, per the AMA's Physician Practice Benchmark Survey.
 >
@@ -56,7 +56,7 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-## 14. ASC per-case risk — Thu 2026-09-24
+## 14. ASC per-case risk — Mon 2026-09-21
 
 > Medicare is steering surgical volume toward ambulatory surgery centers because the savings are documented, not theoretical.
 >
@@ -72,7 +72,7 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-## 15. Health system denial patterns — Mon 2026-09-28
+## 15. Health system denial patterns — Thu 2026-09-24
 
 > Hospital denials got worse again in 2025, and the increase is concentrated in the category that is hardest to fix.
 >
@@ -90,7 +90,7 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-## 16. Multi-site revenue variance — Thu 2026-10-01
+## 16. Multi-site revenue variance — Mon 2026-09-28
 
 > When one location collects better than another, the explanation offered is usually patient mix. It usually isn't.
 >
@@ -108,7 +108,7 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-## 17. MSO/PE acquisition onboarding — Mon 2026-10-05
+## 17. MSO/PE acquisition onboarding — Thu 2026-10-01
 
 > In a healthcare roll-up, the thing that compounds is the onboarding process — not any individual deal.
 >
@@ -126,7 +126,7 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-## 18. Hospital-based out-of-network disputes — Thu 2026-10-08
+## 18. Hospital-based out-of-network disputes — Mon 2026-10-05
 
 > Emergency, radiology, and anesthesia groups did not choose to be at the centre of the surprise billing dispute system. They are there structurally, because their patients do not select them.
 >
@@ -144,4 +144,4 @@ Every figure below is quoted from the blog post it accompanies, which cites its 
 
 ---
 
-*Batch 1 (12–14) drafted 2026-08-26. Batch 2 (15–18) drafted 2026-08-26. All seven now queued to 2026-10-08.*
+*Batch 1 (12–14) drafted 2026-08-26. Batch 2 (15–18) drafted 2026-08-26. All seven queued to 2026-10-05. Dates moved one slot earlier on 2026-09-08: Buffer's first-batch queue ends Fri 09-11, not Mon 09-14.*
