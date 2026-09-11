@@ -126,6 +126,35 @@ export const specialtyServicePages: SpecialtyServicePage[] = [
     metaDescription: "Claims processing, denial management, and administrative support built around behavioral health's session-based billing and confidentiality needs.",
     keyword: "behavioral health back office outsourcing",
   },
+  {
+    specialtySlug: "behavioral-health",
+    serviceSlug: "web-design-social-media",
+    headline: "Website & Social Media for Behavioral Health Practices",
+    subheadline: "A site built around discretion and trust — the two things a behavioral health website has to earn before a visitor becomes a patient.",
+    intro: "Someone searching for a therapist is usually searching privately, often at a harder moment than a typical patient booking a checkup, and the site is the first — sometimes only — impression before they decide to call. A behavioral health website has different requirements than a typical medical site: it has to signal confidentiality and safety before it asks for any information, make insurance and session-cost questions answerable without a phone call, and never read as clinical or cold. We build and maintain that site, and run the social presence alongside it, with the same discretion standards behavioral health billing already requires.",
+    considerations: [
+      { title: "Trust has to be established before a form appears", body: "A visitor deciding whether to seek behavioral health care is often more hesitant than one booking a physical checkup. A site that leads with warmth and clear confidentiality language, rather than an immediate intake form, converts better." },
+      { title: "Insurance and cost questions need answers before someone will call", body: "Whether therapy is covered, what a session costs without insurance, and whether the practice is in-network are the questions that keep a hesitant visitor from ever picking up the phone. Answering them on the site removes the biggest barrier to that first call." },
+      { title: "A visible path to crisis resources is a standard, not an option", body: "Behavioral health sites are expected to point visitors toward the 988 Suicide & Crisis Lifeline and local emergency resources. We include that path on every page, not buried in a footer." },
+      { title: "Social content has to stay clinically careful", body: "No patient photos, no casual health tips that read as clinical advice, no assumptions about what a follower is dealing with. Every post gets reviewed against that standard before it's scheduled." },
+    ],
+    included: [
+      "Site copy and structure led with confidentiality and warmth, not a generic clinical template",
+      "Insurance, session-cost, and telehealth information visible without a phone call",
+      "Visible crisis-resource path (988 Lifeline and local emergency contacts) on every page",
+      "Accepting-new-patients status you can update yourself as caseloads change",
+      "Social content reviewed against confidentiality and clinical-advice standards before it posts",
+      "No patient photos or identifiable case details in any published content",
+    ],
+    stats: [
+      { value: "Confidentiality-First", label: "Site & Content Standards" },
+      { value: "Crisis-Path", label: "Visible on Every Page" },
+      { value: "Any Size", label: "Solo to Multi-Site Providers" },
+    ],
+    metaTitle: "Website & Social Media Management for Behavioral Health Practices",
+    metaDescription: "Discretion-first website design and social media management for behavioral health and substance use practices — confidentiality-led copy, visible crisis resources, and clinically careful content.",
+    keyword: "behavioral health practice website design",
+  },
 
   // ── PRIMARY CARE ───────────────────────────────────────────────────
   {
@@ -239,6 +268,34 @@ export const specialtyServicePages: SpecialtyServicePage[] = [
     metaTitle: "Back-Office Outsourcing for Primary Care Practices",
     metaDescription: "Claims processing, denial management, and administrative support sized to primary care's high patient volume.",
     keyword: "primary care back office outsourcing",
+  },
+  {
+    specialtySlug: "primary-care",
+    serviceSlug: "web-design-social-media",
+    headline: "Website & Social Media for Primary Care Practices",
+    subheadline: "Built to convert the single most common search a practice gets: \"primary care doctor near me accepting new patients.\"",
+    intro: "Primary care sees the highest patient search volume of any specialty, and most of those searches end at whichever site answers three questions fastest: is this practice accepting new patients, does it take my insurance, and can I book an appointment right now. A site that makes a visitor dig for that information loses them to the next result. We build primary care sites around those three questions first, then handle the ongoing social posting a busy front desk never has time for.",
+    considerations: [
+      { title: "Accepting-new-patients status is the first thing most visitors look for", body: "It changes often — a panel closes, a new provider opens one back up — and a site that can't be updated quickly either turns away patients who'd be accepted or wastes front-desk time on calls the site should have answered." },
+      { title: "Insurance-accepted lists need to be current, not aspirational", body: "An outdated payer list produces a wasted trip or a billing surprise, either of which reflects on the practice, not the insurer. Keeping this list accurate is maintenance work, not a one-time build task." },
+      { title: "CCM and AWV visits confuse patients who've never heard the terms", body: "A short, plain-language explanation of what a Chronic Care Management or Annual Wellness Visit actually is reduces the confused calls those programs generate and helps patients show up prepared for the visit type they scheduled." },
+    ],
+    included: [
+      "Real-time accepting-new-patients status you control without waiting on a developer",
+      "Current insurance-accepted list, updated as your payer contracts change",
+      "Online booking or a request form wired directly to your front desk",
+      "Plain-language pages explaining AWV and CCM visits to reduce confused calls",
+      "Provider bio pages built for every provider, not just the founding physician",
+      "Monthly social content — health reminders, seasonal care topics, practice updates — client-approved before posting",
+    ],
+    stats: [
+      { value: "Real-Time", label: "New-Patient & Insurance Status" },
+      { value: "Booking-Ready", label: "Site Wired to Your Front Desk" },
+      { value: "Any Size", label: "Solo Practitioner to Multi-Provider Group" },
+    ],
+    metaTitle: "Website & Social Media Management for Primary Care Practices",
+    metaDescription: "Website design and social media management for primary care practices — real-time new-patient and insurance status, booking, and plain-language AWV/CCM pages.",
+    keyword: "primary care practice website design",
   },
 
   // ── CARDIOLOGY ─────────────────────────────────────────────────────
@@ -354,6 +411,34 @@ export const specialtyServicePages: SpecialtyServicePage[] = [
     metaDescription: "Claims processing and denial management built around cardiology's high-value, high-scrutiny procedure billing.",
     keyword: "cardiology back office outsourcing",
   },
+  {
+    specialtySlug: "cardiology",
+    serviceSlug: "web-design-social-media",
+    headline: "Website & Social Media for Cardiology Practices",
+    subheadline: "Built for the audience that actually decides where a cardiology patient ends up: the referring physician, not just the search engine.",
+    intro: "Most cardiology patients arrive by referral, not a direct search — which means a cardiology website has a second, often more important audience than the patient: the primary care physician deciding where to send them. That physician is checking what procedures and technology the practice offers, which hospitals its physicians are affiliated with, and whether the training listed matches the case they're referring. We build cardiology sites to answer a referring physician's questions as clearly as a patient's, and keep the social presence current with the credentials a specialty this trust-dependent needs to project.",
+    considerations: [
+      { title: "Referring physicians are checking credentials, not just symptoms", body: "A PCP deciding where to send a patient with a specific finding is looking for board certifications, fellowship training, and hospital affiliations — information a patient-focused site often buries or omits entirely." },
+      { title: "Procedure and technology pages do real work here", body: "Whether a practice offers diagnostic-only services or a full interventional and device program determines whether a given referral is even appropriate. Clear procedure pages help referring physicians route correctly the first time." },
+      { title: "Physician bios carry more weight in a specialty this trust-dependent", body: "Choosing a cardiologist is a higher-trust decision than choosing a primary care provider for most patients. Detailed, credential-forward bio pages matter more here than in specialties where the practice brand carries more of the trust." },
+    ],
+    included: [
+      "Procedure and technology pages distinguishing diagnostic, interventional, and device services offered",
+      "Physician bio pages built around training, board certification, and hospital affiliations",
+      "A referring-physician-facing page separate from the patient-facing site — what to send, how to send it",
+      "Hospital and facility affiliation listings kept current as they change",
+      "Site structure built around your actual procedures and services, cross-linked for patients and referral sources alike",
+      "Social content built around credentials and practice updates, not general health tips",
+    ],
+    stats: [
+      { value: "Referral-Aware", label: "Content for PCPs, Not Just Patients" },
+      { value: "Credential-Forward", label: "Physician Bio Pages" },
+      { value: "Any Size", label: "Solo Cardiologist to Multi-Site Group" },
+    ],
+    metaTitle: "Website & Social Media Management for Cardiology Practices",
+    metaDescription: "Website design and social media management for cardiology practices — procedure and technology pages, credential-forward physician bios, and referring-physician content.",
+    keyword: "cardiology practice website design",
+  },
 
   // ── MULTI-SPECIALTY GROUPS ─────────────────────────────────────────
   {
@@ -468,6 +553,34 @@ export const specialtyServicePages: SpecialtyServicePage[] = [
     metaDescription: "Claims processing and denial management with the depth to handle every department's distinct billing profile in your multi-specialty practice.",
     keyword: "multi specialty back office outsourcing",
   },
+  {
+    specialtySlug: "multi-specialty-groups",
+    serviceSlug: "web-design-social-media",
+    headline: "Website & Social Media for Multi-Specialty Groups",
+    subheadline: "One site architecture that lets a patient find the right department without getting lost in departments they don't need.",
+    intro: "A multi-specialty group's website has a navigation problem most single-specialty sites never face: patients need to find the right provider across departments that don't share the same visit types, insurance quirks, or booking flow, without the site feeling like several practices stitched together. We build one coherent site structured by specialty and service — the same architecture we use across this entire site — so every department gets its own clear page while the group presents as one practice, not a directory.",
+    considerations: [
+      { title: "Site navigation has to scale with departments without becoming a maze", body: "A group with two specialties and a group with a dozen need fundamentally different navigation depth. Building the structure to fit your actual department count — not a generic template — is what keeps the site usable as you add specialties." },
+      { title: "Cross-department discovery is free marketing most groups leave on the table", body: "A patient who found the practice for one specialty often doesn't know the group offers three others. Clear cross-linking between specialty pages turns existing site traffic into internal referrals without any additional marketing spend." },
+      { title: "One brand voice has to hold across departments that each have their own culture", body: "A cardiology department and a behavioral health department inside the same group often need different tones in their content, but the site still needs to read as one consistent brand. Balancing that is a content decision, not just a design one." },
+    ],
+    included: [
+      "Site architecture organized by specialty and department, built to scale as you add providers or departments",
+      "Cross-linking between departments so existing traffic surfaces services patients didn't know you offered",
+      "One consistent brand system across departments, with content tone adjusted per specialty where it matters",
+      "Unified provider directory searchable by specialty, location, and insurance accepted",
+      "Location pages for every site if you run more than one",
+      "Social content calendar spanning every department, so no specialty goes quiet while another gets attention",
+    ],
+    stats: [
+      { value: "Unified", label: "One Site Architecture, Every Department" },
+      { value: "Cross-Linked", label: "Internal Referral Between Specialties" },
+      { value: "Any Size", label: "Two Specialties to a Dozen" },
+    ],
+    metaTitle: "Website & Social Media Management for Multi-Specialty Groups",
+    metaDescription: "Website design and social media management for multi-specialty medical groups — unified site architecture, cross-department discovery, and one consistent brand across departments.",
+    keyword: "multi specialty group website design",
+  },
 
   // ── LABS & DIAGNOSTICS ─────────────────────────────────────────────
   {
@@ -581,6 +694,34 @@ export const specialtyServicePages: SpecialtyServicePage[] = [
     metaTitle: "Back-Office Outsourcing for Labs & Diagnostic Centers",
     metaDescription: "Claims processing and denial management built around lab-specific compliance and audit exposure for labs and diagnostic centers.",
     keyword: "lab diagnostic back office outsourcing",
+  },
+  {
+    specialtySlug: "laboratory-diagnostics",
+    serviceSlug: "web-design-social-media",
+    headline: "Website & Social Media for Labs & Diagnostics",
+    subheadline: "Built for the audience a lab site actually has: referring physicians and health systems, not patients searching to book.",
+    intro: "A lab or diagnostic center's website serves an almost entirely different audience than a typical practice site — referring physicians and health system partners evaluating whether to send specimens, not patients searching to book an appointment. That changes what the site needs to do: a clear, current test menu with specimen requirements and turnaround times, visible accreditation and compliance credentials, and a way to reach the lab that doesn't assume the visitor is a patient. We build lab sites around that reality, and keep social presence focused on credibility signals rather than patient-facing content that doesn't fit the audience.",
+    considerations: [
+      { title: "The primary visitor is a referring physician's office, not a patient", body: "A referring office checking a lab's site is usually looking for the test menu, specimen requirements, and turnaround times to decide where to send work — not booking information a patient site would lead with." },
+      { title: "Accreditation and compliance credentials need to be visible, not just held", body: "CLIA certification, CAP accreditation, and state licensure are exactly what a referring office's compliance process checks before sending specimens. A site that doesn't surface this credibly adds friction to a decision that should be easy." },
+      { title: "The test menu is the site's most-used page, and it needs to stay current", body: "Adding or discontinuing a test, or changing a specimen requirement, needs to reflect on the site immediately — an outdated test menu causes rejected specimens and wasted courier trips." },
+    ],
+    included: [
+      "Searchable, current test menu with specimen requirements and turnaround times",
+      "Accreditation and compliance credentials (CLIA, CAP, state licensure) surfaced prominently, not buried",
+      "Physician-facing contact and requisition information separate from any patient-facing content",
+      "Results-access and portal information clearly linked, even where login lives on a separate system",
+      "Content built to stay current as your test menu and accreditations change",
+      "Social content focused on capacity, accreditation, and turnaround — not patient-facing health content",
+    ],
+    stats: [
+      { value: "Physician-Facing", label: "Content Built for Referring Offices" },
+      { value: "Current", label: "Test Menu Kept Up to Date" },
+      { value: "Any Volume", label: "Single Reference Lab to Diagnostic Network" },
+    ],
+    metaTitle: "Website & Social Media Management for Labs & Diagnostic Centers",
+    metaDescription: "Website design and social media management for independent labs and diagnostic centers — physician-facing content, current test menus, and visible accreditation credentials.",
+    keyword: "diagnostic laboratory website design",
   },
   // ── GASTROENTEROLOGY ───────────────────────────────────────────────
   {
@@ -699,6 +840,34 @@ export const specialtyServicePages: SpecialtyServicePage[] = [
     metaTitle: "Back-Office Outsourcing for Gastroenterology Practices",
     metaDescription: "Biologic prior authorizations, infusion coordination, buy-and-bill reconciliation, and pathology tracking for gastroenterology practices.",
     keyword: "gastroenterology back office outsourcing",
+  },
+  {
+    specialtySlug: "gastroenterology",
+    serviceSlug: "web-design-social-media",
+    headline: "Website & Social Media for Gastroenterology Practices",
+    subheadline: "Built to answer the question that generates the most confused calls in GI: what a colonoscopy actually costs.",
+    intro: "No specialty gets more billing-driven website traffic than gastroenterology. Patients search whether a screening colonoscopy is free, what one costs with insurance, and when they need their first one — before they ever call. Those are the same screening-to-diagnostic and coverage questions that already drive your most common billing disputes. We build gastroenterology sites to answer the cost and prep questions up front, in plain language, which cuts down the surprise-bill calls your front desk currently absorbs.",
+    considerations: [
+      { title: "Screening vs. diagnostic cost confusion starts online, before it becomes a phone call", body: "A plain-language page explaining why a screening colonoscopy can become billable if a polyp is found — the same distinction that drives your billing disputes — sets expectations before the procedure, not after the bill." },
+      { title: "Age-based screening guidance is a real, recurring search", body: "Patients actively search when they should get a first colonoscopy or how often to repeat one. Content answering that accurately, in line with current screening guidelines, brings in exactly the patients a GI practice wants to convert." },
+      { title: "Prep instructions belong on the site, not just in an after-visit summary", body: "A downloadable, plain-language prep guide reduces the same comprehension-driven cancellations your call center already works to prevent — the site and the phone team reinforcing the same message." },
+    ],
+    included: [
+      "Plain-language page explaining screening-to-diagnostic billing, written to reduce surprise-bill calls",
+      "Screening-guideline content addressing when patients should get a first or repeat colonoscopy",
+      "Downloadable prep instructions and FAQ, consistent with what your call center tells patients",
+      "Procedure pages distinguishing colonoscopy, endoscopy, and ASC-based procedures offered",
+      "Physician bio pages built around GI-specific training and procedure volume",
+      "Social content addressing screening awareness and practice updates, reviewed for medical accuracy",
+    ],
+    stats: [
+      { value: "Plain-Language", label: "Screening vs. Diagnostic Billing Explained" },
+      { value: "Consistent", label: "Site & Call Center Tell the Same Story" },
+      { value: "Any Size", label: "Solo Gastroenterologist to Practice-Owned ASC" },
+    ],
+    metaTitle: "Website & Social Media Management for Gastroenterology Practices",
+    metaDescription: "Website design and social media management for gastroenterology practices — plain-language billing and prep content built to reduce surprise-bill calls.",
+    keyword: "gastroenterology practice website design",
   },
 ];
 

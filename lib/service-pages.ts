@@ -191,6 +191,49 @@ export const servicePages: ServicePage[] = [
       "Claims processing, denial management, and administrative support for medical practices of any size, from a single practice to a multi-location group.",
     keyword: "medical back office outsourcing",
   },
+  {
+    slug: "web-design-social-media",
+    name: "Website Design & Social Media",
+    tagline: "Your front door and your feed, run by one team.",
+    headline: "Medical Practice Website Design & Social Media Management",
+    subheadline:
+      "A website and social presence built and maintained by the same team already running your billing and credentialing — not a third vendor you have to manage.",
+    description:
+      "A practice's website is often the last thing that gets updated after a provider joins, a panel closes, or a new location opens — and the first thing a referring physician or new patient checks before calling. We build practice sites the same way we built this one: structured by specialty and service, kept current as your practice changes, with a blog and social presence that keep posting after the launch excitement fades. It's the same operations team already handling your billing and credentialing, running one more part of the practice instead of introducing a new vendor relationship.",
+    challenges: [
+      {
+        title: "A site built once rarely reflects the practice you run now",
+        body: "Providers join, insurance panels close and reopen, locations get added — and a site frozen at launch goes stale quietly, regardless of practice size. Nobody notices until a patient mentions calling about information that turned out to be wrong.",
+      },
+      {
+        title: "Referring physicians and patients both check before they call",
+        body: "A referral or a new-patient search usually stops at whatever the site currently shows — a solo provider's credentials or a multi-location group's full roster. An outdated or thin site costs a call that would have converted.",
+      },
+      {
+        title: "Social accounts go quiet without someone dedicated to keeping them posting",
+        body: "A stalled feed with a last post from eight months ago reads worse to a prospective patient than no social presence at all, and 'we should post more' rarely survives a busy month without someone actually owning the calendar.",
+      },
+    ],
+    included: [
+      "Site built page-by-page for your specialties and services, not a single generic template",
+      "Mobile-responsive design with booking or contact forms wired directly to your front desk",
+      "On-page SEO — page titles, meta descriptions, schema markup",
+      "Blog setup built to carry SEO weight over time, not just launch copy",
+      "Monthly content calendar for LinkedIn and Facebook, client-approved before anything posts",
+      "Analytics and a monthly performance summary — traffic, form submissions, and post activity",
+      "Ongoing edits as your roster, panels, or locations change",
+      "One point of contact — the same operations team already running your billing and credentialing",
+    ],
+    stats: [
+      { value: "Any Size", label: "Solo Practice to Multi-Location Group" },
+      { value: "Client-Approved", label: "Every Post Reviewed Before It Publishes" },
+      { value: "One Team", label: "Same Operations Team as Your Billing" },
+    ],
+    metaTitle: "Medical Practice Website Design & Social Media Management",
+    metaDescription:
+      "Website design and social media management for medical practices of any size — built and maintained by the same team running your billing and credentialing.",
+    keyword: "medical practice website design services",
+  },
 ];
 
 export function getServicePage(slug: string): ServicePage | undefined {

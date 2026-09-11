@@ -91,6 +91,7 @@ export default function Footer() {
               { label: "Medical Billing & RCM", href: "/services/medical-billing-rcm" },
               { label: "Credentialing & Enrollment", href: "/services/credentialing-enrollment" },
               { label: "BPO / Back-Office", href: "/services/bpo-back-office" },
+              { label: "Website & Social Media", href: "/services/web-design-social-media" },
             ].map(({ label, href }) => (
               <div key={label} style={{ marginBottom: 10 }}>
                 <Link href={href} style={{ fontSize: 13, color: "#86868b", textDecoration: "none" }}>

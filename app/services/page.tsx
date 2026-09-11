@@ -75,11 +75,27 @@ function IconBPO() {
   );
 }
 
+function IconWebSocial() {
+  return (
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="44" height="44" rx="12" fill="#e8eef4" />
+      <rect x="9" y="10" width="19" height="15" rx="2.5" stroke="#0f2b46" strokeWidth="1.8" fill="none" />
+      <path d="M9 14.5h19" stroke="#0f2b46" strokeWidth="1.8" />
+      <circle cx="30" cy="29" r="6.5" fill="#17a673" />
+      <circle cx="27.5" cy="27" r="1.2" fill="#fff" />
+      <circle cx="32.5" cy="27" r="1.2" fill="#fff" />
+      <circle cx="30" cy="31.5" r="1.2" fill="#fff" />
+      <path d="M28.3 27.7l3.2 2.6M31.7 27.7l-1.4 2.6" stroke="#fff" strokeWidth="1" />
+    </svg>
+  );
+}
+
 const icons: Record<string, React.ReactNode> = {
   "call-center": <IconCallCenter />,
   "medical-billing-rcm": <IconBilling />,
   "credentialing-enrollment": <IconCredentialing />,
   "bpo-back-office": <IconBPO />,
+  "web-design-social-media": <IconWebSocial />,
 };
 
 export default function ServicesPage() {
