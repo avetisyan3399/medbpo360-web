@@ -194,12 +194,12 @@ export const servicePages: ServicePage[] = [
   {
     slug: "web-design-social-media",
     name: "Website Design & Social Media",
-    tagline: "Your front door and your feed, run by one team.",
+    tagline: "Your front door and your feed, built in-house.",
     headline: "Medical Practice Website Design & Social Media Management",
     subheadline:
-      "A website and social presence built and maintained by the same team already running your billing and credentialing — not a third vendor you have to manage.",
+      "A website and social presence built and maintained in-house at medbpo360 — not outsourced to a third-party agency or freelancer.",
     description:
-      "A practice's website is often the last thing that gets updated after a provider joins, a panel closes, or a new location opens — and the first thing a referring physician or new patient checks before calling. We build practice sites the same way we built this one: structured by specialty and service, kept current as your practice changes, with a blog and social presence that keep posting after the launch excitement fades. It's the same operations team already handling your billing and credentialing, running one more part of the practice instead of introducing a new vendor relationship.",
+      "A practice's website is often the last thing that gets updated after a provider joins, a panel closes, or a new location opens — and the first thing a referring physician or new patient checks before calling. We build practice sites the same way we built this one: structured by specialty and service, kept current as your practice changes, with a blog and social presence that keep posting after the launch excitement fades. It's handled in-house at medbpo360, alongside your billing and credentialing, instead of getting handed off to a separate agency you have to manage and brief from scratch.",
     challenges: [
       {
         title: "A site built once rarely reflects the practice you run now",
@@ -222,16 +222,16 @@ export const servicePages: ServicePage[] = [
       "Monthly content calendar for LinkedIn and Facebook, client-approved before anything posts",
       "Analytics and a monthly performance summary — traffic, form submissions, and post activity",
       "Ongoing edits as your roster, panels, or locations change",
-      "One point of contact — the same operations team already running your billing and credentialing",
+      "Built and managed in-house at medbpo360 — no separate agency briefed or managed on your behalf",
     ],
     stats: [
       { value: "Any Size", label: "Solo Practice to Multi-Location Group" },
       { value: "Client-Approved", label: "Every Post Reviewed Before It Publishes" },
-      { value: "One Team", label: "Same Operations Team as Your Billing" },
+      { value: "In-House", label: "Not Outsourced to a Third-Party Agency" },
     ],
     metaTitle: "Medical Practice Website Design & Social Media Management",
     metaDescription:
-      "Website design and social media management for medical practices of any size — built and maintained by the same team running your billing and credentialing.",
+      "In-house website design and social media management for medical practices of any size — not outsourced to a third-party agency, delivered alongside your billing and credentialing.",
     keyword: "medical practice website design services",
   },
 ];
