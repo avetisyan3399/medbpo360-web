@@ -100,6 +100,16 @@ export default async function ServiceLandingPage({
             }}>
               Get a Free Assessment
             </Link>
+            {slug === "web-design-social-media" && (
+              <Link href="/style-directions" style={{
+                padding: "15px 30px", borderRadius: 980,
+                background: "#fff", color: "#0a0a0f",
+                fontSize: 15, fontWeight: 600, textDecoration: "none",
+                border: "1px solid #d2d2d7",
+              }}>
+                See Style Directions
+              </Link>
+            )}
             <Link href="/services" style={{
               padding: "15px 30px", borderRadius: 980,
               background: "#fff", color: "#0a0a0f",

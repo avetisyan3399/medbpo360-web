@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Website Style Directions",
   description:
-    "Four website style directions for medical practices, shown on the same example practice, used to kick off a web design engagement.",
-  robots: {
-    index: false,
-    follow: false,
+    "Four website style directions for medical practices, shown on the same example practice, so you can see what your site could look like before we build it.",
+  openGraph: {
+    title: "Website Style Directions | medbpo360",
+    description:
+      "Four website style directions for medical practices, shown on the same example practice — pick the one closest to what you want.",
+    url: "https://medbpo360.com/style-directions",
   },
   alternates: {
     canonical: "https://medbpo360.com/style-directions",
@@ -47,11 +50,11 @@ const directions = [
 ];
 
 const checklist = [
-  { title: "Existing brand", body: "Logo and brand colors if they have them, or confirm we're starting from scratch." },
-  { title: "Specialty or org type", body: "Which specialty and service pages this site needs to map to." },
-  { title: "Locations", body: "Single site or multiple, and how many, since it changes the navigation depth." },
-  { title: "Photos", body: "Real practice or provider photos available, or placeholder/stock treatment needed." },
-  { title: "Tone check", body: "Confirm the direction still feels right once it's applied to their actual name and specialty, not a fictional example." },
+  { title: "Your brand", body: "Send your logo and brand colors if you already have them — or tell us you're starting fresh and we'll build from scratch." },
+  { title: "Your specialty", body: "Which of our specialty and service pages your practice maps to, so the site's content matches your actual services." },
+  { title: "Your locations", body: "One site or multiple? It changes how deep the navigation needs to go." },
+  { title: "Your photos", body: "Real photos of your practice and providers if you have them, or we'll source placeholder imagery to start." },
+  { title: "One final look", body: "Once it's built with your real name, specialty, and photos, you'll see it before anything goes live." },
 ];
 
 export default function StyleDirectionsPage() {
@@ -121,13 +124,13 @@ export default function StyleDirectionsPage() {
         <section style={{ paddingTop: 140, paddingBottom: 40, paddingLeft: 24, paddingRight: 24 }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <p style={{ fontSize: 13, fontWeight: 600, color: "#17a673", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 16 }}>
-              medbpo360 &middot; Web Design Intake
+              Website Design &amp; Social Media
             </p>
             <h1 style={{ fontSize: "clamp(28px, 4.5vw, 44px)", fontWeight: 700, letterSpacing: "-1.2px", lineHeight: 1.12, color: "#0a0a0f", marginBottom: 18, maxWidth: 760 }}>
-              Four Starting Points for a Practice&apos;s Website
+              See What Your Practice&apos;s Website Could Look Like
             </h1>
             <p style={{ fontSize: 17, color: "#515154", lineHeight: 1.65, maxWidth: 620 }}>
-              Same fictional practice, four different treatments — use this in the first client conversation. They point at the one that feels right, then the checklist below fills in the specifics before anything gets built.
+              Below is the same fictional practice, shown four different ways, so the differences are easy to see side by side. Pick the direction closest to what you want, and we&apos;ll shape it around your specialty, brand, and photos from there.
             </p>
           </div>
         </section>
@@ -242,14 +245,14 @@ export default function StyleDirectionsPage() {
           ))}
 
           {/* INTAKE */}
-          <section style={{ background: "#0f2b46", borderRadius: 20, padding: "36px 32px", marginTop: 60, marginBottom: 80, color: "#fff" }}>
+          <section style={{ background: "#0f2b46", borderRadius: 20, padding: "36px 32px", marginTop: 60, marginBottom: 36, color: "#fff" }}>
             <h2 style={{ fontSize: 21, fontWeight: 700, letterSpacing: "-0.4px", margin: "0 0 8px" }}>
-              Once They Point at One
+              Once You Pick a Direction
             </h2>
             <p style={{ fontSize: 14, opacity: 0.75, margin: "0 0 24px", maxWidth: "52ch", lineHeight: 1.6 }}>
-              The style is the starting point. This is what still needs to be confirmed before anything gets built.
+              The style is the starting point. Here&apos;s what we&apos;ll need from you before we start building.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 28 }}>
               {checklist.map((item, i) => (
                 <div key={item.title} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                   <span style={{
@@ -266,10 +269,17 @@ export default function StyleDirectionsPage() {
                 </div>
               ))}
             </div>
+            <Link href="/contact" style={{
+              display: "inline-block", padding: "13px 26px",
+              borderRadius: 980, background: "#17a673",
+              color: "#fff", fontSize: 14, fontWeight: 700, textDecoration: "none",
+            }}>
+              Talk to Our Team
+            </Link>
           </section>
 
           <p style={{ fontSize: 12.5, color: "#86868b", lineHeight: 1.6, paddingBottom: 60, borderTop: "1px solid #e8e8ed", paddingTop: 22 }}>
-            Reusable across any client — same four directions, same intake, no rebuild per prospect. &ldquo;Harborview Cardiology&rdquo; above is a fictional example used for comparison only, not a real client or outcome.
+            &ldquo;Harborview Cardiology&rdquo; above is a fictional example, used to compare styles side by side — not a real client or outcome.
           </p>
         </div>
       </main>
