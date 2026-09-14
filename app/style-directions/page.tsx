@@ -42,6 +42,7 @@ const directions: Direction[] = [
     desc: "Softer palette, rounder type, no stat blocks. Built for a visitor who's a nervous or first-time patient, not a referring physician.",
     fit: ["Primary Care", "Behavioral Health"],
     mockClass: "mock--warm",
+    liveDemo: "/demo/willowcreek",
   },
   {
     num: "03",

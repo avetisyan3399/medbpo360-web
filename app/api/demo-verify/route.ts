@@ -3,15 +3,26 @@ import { verifyDemoToken } from "@/lib/demo-token";
 
 const DEMOS: Record<string, { cookie: string; path: string }> = {
   harborview: { cookie: "hv_demo_unlock", path: "/demo/harborview" },
+  willowcreek: { cookie: "wc_demo_unlock", path: "/demo/willowcreek" },
 };
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const token = url.searchParams.get("token") ?? "";
-  const demo = DEMOS.harborview; // only one demo today; keyed by token payload if that ever changes
 
   const verified = verifyDemoToken(token);
-  if (!verified) {
+  const demo = verified && DEMOS[verified.demo];
+
+  if (!verified || !demo) {
+    // Forged, malformed, or for a demo we don't recognize — no signed
+    // payload to trust at all, so there's no specific gate to send them
+    // back to.
+    return NextResponse.redirect(new URL("/style-directions?expired=1", url.origin));
+  }
+
+  if (verified.expired) {
+    // Signature checks out, so the `demo` field is trustworthy even though
+    // the link itself timed out — send them back to that specific gate.
     return NextResponse.redirect(new URL(`${demo.path}?expired=1`, url.origin));
   }
 

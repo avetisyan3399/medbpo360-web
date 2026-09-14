@@ -45,7 +45,7 @@ export default function ContactForm() {
       onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
       style={{ border: "1px solid #e8ecf0", borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", gap: 18 }}
     >
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 16 }}>
         <div>
           <label style={labelStyle}>Full Name</label>
           <input required style={inputStyle} type="text" placeholder="Jane Rivera" />

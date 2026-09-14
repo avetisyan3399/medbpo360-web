@@ -43,7 +43,7 @@ export default function ServicesPage() {
           {services.map((s) => (
             <div key={s.name} style={{
               border: "1px solid #e8ecf0", borderRadius: 16, padding: "30px 28px",
-              display: "grid", gridTemplateColumns: "minmax(200px, 1fr) minmax(200px, 1fr)", gap: 24,
+              display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24,
             }}>
               <div>
                 <h3 style={{ fontFamily: "'Libre Franklin', sans-serif", fontSize: 19, fontWeight: 800, color: "#0f2b46", marginBottom: 8 }}>{s.name}</h3>

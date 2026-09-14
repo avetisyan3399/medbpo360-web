@@ -30,12 +30,19 @@ function sign(payload: string): string {
   return createHmac("sha256", getSecret()).update(payload).digest("base64url");
 }
 
-export function createDemoToken(email: string, ttlMs = 30 * 60_000): string {
-  const payload = Buffer.from(JSON.stringify({ email, exp: Date.now() + ttlMs })).toString("base64url");
+export function createDemoToken(email: string, demo: string, ttlMs = 30 * 60_000): string {
+  const payload = Buffer.from(JSON.stringify({ email, demo, exp: Date.now() + ttlMs })).toString("base64url");
   return `${payload}.${sign(payload)}`;
 }
 
-export function verifyDemoToken(token: string): { email: string } | null {
+export type DemoTokenPayload = { email: string; demo: string; expired: boolean };
+
+// Verifies the signature and, if that checks out, returns the payload
+// regardless of expiry — the `demo` field is trustworthy either way (it was
+// signed), so a caller can still redirect an expired link back to the right
+// demo's gate instead of a generic fallback. `expired` is what actually
+// gates unlock; a signature failure (forged/malformed token) returns null.
+export function verifyDemoToken(token: string): DemoTokenPayload | null {
   const [payload, signature] = String(token ?? "").split(".");
   if (!payload || !signature) return null;
 
@@ -45,10 +52,9 @@ export function verifyDemoToken(token: string): { email: string } | null {
   if (a.length !== b.length || !timingSafeEqual(a, b)) return null;
 
   try {
-    const { email, exp } = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
-    if (typeof email !== "string" || typeof exp !== "number") return null;
-    if (Date.now() > exp) return null;
-    return { email };
+    const { email, demo, exp } = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
+    if (typeof email !== "string" || typeof demo !== "string" || typeof exp !== "number") return null;
+    return { email, demo, expired: Date.now() > exp };
   } catch {
     return null;
   }

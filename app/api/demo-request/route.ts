@@ -28,6 +28,7 @@ const NOTIFY_TO = "info+demo@medbpo360.com";
 
 const DEMOS: Record<string, { label: string; path: string }> = {
   harborview: { label: "Harborview Cardiology (Clinical Trust)", path: "/demo/harborview" },
+  willowcreek: { label: "Willow Creek Family Medicine (Warm & Approachable)", path: "/demo/willowcreek" },
 };
 
 const MIN_FILL_MS = 2_000;
@@ -46,7 +47,8 @@ export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
   if (!body) return NextResponse.json({ error: "Invalid request." }, { status: 400 });
 
-  const demo = DEMOS[String(body.demo ?? "")];
+  const demoKey = String(body.demo ?? "");
+  const demo = DEMOS[demoKey];
   if (!demo) return NextResponse.json({ error: "Unknown demo." }, { status: 404 });
 
   // Bots fill every input. Pretend it worked — a distinctive failure would
@@ -75,7 +77,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const token = createDemoToken(email);
+  const token = createDemoToken(email, demoKey);
   const origin = new URL(request.url).origin;
   const verifyUrl = `${origin}/api/demo-verify?token=${encodeURIComponent(token)}`;
 

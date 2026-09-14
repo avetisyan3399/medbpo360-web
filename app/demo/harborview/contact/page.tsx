@@ -18,7 +18,7 @@ export default function ContactPage() {
       </section>
 
       <section style={{ padding: "48px 24px 90px", background: "#fff" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1.3fr) minmax(0, 1fr)", gap: 40, alignItems: "start" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 40, alignItems: "start" }}>
           <ContactForm />
           <div style={{ background: "#f5f7f9", borderRadius: 16, padding: "28px 24px" }}>
             <h3 style={{ fontSize: 14, fontWeight: 700, color: "#0f2b46", textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 18 }}>
