@@ -1,24 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
-const STORAGE_KEY = "medbpo360-demo-unlocked:harborview";
+export default function DemoGate() {
+  const searchParams = useSearchParams();
+  const expired = searchParams.get("expired") === "1";
 
-export default function DemoGate({ children }: { children: React.ReactNode }) {
-  const [unlocked, setUnlocked] = useState<boolean | null>(null);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sent, setSent] = useState(false);
   const startedAt = useRef<number | null>(null);
   const honeypot = useRef("");
 
   useEffect(() => {
     startedAt.current = Date.now();
-    try {
-      setUnlocked(localStorage.getItem(STORAGE_KEY) === "true");
-    } catch {
-      setUnlocked(false);
-    }
   }, []);
 
   const submit = async (e: React.FormEvent) => {
@@ -42,14 +39,8 @@ export default function DemoGate({ children }: { children: React.ReactNode }) {
         }),
       });
       const payload = await res.json().catch(() => null);
-      if (!res.ok || !payload?.unlocked) throw new Error(payload?.error || "Failed");
-      try {
-        localStorage.setItem(STORAGE_KEY, "true");
-      } catch {
-        // Private browsing or storage disabled — the demo still opens for
-        // this page view, it just won't stay unlocked on the next visit.
-      }
-      setUnlocked(true);
+      if (!res.ok || !payload?.sent) throw new Error(payload?.error || "Failed");
+      setSent(true);
     } catch (err) {
       setError(
         err instanceof Error && err.message !== "Failed"
@@ -61,10 +52,26 @@ export default function DemoGate({ children }: { children: React.ReactNode }) {
     }
   };
 
-  // Avoid a flash of the gate for a visitor who already unlocked it.
-  if (unlocked === null) return null;
-
-  if (unlocked) return <>{children}</>;
+  if (sent) {
+    return (
+      <main style={{ padding: "72px 24px 100px", textAlign: "center" }}>
+        <div style={{ maxWidth: 420, margin: "0 auto" }}>
+          <div style={{
+            width: 46, height: 46, borderRadius: "50%", background: "#128a5e",
+            display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px",
+          }}>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </div>
+          <h1 style={{ fontFamily: "'Libre Franklin', sans-serif", fontSize: 22, fontWeight: 800, color: "#0f2b46", marginBottom: 12 }}>
+            Check your inbox
+          </h1>
+          <p style={{ fontSize: 15, color: "#5f6b76", lineHeight: 1.65 }}>
+            We sent a link to <strong>{email.trim()}</strong>. Click it to open the demo — it works once and expires in 30 minutes.
+          </p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main style={{ background: "radial-gradient(ellipse 90% 55% at 50% 0%, #dde7ee 0%, #ffffff 65%)", padding: "72px 24px 100px", textAlign: "center" }}>
@@ -75,9 +82,15 @@ export default function DemoGate({ children }: { children: React.ReactNode }) {
         <h1 style={{ fontFamily: "'Libre Franklin', sans-serif", fontSize: "clamp(24px, 4vw, 32px)", fontWeight: 800, letterSpacing: "-0.8px", color: "#0f2b46", marginBottom: 14, lineHeight: 1.2 }}>
           See the Full Demo
         </h1>
-        <p style={{ fontSize: 15, color: "#5f6b76", lineHeight: 1.65, marginBottom: 28 }}>
-          One email unlocks all five pages — home, providers, services, locations, and a working appointment form.
+        <p style={{ fontSize: 15, color: "#5f6b76", lineHeight: 1.65, marginBottom: 22 }}>
+          Enter your email and we&apos;ll send a link to unlock all five pages — home, providers, services, locations, and a working appointment form.
         </p>
+
+        {expired && (
+          <div style={{ background: "#fdf3d9", color: "#8a6d00", fontSize: 13.5, borderRadius: 10, padding: "10px 14px", marginBottom: 18, textAlign: "left" }}>
+            That link expired or was already used — request a new one below.
+          </div>
+        )}
 
         <form onSubmit={submit} style={{
           background: "#fff", border: "1px solid #e8ecf0", borderRadius: 16,
@@ -120,7 +133,7 @@ export default function DemoGate({ children }: { children: React.ReactNode }) {
               fontSize: 15, fontWeight: 700, cursor: loading ? "default" : "pointer",
             }}
           >
-            {loading ? "Unlocking…" : "View the Demo"}
+            {loading ? "Sending…" : "Email Me the Link"}
           </button>
           {error && <div style={{ fontSize: 13, color: "#c0392b", lineHeight: 1.5 }}>{error}</div>}
           <p style={{ fontSize: 12, color: "#8a929a", lineHeight: 1.6, margin: 0 }}>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import DemoBanner from "./_components/DemoBanner";
 import HarborviewNav from "./_components/HarborviewNav";
 import HarborviewFooter from "./_components/HarborviewFooter";
@@ -17,7 +18,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HarborviewLayout({ children }: { children: React.ReactNode }) {
+export default async function HarborviewLayout({ children }: { children: React.ReactNode }) {
+  const cookieStore = await cookies();
+  const unlocked = cookieStore.get("hv_demo_unlock")?.value === "1";
+
   return (
     <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" }}>
       <link
@@ -26,7 +30,7 @@ export default function HarborviewLayout({ children }: { children: React.ReactNo
       />
       <DemoBanner />
       <HarborviewNav />
-      <DemoGate>{children}</DemoGate>
+      {unlocked ? children : <DemoGate />}
       <HarborviewFooter />
     </div>
   );
