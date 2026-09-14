@@ -155,6 +155,31 @@ export default async function ServiceLandingPage({
           </div>
         </section>
 
+        {slug === "web-design-social-media" && (
+          <section style={{ padding: "0 24px 80px", background: "#fff" }}>
+            <div style={{
+              maxWidth: 900, margin: "0 auto", background: "#0f2b46", borderRadius: 24,
+              padding: "48px 40px", textAlign: "center", color: "#fff",
+            }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "#5cd6ab", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 14 }}>
+                See It In Action
+              </p>
+              <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 700, letterSpacing: "-0.8px", marginBottom: 14 }}>
+                Walk Through a Live Demo
+              </h2>
+              <p style={{ fontSize: 15.5, color: "rgba(255,255,255,0.8)", maxWidth: 520, margin: "0 auto 28px", lineHeight: 1.65 }}>
+                We built a real, clickable five-page site for a fictional cardiology practice in the Clinical Trust direction — home, providers, services, locations, and a working appointment form. One email unlocks it.
+              </p>
+              <Link href="/demo/harborview" style={{
+                display: "inline-block", padding: "14px 30px", borderRadius: 980,
+                background: "#17a673", color: "#fff", fontSize: 15, fontWeight: 700, textDecoration: "none",
+              }}>
+                View Live Demo
+              </Link>
+            </div>
+          </section>
+        )}
+
         {/* CHALLENGES */}
         <section style={{ padding: "80px 24px", background: "#f5f5f7" }}>
           <div style={{ maxWidth: 1080, margin: "0 auto" }}>

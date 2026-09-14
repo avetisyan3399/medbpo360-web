@@ -18,13 +18,23 @@ export const metadata: Metadata = {
   },
 };
 
-const directions = [
+type Direction = {
+  num: string;
+  name: string;
+  desc: string;
+  fit: string[];
+  mockClass: string;
+  liveDemo?: string;
+};
+
+const directions: Direction[] = [
   {
     num: "01",
     name: "Clinical Trust",
     desc: "Navy, white, one accent color. Credentials and numbers up front — built for a visitor who's evaluating expertise before they trust it.",
     fit: ["Cardiology", "Labs & Diagnostics", "Multi-Specialty Groups"],
     mockClass: "mock--clinical",
+    liveDemo: "/demo/harborview",
   },
   {
     num: "02",
@@ -164,6 +174,11 @@ export default function StyleDirectionsPage() {
                       </span>
                     ))}
                   </div>
+                  {d.liveDemo && (
+                    <Link href={d.liveDemo} style={{ display: "inline-block", fontSize: 12.5, fontWeight: 700, color: "#128a5e", textDecoration: "none", marginTop: 10 }}>
+                      View a live, clickable demo of this direction &rarr;
+                    </Link>
+                  )}
                 </div>
               </div>
 

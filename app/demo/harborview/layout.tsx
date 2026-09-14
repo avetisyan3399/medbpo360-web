@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import DemoBanner from "./_components/DemoBanner";
 import HarborviewNav from "./_components/HarborviewNav";
 import HarborviewFooter from "./_components/HarborviewFooter";
+import DemoGate from "./_components/DemoGate";
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +26,7 @@ export default function HarborviewLayout({ children }: { children: React.ReactNo
       />
       <DemoBanner />
       <HarborviewNav />
-      {children}
+      <DemoGate>{children}</DemoGate>
       <HarborviewFooter />
     </div>
   );
