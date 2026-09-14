@@ -102,13 +102,13 @@ export default async function ServiceLandingPage({
             </Link>
             {slug === "web-design-social-media" && (
               <>
-                <Link href="/demo/harborview" style={{
+                <a href="#live-demos" style={{
                   padding: "15px 30px", borderRadius: 980, background: "#17a673",
                   color: "#fff", fontSize: 15, fontWeight: 600, textDecoration: "none",
                   boxShadow: "0 4px 20px rgba(23,166,115,0.3)",
                 }}>
-                  View Live Demo
-                </Link>
+                  View Live Demos
+                </a>
                 <Link href="/style-directions" style={{
                   padding: "15px 30px", borderRadius: 980,
                   background: "#fff", color: "#0a0a0f",
@@ -165,26 +165,58 @@ export default async function ServiceLandingPage({
         </section>
 
         {slug === "web-design-social-media" && (
-          <section style={{ padding: "0 24px 80px", background: "#fff" }}>
+          <section id="live-demos" style={{ padding: "0 24px 80px", background: "#fff", scrollMarginTop: 100 }}>
             <div style={{
-              maxWidth: 900, margin: "0 auto", background: "#0f2b46", borderRadius: 24,
-              padding: "48px 40px", textAlign: "center", color: "#fff",
+              maxWidth: 1000, margin: "0 auto", background: "#0f2b46", borderRadius: 24,
+              padding: "48px 40px",
             }}>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "#5cd6ab", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 14 }}>
-                See It In Action
-              </p>
-              <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 700, letterSpacing: "-0.8px", marginBottom: 14 }}>
-                Walk Through a Live Demo
-              </h2>
-              <p style={{ fontSize: 15.5, color: "rgba(255,255,255,0.8)", maxWidth: 520, margin: "0 auto 28px", lineHeight: 1.65 }}>
-                We built a real, clickable five-page site for a fictional cardiology practice in the Clinical Trust direction — home, providers, services, locations, and a working appointment form. One email unlocks it.
-              </p>
-              <Link href="/demo/harborview" style={{
-                display: "inline-block", padding: "14px 30px", borderRadius: 980,
-                background: "#17a673", color: "#fff", fontSize: 15, fontWeight: 700, textDecoration: "none",
-              }}>
-                View Live Demo
-              </Link>
+              <div style={{ textAlign: "center", marginBottom: 36 }}>
+                <p style={{ fontSize: 12, fontWeight: 700, color: "#5cd6ab", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 14 }}>
+                  See It In Action
+                </p>
+                <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 700, letterSpacing: "-0.8px", color: "#fff", marginBottom: 14 }}>
+                  Walk Through a Live Demo
+                </h2>
+                <p style={{ fontSize: 15.5, color: "rgba(255,255,255,0.8)", maxWidth: 560, margin: "0 auto", lineHeight: 1.65 }}>
+                  Two real, clickable five-page sites, each in a different style direction — home, providers, services, locations, and a working appointment form. One email unlocks either one.
+                </p>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
+                <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 18, padding: "26px 24px", textAlign: "center" }}>
+                  <p style={{ fontSize: 11.5, fontWeight: 700, color: "#5cd6ab", textTransform: "uppercase", letterSpacing: 1, marginBottom: 10 }}>
+                    Clinical Trust
+                  </p>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#fff", marginBottom: 10 }}>
+                    Harborview Cardiology
+                  </h3>
+                  <p style={{ fontSize: 13.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, marginBottom: 20 }}>
+                    Credential-forward, built for a referral-driven specialty practice.
+                  </p>
+                  <Link href="/demo/harborview" style={{
+                    display: "inline-block", padding: "12px 26px", borderRadius: 980,
+                    background: "#17a673", color: "#fff", fontSize: 14, fontWeight: 700, textDecoration: "none",
+                  }}>
+                    View This Demo
+                  </Link>
+                </div>
+                <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 18, padding: "26px 24px", textAlign: "center" }}>
+                  <p style={{ fontSize: 11.5, fontWeight: 700, color: "#e0a3b3", textTransform: "uppercase", letterSpacing: 1, marginBottom: 10 }}>
+                    Warm &amp; Approachable
+                  </p>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#fff", marginBottom: 10 }}>
+                    Willow Creek Family Medicine
+                  </h3>
+                  <p style={{ fontSize: 13.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, marginBottom: 20 }}>
+                    Softer and more personal, built for a primary care or behavioral health practice.
+                  </p>
+                  <Link href="/demo/willowcreek" style={{
+                    display: "inline-block", padding: "12px 26px", borderRadius: 980,
+                    background: "#b3667a", color: "#fff", fontSize: 14, fontWeight: 700, textDecoration: "none",
+                  }}>
+                    View This Demo
+                  </Link>
+                </div>
+              </div>
             </div>
           </section>
         )}
