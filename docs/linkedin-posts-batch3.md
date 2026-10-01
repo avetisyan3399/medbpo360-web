@@ -46,6 +46,8 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 > That is one of seven places we see diagnostic revenue leak. The others: PAMA reporting, ABN validity, coverage rules that differ by MAC jurisdiction, panel scope, and genetic testing documentation.
 >
 > Checklist, with the CMS and OIG sources cited throughout → https://medbpo360.com/resources/lab-billing-compliance-checklist
+>
+> #medicalbilling #medicallaboratory #healthcarecompliance #revenuecyclemanagement
 
 ---
 
@@ -60,6 +62,8 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 > In cardiology it is the single largest driver of denials we see — ahead of coding errors, ahead of eligibility.
 >
 > How the patterns break down by payer → https://medbpo360.com/blog/denial-management-cardiology-payer-patterns
+>
+> #priorauthorization #cardiology #denialmanagement #revenuecyclemanagement
 
 ---
 
@@ -88,6 +92,8 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 > Most billing teams are not looking for that, because it is a legal argument wearing a claims-denial costume.
 >
 > Where behavioural health denials actually come from → https://medbpo360.com/blog/behavioral-health-billing-denial-rates
+>
+> #behavioralhealth #mentalhealthcare #denialmanagement #medicalbilling
 
 ---
 
@@ -102,6 +108,8 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 > That is one of seven dates worth checking. Revalidation deactivation is another — it runs on Medicare's calendar, to whatever correspondence address is on file, which for a lot of practices is a suite they moved out of.
 >
 > Checklist, sourced to CMS contractors → https://medbpo360.com/resources/credentialing-timeline-checklist
+>
+> #credentialing #payerenrollment #practicemanagement #healthcareadmin
 
 ---
 
@@ -116,6 +124,8 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 > The tipping point is usually three things at once — nobody auditing coding, AR days climbing without explanation, and the billing staff absorbing prior auth work they did not use to do.
 >
 > When in-house billing stops making sense → https://medbpo360.com/blog/primary-care-billing-when-to-stop-in-house
+>
+> #primarycare #practicemanagement #healthcareadmin #medicalbilling
 
 ---
 
@@ -130,6 +140,8 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 > It is money already earned. The work is already done, the patient was already seen, the claim was already submitted. The only thing standing between the practice and the payment is somebody opening the denial.
 >
 > If you measure one thing this quarter, measure that percentage. It is usually worse than expected, and it is the cheapest thing on the list to fix.
+>
+> #revenuecyclemanagement #denialmanagement #practicemanagement
 
 ---
 
@@ -138,4 +150,5 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 - Polls: LinkedIn allows up to four options and a body. Run them for one week.
 - Posts 21, 23 and 25 lead from a different fact than their original companions did, so a reader who saw the first will not feel repeated at.
 - Every statistic is one already published in the linked blog post, which cites its own source. Nothing here is medbpo360 client data.
+- Hashtags added 2026-10-01 for consistency with batches 1 and 2; the polls stay without, since a poll's body reads better clean.
 - Post 26 has no link at all. That is deliberate — one post in the batch that asks nothing and links nowhere.
