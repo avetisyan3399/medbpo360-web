@@ -224,6 +224,48 @@ def build_post_square(path: Path, title: str, category: str) -> None:
     save_jpeg(img, path)
 
 
+# ---------------------------------------------------------------------------
+# Paid ad creative
+#
+# A Lead Gen Form campaign cannot use an existing organic post as its creative:
+# the form only attaches to a single-image, document, carousel or video ad. So
+# a sponsored lead-gen ad needs its own image, which is what this produces.
+# LinkedIn's single-image spec is 1200x627 for the 1.91:1 landscape slot.
+# ---------------------------------------------------------------------------
+
+AD_LANDSCAPE = (1200, 627)
+
+
+def build_ad_landscape(path: Path, eyebrow: str, headline: str, footer: str) -> None:
+    w, h = AD_LANDSCAPE
+    pad = 72
+    usable = w - pad * 2
+    img = backdrop(AD_LANDSCAPE, focus=(0.18, 0.25))
+    draw = ImageDraw.Draw(img)
+
+    draw.text((pad, pad - 8), "Med", font=load_font("bold", 40), fill=WHITE)
+    off = draw.textlength("Med", font=load_font("bold", 40))
+    draw.text((pad + off, pad - 8), "BPO360", font=load_font("bold", 40), fill=GREEN)
+
+    draw_tracked(draw, (pad, 196), eyebrow.upper(), load_font("bold", 24), GREEN, 3)
+
+    # Largest size whose wrap fits the headline box.
+    box_h, top = 250, 244
+    for size in (62, 56, 50, 46, 42):
+        font = load_font("bold", size)
+        lines = wrap(draw, headline, font, usable)
+        lh = int(size * 1.2)
+        if len(lines) * lh <= box_h:
+            break
+    y = top
+    for line in lines:
+        draw.text((pad, y), line, font=font, fill=WHITE)
+        y += lh
+
+    draw.text((pad, h - pad - 24), footer, font=load_font("regular", 27), fill=MUTED)
+    save_jpeg(img, path)
+
+
 def build_all_post_squares() -> None:
     out = OUT_DIR / "squares"
     posts = sorted(BLOG_DIR.glob("*.md"))
@@ -241,3 +283,9 @@ if __name__ == "__main__":
     build_cover(OUT_DIR / "facebook-cover.jpg")
     build_square(OUT_DIR / "logo-square.jpg")
     build_all_post_squares()
+    build_ad_landscape(
+        OUT_DIR / "ad-credentialing-checklist.jpg",
+        eyebrow="Credentialing",
+        headline="Seven dates that decide whether a new provider is billable",
+        footer="Free checklist, sourced to CMS  ·  medbpo360.com",
+    )
