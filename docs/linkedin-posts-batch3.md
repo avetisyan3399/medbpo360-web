@@ -17,7 +17,9 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 
 ---
 
-## 19. Poll — where the money actually goes · Thu 2026-10-08
+## 19. Poll — where the money actually goes · Thu 2026-10-08 — NOT POSTED
+
+**Skipped.** The date passed unposted and the owner chose on 2026-10-21 not to backfill it. Kept here because the question is reusable once the page has an audience that would answer it.
 
 **Poll question:** Which one quietly costs your practice the most?
 
@@ -67,7 +69,9 @@ If the polls also produce nothing, that is genuinely informative: it would mean 
 
 ---
 
-## 22. Poll — credentialing reality check · Mon 2026-10-19
+## 22. Poll — credentialing reality check · Mon 2026-10-19 — NOT POSTED
+
+**Skipped** on 2026-10-21, same reason as post 19. A poll with no voters reads worse than no poll.
 
 **Poll question:** Last time you credentialed a provider with a new payer, how long did it actually take?
 
