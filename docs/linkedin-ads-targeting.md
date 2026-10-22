@@ -86,3 +86,62 @@ LinkedIn's native Lead Gen Forms typically convert better than a landing page, b
 They are not the first test here because leads land inside LinkedIn rather than in the site's own flow: no Insight Tag conversion, no retargeting audience built, and the contact has to be exported. Website conversions are measurable end to end and feed campaign 3.
 
 Worth testing as a variant once there is a baseline to compare against.
+
+---
+
+# Revision 2026-10-21 — what is actually being run
+
+The plan above was drafted 2026-08-26 on the assumption that the free levers would run first and that ads would start once the question was *"how do we get more of this?"*. That is not what happened. The free levers never ran, and organic reach has since collapsed: 21 posts from 08-17 to 10-14 produced 925 impressions, 15 clicks, 1 like, 0 comments and 0 followers, with daily impressions falling from 24/day in August to 3.2/day by mid-October. Click-through across the whole run is 1.6%, which is normal — the posts convert the few people who see them, and almost nobody sees them.
+
+So the ad is starting earlier, smaller, and against a different question: *does this audience respond at all?*
+
+Two deliberate departures from the brief above, both of which overturn reasoning written in August.
+
+**Credentialing, not lab billing, goes first.** The August argument for lab was the only genuine demand signal in Search Console. That argument is about Google, where people arrive already searching for a solution. LinkedIn has no search intent to capture — it interrupts people by job title, and "lab billing manager" is a far smaller targetable population than "practice manager." At $300 a narrow audience in an expensive auction is a liability, not a focus. Credentialing is also the least specialty-specific pain medbpo360 sells against, so the targeting does not have to be tight to work.
+
+**A Lead Gen Form, not a landing page.** The August reasoning — end-to-end measurement, and traffic that builds a retargeting audience for campaign 3 — is sound at a larger budget. At $300 it is unreachable: LinkedIn requires a minimum audience size before a website retargeting audience can be used for anything, and this spend will not produce it. What binds at this budget is how many clicks the test needs before a null result means something, and the pre-filled form cuts that materially. The accepted cost is colder leads and a manual export. The form's thank-you URL still sends people to the resource page, so they land on the site either way.
+
+## Campaign spec as launched
+
+| Field | Value |
+|---|---|
+| Objective | Lead generation |
+| Budget | $300 lifetime, daily cap $25, ends Mon 2026-11-09 |
+| Start | Mon 2026-10-26 |
+| Format | Single image, `brand/ad-credentialing-checklist.jpg` (1200×627) |
+| Audience | US · job functions Healthcare Services, Operations, Finance · seniority Manager/Director/Owner · headcount 1–200 · titles Practice Manager, Practice Administrator, Revenue Cycle Manager, Billing Manager, Office Manager |
+| Audience Expansion | **Off** |
+| LinkedIn Audience Network | **Off** |
+
+### Ad copy
+
+**Intro text**
+
+> Medicare sets a new provider's billing start date as the later of two dates, and retrospective billing reaches back only 30 days.
+>
+> Miss that window and you have weeks of work that cannot be billed to the payer or to the patient. It is simply gone — and most practices never record it as a loss, because nobody was watching that date.
+>
+> That is one of seven dates in the checklist. Sourced to CMS and its Medicare contractors throughout.
+
+**Headline:** Seven dates that decide whether a provider is billable
+
+**Description:** Free checklist, sourced to CMS.
+
+**Call to action:** Download
+
+### Lead Gen Form
+
+| Field | Value |
+|---|---|
+| Form name | Credentialing Timeline Checklist |
+| Headline | Get the checklist |
+| Details | Seven dates that decide whether a new provider is billable. Sourced to CMS and its Medicare contractors. |
+| Fields | First name · Last name · Work email — **nothing else** |
+| Privacy policy URL | `https://medbpo360.com/privacy` |
+| Confirmation URL | `https://medbpo360.com/resources/credentialing-timeline-checklist` |
+
+Every extra form field costs completions. Three is the whole form.
+
+## Running in parallel
+
+The free levers run alongside the ad rather than before it, at the owner's decision on 2026-10-21: 250 page invites to real prospects (not job seekers), and five comments as the page twice a week. A reminder on 2026-11-18 re-pulls the exports to see whether organic moved. Keep the two apart in that analysis — sponsored impressions sit in their own columns and must not be mixed into the organic trend.
